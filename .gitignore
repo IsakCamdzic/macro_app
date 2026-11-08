@@ -27,6 +27,11 @@ yarn-error.log*
 .env
 !.env.example
 
+# python
+.venv/
+__pycache__/
+
+
 # vercel
 .vercel
 

@@ -27,11 +27,26 @@ jobs:
       - name: Unit & Solver Tests
         run: npm test
 
+      - name: Solver Golden Tests
+        run: npm run test:solver
+
+      - name: Solver Calibration Test
+        run: npm run test:calibration
+
       - name: Security Check - Service Role Key Isolation
         run: |
-          LEAKS=$(grep -rn "SUPABASE_SERVICE_ROLE_KEY" --exclude-dir=node_modules --exclude-dir=.next --exclude-dir=.git --exclude="food-cache.ts" --exclude="*.md" --exclude=".env.example" . || true)
+          LEAKS=$(grep -rn "SUPABASE_SERVICE_ROLE_KEY" --exclude-dir=node_modules --exclude-dir=.next --exclude-dir=.git --exclude-dir=.venv --exclude-dir=.github --exclude="food-cache.ts" --exclude="*.md" --exclude=".env.example" . || true)
           if [ -n "$LEAKS" ]; then
             echo "SECURITY LEAK: SUPABASE_SERVICE_ROLE_KEY found outside food-cache.ts:"
+            echo "$LEAKS"
+            exit 1
+          fi
+
+      - name: Security Check - USDA API Key Leak Protection
+        run: |
+          LEAKS=$(git grep -E "USDA_API_KEY=[a-zA-Z0-9_-]{10,}" | grep -v "your_usda_key_here" || true)
+          if [ -n "$LEAKS" ]; then
+            echo "SECURITY LEAK: Real USDA_API_KEY found in tracked git files:"
             echo "$LEAKS"
             exit 1
           fi

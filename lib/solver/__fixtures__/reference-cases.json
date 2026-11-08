@@ -1,0 +1,11912 @@
+{
+ "weights": [
+  2.0,
+  1.0,
+  1.0
+ ],
+ "lam": 0.0001,
+ "foods": {
+  "chicken": {
+   "p": 23.0,
+   "c": 0.0,
+   "f": 1.2,
+   "g0": 150,
+   "mx": 1000
+  },
+  "rice": {
+   "p": 7.0,
+   "c": 80.0,
+   "f": 0.6,
+   "g0": 100,
+   "mx": 1000
+  },
+  "broccoli": {
+   "p": 2.8,
+   "c": 7.0,
+   "f": 0.4,
+   "g0": 150,
+   "mx": 1000
+  },
+  "oil": {
+   "p": 0.0,
+   "c": 0.0,
+   "f": 100.0,
+   "g0": 10,
+   "mx": 60
+  },
+  "oats": {
+   "p": 13.0,
+   "c": 68.0,
+   "f": 7.0,
+   "g0": 60,
+   "mx": 1000
+  },
+  "pb": {
+   "p": 25.0,
+   "c": 20.0,
+   "f": 50.0,
+   "g0": 15,
+   "mx": 100
+  }
+ },
+ "cases": [
+  {
+   "target": [
+    69.9,
+    0.4,
+    65.7
+   ],
+   "foods": [
+    "broccoli",
+    "oil",
+    "oats",
+    "rice",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 451.0,
+    "oil": 14.0,
+    "oats": 0.0,
+    "rice": 0.0,
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    37.628,
+    51.57,
+    65.804
+   ]
+  },
+  {
+   "target": [
+    24.2,
+    22.3,
+    20.4
+   ],
+   "foods": [
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 536.0
+   },
+   "ref_achieved": [
+    15.008,
+    37.52,
+    2.144
+   ]
+  },
+  {
+   "target": [
+    49.8,
+    79.1,
+    17.2
+   ],
+   "foods": [
+    "chicken",
+    "rice",
+    "oil",
+    "oats",
+    "broccoli"
+   ],
+   "locked": {
+    "broccoli": 21.0
+   },
+   "ref_grams": {
+    "broccoli": 21.0,
+    "chicken": 173.0,
+    "rice": 65.0,
+    "oil": 12.0,
+    "oats": 38.0
+   },
+   "ref_achieved": [
+    49.868,
+    79.31,
+    17.21
+   ]
+  },
+  {
+   "target": [
+    50.3,
+    41.1,
+    39.7
+   ],
+   "foods": [
+    "rice",
+    "oats",
+    "chicken",
+    "oil"
+   ],
+   "locked": {
+    "oil": 13.0
+   },
+   "ref_grams": {
+    "oil": 13.0,
+    "rice": 0.0,
+    "oats": 63.0,
+    "chicken": 184.0
+   },
+   "ref_achieved": [
+    50.51,
+    42.84,
+    19.618
+   ]
+  },
+  {
+   "target": [
+    55.4,
+    16.0,
+    29.6
+   ],
+   "foods": [
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 43.0
+   },
+   "ref_achieved": [
+    3.01,
+    34.4,
+    0.258
+   ]
+  },
+  {
+   "target": [
+    21.4,
+    70.4,
+    40.8
+   ],
+   "foods": [
+    "oats",
+    "chicken",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 104.0,
+    "chicken": 35.0,
+    "oil": 33.0
+   },
+   "ref_achieved": [
+    21.57,
+    70.72,
+    40.7
+   ]
+  },
+  {
+   "target": [
+    40.6,
+    69.7,
+    28.9
+   ],
+   "foods": [
+    "oil",
+    "chicken",
+    "broccoli",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 26.0,
+    "chicken": 136.0,
+    "broccoli": 146.0,
+    "rice": 74.0
+   },
+   "ref_achieved": [
+    40.548,
+    69.42,
+    28.66
+   ]
+  },
+  {
+   "target": [
+    31.0,
+    25.8,
+    12.0
+   ],
+   "foods": [
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 135.0
+   },
+   "ref_achieved": [
+    31.05,
+    0.0,
+    1.62
+   ]
+  },
+  {
+   "target": [
+    78.3,
+    47.2,
+    48.4
+   ],
+   "foods": [
+    "broccoli",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 1000.0,
+    "oats": 26.0
+   },
+   "ref_achieved": [
+    31.38,
+    87.68,
+    5.82
+   ]
+  },
+  {
+   "target": [
+    19.2,
+    32.2,
+    7.7
+   ],
+   "foods": [
+    "chicken",
+    "broccoli",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 57.0,
+    "broccoli": 0.0,
+    "oats": 48.0
+   },
+   "ref_achieved": [
+    19.35,
+    32.64,
+    4.044
+   ]
+  },
+  {
+   "target": [
+    10.5,
+    67.6,
+    75.6
+   ],
+   "foods": [
+    "rice",
+    "broccoli",
+    "chicken",
+    "oats",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 3.0,
+    "broccoli": 0.0,
+    "chicken": 0.0,
+    "oats": 94.0,
+    "oil": 60.0
+   },
+   "ref_achieved": [
+    12.43,
+    66.32,
+    66.598
+   ]
+  },
+  {
+   "target": [
+    14.4,
+    70.7,
+    51.3
+   ],
+   "foods": [
+    "oil",
+    "chicken",
+    "rice",
+    "pb",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 50.0,
+    "chicken": 23.0,
+    "rice": 76.0,
+    "pb": 0.0,
+    "broccoli": 136.0
+   },
+   "ref_achieved": [
+    14.418,
+    70.32,
+    51.276
+   ]
+  },
+  {
+   "target": [
+    32.9,
+    19.2,
+    3.0
+   ],
+   "foods": [
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 620.0
+   },
+   "ref_achieved": [
+    17.36,
+    43.4,
+    2.48
+   ]
+  },
+  {
+   "target": [
+    2.0,
+    29.8,
+    2.4
+   ],
+   "foods": [
+    "rice",
+    "pb",
+    "oats",
+    "broccoli",
+    "oil"
+   ],
+   "locked": {
+    "oats": 168.0
+   },
+   "ref_grams": {
+    "oats": 168.0,
+    "rice": 0.0,
+    "pb": 0.0,
+    "broccoli": 2.0,
+    "oil": 0.0
+   },
+   "ref_achieved": [
+    21.896,
+    114.38,
+    11.768
+   ]
+  },
+  {
+   "target": [
+    54.7,
+    28.4,
+    41.5
+   ],
+   "foods": [
+    "oats",
+    "rice",
+    "broccoli",
+    "chicken",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 0.0,
+    "rice": 4.0,
+    "broccoli": 141.0,
+    "chicken": 134.0,
+    "pb": 79.0
+   },
+   "ref_achieved": [
+    54.798,
+    28.87,
+    41.696
+   ]
+  },
+  {
+   "target": [
+    0.4,
+    60.2,
+    64.8
+   ],
+   "foods": [
+    "oats",
+    "pb",
+    "oil"
+   ],
+   "locked": {
+    "oil": 111.0
+   },
+   "ref_grams": {
+    "oil": 111.0,
+    "oats": 77.0,
+    "pb": 0.0
+   },
+   "ref_achieved": [
+    10.01,
+    52.36,
+    116.39
+   ]
+  },
+  {
+   "target": [
+    58.1,
+    18.1,
+    15.9
+   ],
+   "foods": [
+    "rice",
+    "broccoli",
+    "oil",
+    "oats",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 6.0,
+    "broccoli": 149.0,
+    "oil": 12.0,
+    "oats": 5.0,
+    "chicken": 230.0
+   },
+   "ref_achieved": [
+    58.142,
+    18.63,
+    15.742
+   ]
+  },
+  {
+   "target": [
+    27.7,
+    75.8,
+    45.9
+   ],
+   "foods": [
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 104.0
+   },
+   "ref_achieved": [
+    7.28,
+    83.2,
+    0.624
+   ]
+  },
+  {
+   "target": [
+    41.2,
+    41.7,
+    71.7
+   ],
+   "foods": [
+    "rice",
+    "oats",
+    "chicken",
+    "pb",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "oats": 34.0,
+    "chicken": 52.0,
+    "pb": 100.0,
+    "broccoli": 0.0
+   },
+   "ref_achieved": [
+    41.38,
+    43.12,
+    53.004
+   ]
+  },
+  {
+   "target": [
+    32.9,
+    73.8,
+    5.5
+   ],
+   "foods": [
+    "broccoli",
+    "oats",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 1000.0,
+    "oats": 5.0,
+    "pb": 9.0
+   },
+   "ref_achieved": [
+    30.9,
+    75.2,
+    8.85
+   ]
+  },
+  {
+   "target": [
+    76.1,
+    20.1,
+    64.5
+   ],
+   "foods": [
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 60.0
+   },
+   "ref_achieved": [
+    0.0,
+    0.0,
+    60.0
+   ]
+  },
+  {
+   "target": [
+    26.6,
+    31.9,
+    16.2
+   ],
+   "foods": [
+    "broccoli",
+    "rice",
+    "chicken",
+    "oil"
+   ],
+   "locked": {
+    "rice": 230.0
+   },
+   "ref_grams": {
+    "rice": 230.0,
+    "broccoli": 3.0,
+    "chicken": 45.0,
+    "oil": 14.0
+   },
+   "ref_achieved": [
+    26.534,
+    184.21,
+    15.932
+   ]
+  },
+  {
+   "target": [
+    48.3,
+    38.3,
+    47.6
+   ],
+   "foods": [
+    "oats",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 46.0,
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    30.98,
+    51.28,
+    53.22
+   ]
+  },
+  {
+   "target": [
+    76.9,
+    37.3,
+    50.2
+   ],
+   "foods": [
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 1000.0
+   },
+   "ref_achieved": [
+    28.0,
+    70.0,
+    4.0
+   ]
+  },
+  {
+   "target": [
+    4.9,
+    32.9,
+    61.1
+   ],
+   "foods": [
+    "oil",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 60.0,
+    "broccoli": 352.0
+   },
+   "ref_achieved": [
+    9.856,
+    24.64,
+    61.408
+   ]
+  },
+  {
+   "target": [
+    9.1,
+    73.1,
+    64.2
+   ],
+   "foods": [
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    25.0,
+    20.0,
+    50.0
+   ]
+  },
+  {
+   "target": [
+    2.4,
+    1.6,
+    20.2
+   ],
+   "foods": [
+    "oil",
+    "broccoli",
+    "oats",
+    "pb"
+   ],
+   "locked": {
+    "oil": 55.0
+   },
+   "ref_grams": {
+    "oil": 55.0,
+    "broccoli": 38.0,
+    "oats": 0.0,
+    "pb": 2.0
+   },
+   "ref_achieved": [
+    1.564,
+    3.06,
+    56.152
+   ]
+  },
+  {
+   "target": [
+    1.7,
+    24.8,
+    75.1
+   ],
+   "foods": [
+    "oil",
+    "chicken",
+    "oats",
+    "pb",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 60.0,
+    "chicken": 0.0,
+    "oats": 0.0,
+    "pb": 15.0,
+    "rice": 26.0
+   },
+   "ref_achieved": [
+    5.57,
+    23.8,
+    67.656
+   ]
+  },
+  {
+   "target": [
+    46.0,
+    3.2,
+    64.1
+   ],
+   "foods": [
+    "rice",
+    "pb",
+    "broccoli",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "pb": 100.0,
+    "broccoli": 146.0,
+    "oil": 14.0
+   },
+   "ref_achieved": [
+    29.088,
+    30.22,
+    64.584
+   ]
+  },
+  {
+   "target": [
+    50.1,
+    63.8,
+    25.1
+   ],
+   "foods": [
+    "broccoli",
+    "oil",
+    "rice",
+    "chicken",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 148.0,
+    "oil": 13.0,
+    "rice": 62.0,
+    "chicken": 161.0,
+    "pb": 18.0
+   },
+   "ref_achieved": [
+    50.014,
+    63.56,
+    24.896
+   ]
+  },
+  {
+   "target": [
+    70.6,
+    15.8,
+    45.9
+   ],
+   "foods": [
+    "oil",
+    "rice",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 42.0,
+    "rice": 20.0,
+    "chicken": 301.0
+   },
+   "ref_achieved": [
+    70.63,
+    16.0,
+    45.732
+   ]
+  },
+  {
+   "target": [
+    52.9,
+    50.6,
+    65.9
+   ],
+   "foods": [
+    "oats",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 117.0,
+    "oil": 58.0
+   },
+   "ref_achieved": [
+    15.21,
+    79.56,
+    66.19
+   ]
+  },
+  {
+   "target": [
+    69.4,
+    71.4,
+    12.9
+   ],
+   "foods": [
+    "rice",
+    "chicken"
+   ],
+   "locked": {
+    "rice": 62.0
+   },
+   "ref_grams": {
+    "rice": 62.0,
+    "chicken": 283.0
+   },
+   "ref_achieved": [
+    69.43,
+    49.6,
+    3.768
+   ]
+  },
+  {
+   "target": [
+    36.5,
+    52.6,
+    8.1
+   ],
+   "foods": [
+    "oil",
+    "chicken",
+    "broccoli",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 0.0,
+    "chicken": 62.0,
+    "broccoli": 712.0,
+    "pb": 10.0
+   },
+   "ref_achieved": [
+    36.696,
+    51.84,
+    8.592
+   ]
+  },
+  {
+   "target": [
+    66.4,
+    30.1,
+    29.7
+   ],
+   "foods": [
+    "chicken",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 263.0,
+    "oats": 47.0
+   },
+   "ref_achieved": [
+    66.6,
+    31.96,
+    6.446
+   ]
+  },
+  {
+   "target": [
+    6.5,
+    60.2,
+    46.3
+   ],
+   "foods": [
+    "oats",
+    "oil",
+    "rice",
+    "chicken"
+   ],
+   "locked": {
+    "oil": 29.0
+   },
+   "ref_grams": {
+    "oil": 29.0,
+    "oats": 61.0,
+    "rice": 23.0,
+    "chicken": 0.0
+   },
+   "ref_achieved": [
+    9.54,
+    59.88,
+    33.408
+   ]
+  },
+  {
+   "target": [
+    10.5,
+    10.7,
+    10.5
+   ],
+   "foods": [
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 25.0
+   },
+   "ref_achieved": [
+    3.25,
+    17.0,
+    1.75
+   ]
+  },
+  {
+   "target": [
+    66.6,
+    49.6,
+    15.0
+   ],
+   "foods": [
+    "pb",
+    "chicken",
+    "oats",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 16.0,
+    "chicken": 224.0,
+    "oats": 52.0,
+    "broccoli": 154.0
+   },
+   "ref_achieved": [
+    66.592,
+    49.34,
+    14.944
+   ]
+  },
+  {
+   "target": [
+    30.0,
+    56.9,
+    7.7
+   ],
+   "foods": [
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 84.0
+   },
+   "ref_achieved": [
+    21.0,
+    16.8,
+    42.0
+   ]
+  },
+  {
+   "target": [
+    29.7,
+    5.1,
+    41.5
+   ],
+   "foods": [
+    "broccoli",
+    "chicken",
+    "oil",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 74.0,
+    "chicken": 120.0,
+    "oil": 40.0,
+    "pb": 0.0
+   },
+   "ref_achieved": [
+    29.672,
+    5.18,
+    41.736
+   ]
+  },
+  {
+   "target": [
+    10.1,
+    14.7,
+    64.0
+   ],
+   "foods": [
+    "chicken",
+    "oil",
+    "pb",
+    "rice",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 20.0,
+    "oil": 60.0,
+    "pb": 6.0,
+    "rice": 5.0,
+    "broccoli": 130.0
+   },
+   "ref_achieved": [
+    10.09,
+    14.3,
+    63.79
+   ]
+  },
+  {
+   "target": [
+    79.7,
+    75.1,
+    67.4
+   ],
+   "foods": [
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 182.0
+   },
+   "ref_achieved": [
+    23.66,
+    123.76,
+    12.74
+   ]
+  },
+  {
+   "target": [
+    31.6,
+    51.3,
+    14.8
+   ],
+   "foods": [
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 98.0
+   },
+   "ref_achieved": [
+    12.74,
+    66.64,
+    6.86
+   ]
+  },
+  {
+   "target": [
+    33.6,
+    2.7,
+    67.5
+   ],
+   "foods": [
+    "oats",
+    "oil",
+    "rice",
+    "pb",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 0.0,
+    "oil": 17.0,
+    "rice": 0.0,
+    "pb": 100.0,
+    "broccoli": 0.0
+   },
+   "ref_achieved": [
+    25.0,
+    20.0,
+    67.0
+   ]
+  },
+  {
+   "target": [
+    43.8,
+    57.7,
+    30.5
+   ],
+   "foods": [
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 1000.0
+   },
+   "ref_achieved": [
+    28.0,
+    70.0,
+    4.0
+   ]
+  },
+  {
+   "target": [
+    73.6,
+    31.0,
+    11.0
+   ],
+   "foods": [
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 112.0
+   },
+   "ref_achieved": [
+    14.56,
+    76.16,
+    7.84
+   ]
+  },
+  {
+   "target": [
+    79.4,
+    11.8,
+    57.0
+   ],
+   "foods": [
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 100.0
+   },
+   "ref_achieved": [
+    13.0,
+    68.0,
+    7.0
+   ]
+  },
+  {
+   "target": [
+    9.3,
+    14.1,
+    46.0
+   ],
+   "foods": [
+    "oats",
+    "broccoli",
+    "chicken",
+    "rice",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 0.0,
+    "broccoli": 130.0,
+    "chicken": 23.0,
+    "rice": 6.0,
+    "oil": 45.0
+   },
+   "ref_achieved": [
+    9.35,
+    13.9,
+    45.832
+   ]
+  },
+  {
+   "target": [
+    5.4,
+    37.9,
+    2.6
+   ],
+   "foods": [
+    "pb",
+    "broccoli",
+    "chicken",
+    "rice",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 4.0,
+    "broccoli": 59.0,
+    "chicken": 0.0,
+    "rice": 41.0,
+    "oats": 0.0
+   },
+   "ref_achieved": [
+    5.522,
+    37.73,
+    2.482
+   ]
+  },
+  {
+   "target": [
+    36.4,
+    4.5,
+    79.6
+   ],
+   "foods": [
+    "rice",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "broccoli": 580.0
+   },
+   "ref_achieved": [
+    16.24,
+    40.6,
+    2.32
+   ]
+  },
+  {
+   "target": [
+    31.5,
+    18.2,
+    10.0
+   ],
+   "foods": [
+    "oil",
+    "oats"
+   ],
+   "locked": {
+    "oats": 40.0
+   },
+   "ref_grams": {
+    "oats": 40.0,
+    "oil": 7.0
+   },
+   "ref_achieved": [
+    5.2,
+    27.2,
+    9.8
+   ]
+  },
+  {
+   "target": [
+    14.7,
+    53.6,
+    21.3
+   ],
+   "foods": [
+    "chicken",
+    "oats",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 19.0,
+    "oats": 79.0,
+    "oil": 16.0
+   },
+   "ref_achieved": [
+    14.64,
+    53.72,
+    21.758
+   ]
+  },
+  {
+   "target": [
+    42.9,
+    31.6,
+    63.3
+   ],
+   "foods": [
+    "oil",
+    "oats",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 58.0,
+    "oats": 83.0,
+    "rice": 0.0
+   },
+   "ref_achieved": [
+    10.79,
+    56.44,
+    63.81
+   ]
+  },
+  {
+   "target": [
+    75.3,
+    18.5,
+    77.6
+   ],
+   "foods": [
+    "oats",
+    "pb",
+    "rice",
+    "chicken"
+   ],
+   "locked": {
+    "chicken": 132.0
+   },
+   "ref_grams": {
+    "chicken": 132.0,
+    "oats": 21.0,
+    "pb": 100.0,
+    "rice": 0.0
+   },
+   "ref_achieved": [
+    58.09,
+    34.28,
+    53.054
+   ]
+  },
+  {
+   "target": [
+    25.2,
+    48.0,
+    5.3
+   ],
+   "foods": [
+    "broccoli",
+    "rice",
+    "pb"
+   ],
+   "locked": {
+    "pb": 221.0
+   },
+   "ref_grams": {
+    "pb": 221.0,
+    "broccoli": 0.0,
+    "rice": 5.0
+   },
+   "ref_achieved": [
+    55.6,
+    48.2,
+    110.53
+   ]
+  },
+  {
+   "target": [
+    56.6,
+    68.0,
+    54.5
+   ],
+   "foods": [
+    "chicken",
+    "oil",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 190.0,
+    "oil": 45.0,
+    "oats": 100.0
+   },
+   "ref_achieved": [
+    56.7,
+    68.0,
+    54.28
+   ]
+  },
+  {
+   "target": [
+    73.6,
+    47.7,
+    26.4
+   ],
+   "foods": [
+    "pb",
+    "oil",
+    "oats",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 100.0,
+    "oil": 0.0,
+    "oats": 79.0,
+    "rice": 0.0
+   },
+   "ref_achieved": [
+    35.27,
+    73.72,
+    55.53
+   ]
+  },
+  {
+   "target": [
+    41.2,
+    7.3,
+    77.2
+   ],
+   "foods": [
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 60.0
+   },
+   "ref_achieved": [
+    0.0,
+    0.0,
+    60.0
+   ]
+  },
+  {
+   "target": [
+    64.3,
+    22.6,
+    64.1
+   ],
+   "foods": [
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 1000.0
+   },
+   "ref_achieved": [
+    28.0,
+    70.0,
+    4.0
+   ]
+  },
+  {
+   "target": [
+    34.7,
+    33.2,
+    55.4
+   ],
+   "foods": [
+    "rice",
+    "oats",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "oats": 77.0,
+    "oil": 50.0
+   },
+   "ref_achieved": [
+    10.01,
+    52.36,
+    55.39
+   ]
+  },
+  {
+   "target": [
+    5.2,
+    58.2,
+    1.2
+   ],
+   "foods": [
+    "oats",
+    "oil",
+    "pb",
+    "rice",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 0.0,
+    "oil": 1.0,
+    "pb": 0.0,
+    "rice": 72.0,
+    "broccoli": 12.0
+   },
+   "ref_achieved": [
+    5.376,
+    58.44,
+    1.48
+   ]
+  },
+  {
+   "target": [
+    58.5,
+    6.8,
+    45.0
+   ],
+   "foods": [
+    "pb",
+    "rice",
+    "oats",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 100.0,
+    "rice": 0.0,
+    "oats": 0.0,
+    "broccoli": 346.0
+   },
+   "ref_achieved": [
+    34.688,
+    44.22,
+    51.384
+   ]
+  },
+  {
+   "target": [
+    50.5,
+    44.1,
+    5.9
+   ],
+   "foods": [
+    "oil",
+    "oats",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 0.0,
+    "oats": 65.0,
+    "chicken": 183.0
+   },
+   "ref_achieved": [
+    50.54,
+    44.2,
+    6.746
+   ]
+  },
+  {
+   "target": [
+    15.8,
+    36.3,
+    60.0
+   ],
+   "foods": [
+    "oats",
+    "chicken",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 61.0,
+    "chicken": 37.0,
+    "rice": 0.0
+   },
+   "ref_achieved": [
+    16.44,
+    41.48,
+    4.714
+   ]
+  },
+  {
+   "target": [
+    54.2,
+    51.3,
+    32.5
+   ],
+   "foods": [
+    "pb",
+    "chicken",
+    "rice",
+    "oats",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 31.0,
+    "chicken": 179.0,
+    "rice": 41.0,
+    "oats": 19.0,
+    "oil": 13.0
+   },
+   "ref_achieved": [
+    54.26,
+    51.92,
+    32.224
+   ]
+  },
+  {
+   "target": [
+    40.3,
+    27.0,
+    66.1
+   ],
+   "foods": [
+    "oil",
+    "chicken",
+    "oats",
+    "pb",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 56.0,
+    "chicken": 148.0,
+    "oats": 1.0,
+    "pb": 17.0,
+    "rice": 28.0
+   },
+   "ref_achieved": [
+    40.38,
+    26.48,
+    66.514
+   ]
+  },
+  {
+   "target": [
+    2.8,
+    31.2,
+    68.8
+   ],
+   "foods": [
+    "rice",
+    "chicken",
+    "oil",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 18.0,
+    "chicken": 0.0,
+    "oil": 60.0,
+    "oats": 24.0
+   },
+   "ref_achieved": [
+    4.38,
+    30.72,
+    61.788
+   ]
+  },
+  {
+   "target": [
+    33.7,
+    14.7,
+    23.4
+   ],
+   "foods": [
+    "broccoli",
+    "rice",
+    "oats",
+    "oil"
+   ],
+   "locked": {
+    "oats": 113.0
+   },
+   "ref_grams": {
+    "oats": 113.0,
+    "broccoli": 264.0,
+    "rice": 0.0,
+    "oil": 14.0
+   },
+   "ref_achieved": [
+    22.082,
+    95.32,
+    22.966
+   ]
+  },
+  {
+   "target": [
+    29.7,
+    46.5,
+    75.8
+   ],
+   "foods": [
+    "broccoli",
+    "pb",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 462.0,
+    "pb": 68.0,
+    "oil": 40.0
+   },
+   "ref_achieved": [
+    29.936,
+    45.94,
+    75.848
+   ]
+  },
+  {
+   "target": [
+    5.9,
+    69.3,
+    25.0
+   ],
+   "foods": [
+    "chicken",
+    "oats",
+    "oil",
+    "pb",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 0.0,
+    "oats": 0.0,
+    "oil": 24.0,
+    "pb": 0.0,
+    "rice": 87.0
+   },
+   "ref_achieved": [
+    6.09,
+    69.6,
+    24.522
+   ]
+  },
+  {
+   "target": [
+    33.6,
+    66.2,
+    66.2
+   ],
+   "foods": [
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 95.0
+   },
+   "ref_achieved": [
+    6.65,
+    76.0,
+    0.57
+   ]
+  },
+  {
+   "target": [
+    61.4,
+    36.6,
+    29.9
+   ],
+   "foods": [
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 1000.0
+   },
+   "ref_achieved": [
+    28.0,
+    70.0,
+    4.0
+   ]
+  },
+  {
+   "target": [
+    61.6,
+    4.5,
+    58.6
+   ],
+   "foods": [
+    "rice",
+    "oats",
+    "pb",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "oats": 16.0,
+    "pb": 100.0,
+    "oil": 7.0
+   },
+   "ref_achieved": [
+    27.08,
+    30.88,
+    58.12
+   ]
+  },
+  {
+   "target": [
+    19.7,
+    51.5,
+    30.1
+   ],
+   "foods": [
+    "chicken",
+    "oats",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 42.0,
+    "oats": 79.0,
+    "rice": 0.0
+   },
+   "ref_achieved": [
+    19.93,
+    53.72,
+    6.034
+   ]
+  },
+  {
+   "target": [
+    77.0,
+    23.1,
+    24.5
+   ],
+   "foods": [
+    "broccoli",
+    "oats",
+    "chicken",
+    "rice",
+    "oil"
+   ],
+   "locked": {
+    "oats": 112.0
+   },
+   "ref_grams": {
+    "oats": 112.0,
+    "broccoli": 3.0,
+    "chicken": 271.0,
+    "rice": 0.0,
+    "oil": 13.0
+   },
+   "ref_achieved": [
+    76.974,
+    76.37,
+    24.104
+   ]
+  },
+  {
+   "target": [
+    56.8,
+    15.6,
+    11.0
+   ],
+   "foods": [
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    25.0,
+    20.0,
+    50.0
+   ]
+  },
+  {
+   "target": [
+    52.5,
+    49.7,
+    61.4
+   ],
+   "foods": [
+    "chicken",
+    "oil",
+    "oats",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 201.0,
+    "oil": 57.0,
+    "oats": 27.0,
+    "rice": 39.0
+   },
+   "ref_achieved": [
+    52.47,
+    49.56,
+    61.536
+   ]
+  },
+  {
+   "target": [
+    35.3,
+    51.2,
+    10.9
+   ],
+   "foods": [
+    "pb",
+    "oats",
+    "rice",
+    "chicken",
+    "oil"
+   ],
+   "locked": {
+    "pb": 52.0
+   },
+   "ref_grams": {
+    "pb": 52.0,
+    "oats": 0.0,
+    "rice": 51.0,
+    "chicken": 81.0,
+    "oil": 0.0
+   },
+   "ref_achieved": [
+    35.2,
+    51.2,
+    27.278
+   ]
+  },
+  {
+   "target": [
+    37.9,
+    1.2,
+    36.7
+   ],
+   "foods": [
+    "oil",
+    "rice",
+    "broccoli",
+    "pb",
+    "chicken"
+   ],
+   "locked": {
+    "oil": 200.0
+   },
+   "ref_grams": {
+    "oil": 200.0,
+    "rice": 0.0,
+    "broccoli": 19.0,
+    "pb": 0.0,
+    "chicken": 162.0
+   },
+   "ref_achieved": [
+    37.792,
+    1.33,
+    202.02
+   ]
+  },
+  {
+   "target": [
+    32.5,
+    33.4,
+    65.3
+   ],
+   "foods": [
+    "rice",
+    "broccoli"
+   ],
+   "locked": {
+    "broccoli": 232.0
+   },
+   "ref_grams": {
+    "broccoli": 232.0,
+    "rice": 32.0
+   },
+   "ref_achieved": [
+    8.736,
+    41.84,
+    1.12
+   ]
+  },
+  {
+   "target": [
+    4.0,
+    53.1,
+    48.0
+   ],
+   "foods": [
+    "oats",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 72.0,
+    "oil": 43.0
+   },
+   "ref_achieved": [
+    9.36,
+    48.96,
+    48.04
+   ]
+  },
+  {
+   "target": [
+    2.6,
+    66.5,
+    73.2
+   ],
+   "foods": [
+    "broccoli",
+    "oil",
+    "oats",
+    "pb",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 0.0,
+    "oil": 60.0,
+    "oats": 89.0,
+    "pb": 0.0,
+    "chicken": 0.0
+   },
+   "ref_achieved": [
+    11.57,
+    60.52,
+    66.23
+   ]
+  },
+  {
+   "target": [
+    54.3,
+    45.6,
+    76.2
+   ],
+   "foods": [
+    "oil",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 60.0,
+    "oats": 113.0
+   },
+   "ref_achieved": [
+    14.69,
+    76.84,
+    67.91
+   ]
+  },
+  {
+   "target": [
+    55.5,
+    33.7,
+    68.1
+   ],
+   "foods": [
+    "pb",
+    "broccoli",
+    "oil",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 100.0,
+    "broccoli": 540.0,
+    "oil": 16.0,
+    "rice": 0.0
+   },
+   "ref_achieved": [
+    40.12,
+    57.8,
+    68.16
+   ]
+  },
+  {
+   "target": [
+    6.2,
+    10.6,
+    14.7
+   ],
+   "foods": [
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 185.0
+   },
+   "ref_achieved": [
+    5.18,
+    12.95,
+    0.74
+   ]
+  },
+  {
+   "target": [
+    74.2,
+    22.3,
+    71.9
+   ],
+   "foods": [
+    "pb",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 100.0,
+    "rice": 24.0
+   },
+   "ref_achieved": [
+    26.68,
+    39.2,
+    50.144
+   ]
+  },
+  {
+   "target": [
+    0.3,
+    63.0,
+    19.6
+   ],
+   "foods": [
+    "rice",
+    "oats"
+   ],
+   "locked": {
+    "rice": 175.0
+   },
+   "ref_grams": {
+    "rice": 175.0,
+    "oats": 2.0
+   },
+   "ref_achieved": [
+    12.51,
+    141.36,
+    1.19
+   ]
+  },
+  {
+   "target": [
+    56.2,
+    10.4,
+    65.2
+   ],
+   "foods": [
+    "broccoli",
+    "chicken",
+    "rice",
+    "pb"
+   ],
+   "locked": {
+    "chicken": 134.0
+   },
+   "ref_grams": {
+    "chicken": 134.0,
+    "broccoli": 0.0,
+    "rice": 0.0,
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    55.82,
+    20.0,
+    51.608
+   ]
+  },
+  {
+   "target": [
+    67.7,
+    6.8,
+    21.9
+   ],
+   "foods": [
+    "chicken",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 294.0,
+    "oil": 18.0
+   },
+   "ref_achieved": [
+    67.62,
+    0.0,
+    21.528
+   ]
+  },
+  {
+   "target": [
+    23.4,
+    60.6,
+    50.9
+   ],
+   "foods": [
+    "rice",
+    "oats",
+    "oil",
+    "pb",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 32.0,
+    "oats": 19.0,
+    "oil": 20.0,
+    "pb": 58.0,
+    "broccoli": 149.0
+   },
+   "ref_achieved": [
+    23.382,
+    60.55,
+    51.118
+   ]
+  },
+  {
+   "target": [
+    58.0,
+    55.9,
+    31.0
+   ],
+   "foods": [
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 1000.0
+   },
+   "ref_achieved": [
+    28.0,
+    70.0,
+    4.0
+   ]
+  },
+  {
+   "target": [
+    77.0,
+    57.1,
+    16.4
+   ],
+   "foods": [
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 335.0
+   },
+   "ref_achieved": [
+    77.05,
+    0.0,
+    4.02
+   ]
+  },
+  {
+   "target": [
+    23.0,
+    24.4,
+    6.2
+   ],
+   "foods": [
+    "oil",
+    "pb",
+    "broccoli",
+    "oats",
+    "rice"
+   ],
+   "locked": {
+    "oats": 52.0
+   },
+   "ref_grams": {
+    "oats": 52.0,
+    "oil": 0.0,
+    "pb": 25.0,
+    "broccoli": 91.0,
+    "rice": 0.0
+   },
+   "ref_achieved": [
+    15.558,
+    46.73,
+    16.504
+   ]
+  },
+  {
+   "target": [
+    17.2,
+    59.1,
+    73.8
+   ],
+   "foods": [
+    "oil",
+    "chicken"
+   ],
+   "locked": {
+    "oil": 147.0
+   },
+   "ref_grams": {
+    "oil": 147.0,
+    "chicken": 75.0
+   },
+   "ref_achieved": [
+    17.25,
+    0.0,
+    147.9
+   ]
+  },
+  {
+   "target": [
+    70.8,
+    37.9,
+    64.4
+   ],
+   "foods": [
+    "chicken",
+    "broccoli",
+    "oats"
+   ],
+   "locked": {
+    "oats": 218.0
+   },
+   "ref_grams": {
+    "oats": 218.0,
+    "chicken": 184.0,
+    "broccoli": 27.0
+   },
+   "ref_achieved": [
+    71.416,
+    150.13,
+    17.576
+   ]
+  },
+  {
+   "target": [
+    29.5,
+    60.8,
+    5.9
+   ],
+   "foods": [
+    "oats",
+    "chicken",
+    "oil"
+   ],
+   "locked": {
+    "chicken": 205.0
+   },
+   "ref_grams": {
+    "chicken": 205.0,
+    "oats": 78.0,
+    "oil": 0.0
+   },
+   "ref_achieved": [
+    57.29,
+    53.04,
+    7.92
+   ]
+  },
+  {
+   "target": [
+    25.6,
+    3.3,
+    31.4
+   ],
+   "foods": [
+    "rice",
+    "oats",
+    "broccoli"
+   ],
+   "locked": {
+    "rice": 146.0
+   },
+   "ref_grams": {
+    "rice": 146.0,
+    "oats": 0.0,
+    "broccoli": 228.0
+   },
+   "ref_achieved": [
+    16.604,
+    132.76,
+    1.788
+   ]
+  },
+  {
+   "target": [
+    46.4,
+    51.8,
+    25.9
+   ],
+   "foods": [
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 83.0
+   },
+   "ref_achieved": [
+    5.81,
+    66.4,
+    0.498
+   ]
+  },
+  {
+   "target": [
+    15.9,
+    46.6,
+    39.3
+   ],
+   "foods": [
+    "oats",
+    "broccoli",
+    "pb",
+    "rice",
+    "oil"
+   ],
+   "locked": {
+    "pb": 159.0
+   },
+   "ref_grams": {
+    "pb": 159.0,
+    "oats": 0.0,
+    "broccoli": 0.0,
+    "rice": 18.0,
+    "oil": 0.0
+   },
+   "ref_achieved": [
+    41.01,
+    46.2,
+    79.608
+   ]
+  },
+  {
+   "target": [
+    21.6,
+    29.8,
+    43.3
+   ],
+   "foods": [
+    "broccoli",
+    "oats",
+    "rice",
+    "chicken",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 136.0,
+    "oats": 0.0,
+    "rice": 25.0,
+    "chicken": 70.0,
+    "oil": 42.0
+   },
+   "ref_achieved": [
+    21.658,
+    29.52,
+    43.534
+   ]
+  },
+  {
+   "target": [
+    8.6,
+    65.4,
+    73.9
+   ],
+   "foods": [
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 60.0
+   },
+   "ref_achieved": [
+    0.0,
+    0.0,
+    60.0
+   ]
+  },
+  {
+   "target": [
+    72.8,
+    3.5,
+    26.6
+   ],
+   "foods": [
+    "pb",
+    "oats",
+    "rice",
+    "chicken"
+   ],
+   "locked": {
+    "oats": 231.0
+   },
+   "ref_grams": {
+    "oats": 231.0,
+    "pb": 14.0,
+    "rice": 0.0,
+    "chicken": 170.0
+   },
+   "ref_achieved": [
+    72.63,
+    159.88,
+    25.21
+   ]
+  },
+  {
+   "target": [
+    41.9,
+    59.6,
+    35.0
+   ],
+   "foods": [
+    "chicken",
+    "oats",
+    "oil"
+   ],
+   "locked": {
+    "oats": 95.0
+   },
+   "ref_grams": {
+    "oats": 95.0,
+    "chicken": 128.0,
+    "oil": 27.0
+   },
+   "ref_achieved": [
+    41.79,
+    64.6,
+    35.186
+   ]
+  },
+  {
+   "target": [
+    64.7,
+    24.9,
+    62.5
+   ],
+   "foods": [
+    "oats",
+    "oil",
+    "pb"
+   ],
+   "locked": {
+    "oil": 49.0
+   },
+   "ref_grams": {
+    "oil": 49.0,
+    "oats": 40.0,
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    30.2,
+    47.2,
+    101.8
+   ]
+  },
+  {
+   "target": [
+    22.8,
+    4.2,
+    17.3
+   ],
+   "foods": [
+    "oil",
+    "pb",
+    "chicken",
+    "rice",
+    "broccoli"
+   ],
+   "locked": {
+    "oil": 122.0
+   },
+   "ref_grams": {
+    "oil": 122.0,
+    "pb": 0.0,
+    "chicken": 92.0,
+    "rice": 0.0,
+    "broccoli": 61.0
+   },
+   "ref_achieved": [
+    22.868,
+    4.27,
+    123.348
+   ]
+  },
+  {
+   "target": [
+    22.5,
+    2.7,
+    26.5
+   ],
+   "foods": [
+    "rice",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "broccoli": 347.0
+   },
+   "ref_achieved": [
+    9.716,
+    24.29,
+    1.388
+   ]
+  },
+  {
+   "target": [
+    71.0,
+    73.4,
+    24.8
+   ],
+   "foods": [
+    "oil",
+    "chicken",
+    "broccoli",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 0.0,
+    "chicken": 154.0,
+    "broccoli": 920.0,
+    "pb": 39.0
+   },
+   "ref_achieved": [
+    70.93,
+    72.2,
+    25.028
+   ]
+  },
+  {
+   "target": [
+    48.2,
+    74.8,
+    11.7
+   ],
+   "foods": [
+    "broccoli",
+    "rice",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 338.0,
+    "rice": 64.0,
+    "chicken": 149.0
+   },
+   "ref_achieved": [
+    48.214,
+    74.86,
+    3.524
+   ]
+  },
+  {
+   "target": [
+    72.5,
+    8.2,
+    7.4
+   ],
+   "foods": [
+    "broccoli",
+    "rice",
+    "pb",
+    "oil",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 109.0,
+    "rice": 0.0,
+    "pb": 3.0,
+    "oil": 2.0,
+    "chicken": 298.0
+   },
+   "ref_achieved": [
+    72.342,
+    8.23,
+    7.512
+   ]
+  },
+  {
+   "target": [
+    2.6,
+    73.5,
+    48.9
+   ],
+   "foods": [
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 77.0
+   },
+   "ref_achieved": [
+    19.25,
+    15.4,
+    38.5
+   ]
+  },
+  {
+   "target": [
+    54.3,
+    79.8,
+    12.5
+   ],
+   "foods": [
+    "chicken",
+    "oats",
+    "rice",
+    "broccoli",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 168.0,
+    "oats": 29.0,
+    "rice": 58.0,
+    "broccoli": 148.0,
+    "pb": 15.0
+   },
+   "ref_achieved": [
+    54.364,
+    79.48,
+    12.486
+   ]
+  },
+  {
+   "target": [
+    71.3,
+    79.4,
+    21.3
+   ],
+   "foods": [
+    "broccoli",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 1000.0,
+    "oil": 17.0
+   },
+   "ref_achieved": [
+    28.0,
+    70.0,
+    21.0
+   ]
+  },
+  {
+   "target": [
+    29.8,
+    75.2,
+    32.5
+   ],
+   "foods": [
+    "oats",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 34.0,
+    "broccoli": 814.0
+   },
+   "ref_achieved": [
+    27.212,
+    80.1,
+    5.636
+   ]
+  },
+  {
+   "target": [
+    35.9,
+    30.9,
+    34.6
+   ],
+   "foods": [
+    "chicken",
+    "oil"
+   ],
+   "locked": {
+    "chicken": 191.0
+   },
+   "ref_grams": {
+    "chicken": 191.0,
+    "oil": 32.0
+   },
+   "ref_achieved": [
+    43.93,
+    0.0,
+    34.292
+   ]
+  },
+  {
+   "target": [
+    53.8,
+    64.2,
+    18.4
+   ],
+   "foods": [
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 235.0
+   },
+   "ref_achieved": [
+    54.05,
+    0.0,
+    2.82
+   ]
+  },
+  {
+   "target": [
+    60.9,
+    29.9,
+    25.9
+   ],
+   "foods": [
+    "rice",
+    "oil",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "oil": 22.0,
+    "broccoli": 1000.0
+   },
+   "ref_achieved": [
+    28.0,
+    70.0,
+    26.0
+   ]
+  },
+  {
+   "target": [
+    55.8,
+    60.5,
+    23.7
+   ],
+   "foods": [
+    "rice",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 97.0,
+    "oil": 23.0
+   },
+   "ref_achieved": [
+    6.79,
+    77.6,
+    23.582
+   ]
+  },
+  {
+   "target": [
+    32.3,
+    46.2,
+    20.3
+   ],
+   "foods": [
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 20.0
+   },
+   "ref_achieved": [
+    0.0,
+    0.0,
+    20.0
+   ]
+  },
+  {
+   "target": [
+    48.8,
+    47.2,
+    12.3
+   ],
+   "foods": [
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 12.0
+   },
+   "ref_achieved": [
+    0.0,
+    0.0,
+    12.0
+   ]
+  },
+  {
+   "target": [
+    77.6,
+    16.2,
+    20.3
+   ],
+   "foods": [
+    "oats",
+    "rice"
+   ],
+   "locked": {
+    "oats": 248.0
+   },
+   "ref_grams": {
+    "oats": 248.0,
+    "rice": 19.0
+   },
+   "ref_achieved": [
+    33.57,
+    183.84,
+    17.474
+   ]
+  },
+  {
+   "target": [
+    76.0,
+    3.4,
+    41.7
+   ],
+   "foods": [
+    "oil",
+    "broccoli",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 38.0,
+    "broccoli": 1000.0,
+    "rice": 0.0
+   },
+   "ref_achieved": [
+    28.0,
+    70.0,
+    42.0
+   ]
+  },
+  {
+   "target": [
+    26.2,
+    0.3,
+    2.8
+   ],
+   "foods": [
+    "rice",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 11.0,
+    "oil": 3.0
+   },
+   "ref_achieved": [
+    0.77,
+    8.8,
+    3.066
+   ]
+  },
+  {
+   "target": [
+    16.2,
+    26.7,
+    5.6
+   ],
+   "foods": [
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 71.0
+   },
+   "ref_achieved": [
+    16.33,
+    0.0,
+    0.852
+   ]
+  },
+  {
+   "target": [
+    16.4,
+    56.7,
+    0.8
+   ],
+   "foods": [
+    "rice",
+    "chicken",
+    "pb"
+   ],
+   "locked": {
+    "chicken": 225.0
+   },
+   "ref_grams": {
+    "chicken": 225.0,
+    "rice": 69.0,
+    "pb": 0.0
+   },
+   "ref_achieved": [
+    56.58,
+    55.2,
+    3.114
+   ]
+  },
+  {
+   "target": [
+    2.0,
+    10.1,
+    50.7
+   ],
+   "foods": [
+    "oil",
+    "oats",
+    "chicken",
+    "pb",
+    "rice"
+   ],
+   "locked": {
+    "oats": 47.0
+   },
+   "ref_grams": {
+    "oats": 47.0,
+    "oil": 47.0,
+    "chicken": 0.0,
+    "pb": 0.0,
+    "rice": 0.0
+   },
+   "ref_achieved": [
+    6.11,
+    31.96,
+    50.29
+   ]
+  },
+  {
+   "target": [
+    63.7,
+    54.1,
+    43.8
+   ],
+   "foods": [
+    "oil",
+    "oats",
+    "broccoli",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 39.0,
+    "oats": 15.0,
+    "broccoli": 1000.0,
+    "rice": 0.0
+   },
+   "ref_achieved": [
+    29.95,
+    80.2,
+    44.05
+   ]
+  },
+  {
+   "target": [
+    20.8,
+    46.7,
+    76.2
+   ],
+   "foods": [
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 95.0
+   },
+   "ref_achieved": [
+    21.85,
+    0.0,
+    1.14
+   ]
+  },
+  {
+   "target": [
+    71.3,
+    5.3,
+    10.3
+   ],
+   "foods": [
+    "oil",
+    "pb",
+    "broccoli",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 0.0,
+    "pb": 100.0,
+    "broccoli": 492.0,
+    "oats": 0.0
+   },
+   "ref_achieved": [
+    38.776,
+    54.44,
+    51.968
+   ]
+  },
+  {
+   "target": [
+    68.1,
+    78.2,
+    19.5
+   ],
+   "foods": [
+    "broccoli",
+    "pb",
+    "oil",
+    "rice",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 1000.0,
+    "pb": 92.0,
+    "oil": 0.0,
+    "rice": 0.0,
+    "oats": 0.0
+   },
+   "ref_achieved": [
+    51.0,
+    88.4,
+    50.0
+   ]
+  },
+  {
+   "target": [
+    16.0,
+    57.0,
+    40.2
+   ],
+   "foods": [
+    "oil",
+    "oats",
+    "rice",
+    "chicken",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 39.0,
+    "oats": 0.0,
+    "rice": 59.0,
+    "chicken": 35.0,
+    "broccoli": 136.0
+   },
+   "ref_achieved": [
+    15.988,
+    56.72,
+    40.318
+   ]
+  },
+  {
+   "target": [
+    7.7,
+    3.7,
+    79.2
+   ],
+   "foods": [
+    "rice",
+    "oil",
+    "broccoli",
+    "oats",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "oil": 60.0,
+    "broccoli": 0.0,
+    "oats": 0.0,
+    "pb": 33.0
+   },
+   "ref_achieved": [
+    8.25,
+    6.6,
+    76.5
+   ]
+  },
+  {
+   "target": [
+    76.1,
+    75.9,
+    10.0
+   ],
+   "foods": [
+    "pb",
+    "chicken",
+    "broccoli",
+    "oats"
+   ],
+   "locked": {
+    "chicken": 210.0
+   },
+   "ref_grams": {
+    "chicken": 210.0,
+    "pb": 7.0,
+    "broccoli": 732.0,
+    "oats": 35.0
+   },
+   "ref_achieved": [
+    75.096,
+    76.44,
+    11.398
+   ]
+  },
+  {
+   "target": [
+    16.8,
+    65.4,
+    1.1
+   ],
+   "foods": [
+    "oil",
+    "oats",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 0.0,
+    "oats": 99.0,
+    "pb": 1.0
+   },
+   "ref_achieved": [
+    13.12,
+    67.52,
+    7.43
+   ]
+  },
+  {
+   "target": [
+    43.1,
+    4.6,
+    34.3
+   ],
+   "foods": [
+    "rice",
+    "oil",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 6.0,
+    "oil": 32.0,
+    "chicken": 186.0
+   },
+   "ref_achieved": [
+    43.2,
+    4.8,
+    34.268
+   ]
+  },
+  {
+   "target": [
+    40.3,
+    23.7,
+    52.5
+   ],
+   "foods": [
+    "oats",
+    "oil",
+    "broccoli",
+    "rice",
+    "chicken"
+   ],
+   "locked": {
+    "oil": 228.0
+   },
+   "ref_grams": {
+    "oil": 228.0,
+    "oats": 0.0,
+    "broccoli": 88.0,
+    "rice": 22.0,
+    "chicken": 158.0
+   },
+   "ref_achieved": [
+    40.344,
+    23.76,
+    230.38
+   ]
+  },
+  {
+   "target": [
+    37.2,
+    68.8,
+    23.2
+   ],
+   "foods": [
+    "pb",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 66.0,
+    "oats": 90.0
+   },
+   "ref_achieved": [
+    28.2,
+    74.4,
+    39.3
+   ]
+  },
+  {
+   "target": [
+    48.2,
+    74.1,
+    4.3
+   ],
+   "foods": [
+    "oats",
+    "rice",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 142.0,
+    "rice": 0.0,
+    "oil": 0.0
+   },
+   "ref_achieved": [
+    18.46,
+    96.56,
+    9.94
+   ]
+  },
+  {
+   "target": [
+    20.7,
+    49.9,
+    7.8
+   ],
+   "foods": [
+    "pb",
+    "rice",
+    "oats",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 25.0,
+    "rice": 0.0,
+    "oats": 71.0,
+    "oil": 0.0
+   },
+   "ref_achieved": [
+    15.48,
+    53.28,
+    17.47
+   ]
+  },
+  {
+   "target": [
+    78.5,
+    71.1,
+    64.5
+   ],
+   "foods": [
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    25.0,
+    20.0,
+    50.0
+   ]
+  },
+  {
+   "target": [
+    49.8,
+    41.7,
+    16.0
+   ],
+   "foods": [
+    "oil",
+    "broccoli",
+    "chicken",
+    "rice",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 12.0,
+    "broccoli": 147.0,
+    "chicken": 183.0,
+    "rice": 30.0,
+    "oats": 11.0
+   },
+   "ref_achieved": [
+    49.736,
+    41.77,
+    15.734
+   ]
+  },
+  {
+   "target": [
+    11.3,
+    1.1,
+    21.1
+   ],
+   "foods": [
+    "pb",
+    "rice",
+    "oil",
+    "oats",
+    "chicken"
+   ],
+   "locked": {
+    "chicken": 150.0
+   },
+   "ref_grams": {
+    "chicken": 150.0,
+    "pb": 0.0,
+    "rice": 1.0,
+    "oil": 19.0,
+    "oats": 0.0
+   },
+   "ref_achieved": [
+    34.57,
+    0.8,
+    20.806
+   ]
+  },
+  {
+   "target": [
+    34.3,
+    16.4,
+    53.2
+   ],
+   "foods": [
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 35.0
+   },
+   "ref_achieved": [
+    2.45,
+    28.0,
+    0.21
+   ]
+  },
+  {
+   "target": [
+    72.4,
+    19.7,
+    57.5
+   ],
+   "foods": [
+    "rice",
+    "pb",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "pb": 100.0,
+    "oats": 47.0
+   },
+   "ref_achieved": [
+    31.11,
+    51.96,
+    53.29
+   ]
+  },
+  {
+   "target": [
+    70.2,
+    53.8,
+    7.5
+   ],
+   "foods": [
+    "broccoli",
+    "pb",
+    "oats"
+   ],
+   "locked": {
+    "pb": 248.0
+   },
+   "ref_grams": {
+    "pb": 248.0,
+    "broccoli": 151.0,
+    "oats": 0.0
+   },
+   "ref_achieved": [
+    66.228,
+    60.17,
+    124.604
+   ]
+  },
+  {
+   "target": [
+    76.7,
+    1.2,
+    12.9
+   ],
+   "foods": [
+    "oats",
+    "chicken"
+   ],
+   "locked": {
+    "chicken": 123.0
+   },
+   "ref_grams": {
+    "chicken": 123.0,
+    "oats": 50.0
+   },
+   "ref_achieved": [
+    34.79,
+    34.0,
+    4.976
+   ]
+  },
+  {
+   "target": [
+    25.5,
+    8.7,
+    64.9
+   ],
+   "foods": [
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 60.0
+   },
+   "ref_achieved": [
+    0.0,
+    0.0,
+    60.0
+   ]
+  },
+  {
+   "target": [
+    43.4,
+    50.4,
+    34.3
+   ],
+   "foods": [
+    "pb",
+    "broccoli",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 81.0,
+    "broccoli": 610.0,
+    "oats": 0.0
+   },
+   "ref_achieved": [
+    37.33,
+    58.9,
+    42.94
+   ]
+  },
+  {
+   "target": [
+    40.9,
+    9.1,
+    45.1
+   ],
+   "foods": [
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 664.0
+   },
+   "ref_achieved": [
+    18.592,
+    46.48,
+    2.656
+   ]
+  },
+  {
+   "target": [
+    20.6,
+    79.3,
+    57.6
+   ],
+   "foods": [
+    "rice",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "oats": 128.0
+   },
+   "ref_achieved": [
+    16.64,
+    87.04,
+    8.96
+   ]
+  },
+  {
+   "target": [
+    57.5,
+    41.3,
+    69.9
+   ],
+   "foods": [
+    "pb",
+    "rice",
+    "broccoli",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 100.0,
+    "rice": 0.0,
+    "broccoli": 641.0,
+    "oats": 0.0
+   },
+   "ref_achieved": [
+    42.948,
+    64.87,
+    52.564
+   ]
+  },
+  {
+   "target": [
+    55.6,
+    32.7,
+    74.8
+   ],
+   "foods": [
+    "chicken",
+    "rice",
+    "oats",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 122.0,
+    "rice": 0.0,
+    "oats": 22.0,
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    55.92,
+    34.96,
+    53.004
+   ]
+  },
+  {
+   "target": [
+    48.4,
+    5.9,
+    39.8
+   ],
+   "foods": [
+    "pb",
+    "chicken"
+   ],
+   "locked": {
+    "chicken": 142.0
+   },
+   "ref_grams": {
+    "chicken": 142.0,
+    "pb": 67.0
+   },
+   "ref_achieved": [
+    49.41,
+    13.4,
+    35.204
+   ]
+  },
+  {
+   "target": [
+    65.8,
+    74.9,
+    26.3
+   ],
+   "foods": [
+    "chicken",
+    "oil",
+    "rice",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 243.0,
+    "oil": 22.0,
+    "rice": 80.0,
+    "broccoli": 157.0
+   },
+   "ref_achieved": [
+    65.886,
+    74.99,
+    26.024
+   ]
+  },
+  {
+   "target": [
+    9.5,
+    69.6,
+    52.2
+   ],
+   "foods": [
+    "broccoli",
+    "oats",
+    "chicken"
+   ],
+   "locked": {
+    "broccoli": 79.0
+   },
+   "ref_grams": {
+    "broccoli": 79.0,
+    "oats": 95.0,
+    "chicken": 0.0
+   },
+   "ref_achieved": [
+    14.562,
+    70.13,
+    6.966
+   ]
+  },
+  {
+   "target": [
+    35.9,
+    11.8,
+    41.1
+   ],
+   "foods": [
+    "pb",
+    "oats",
+    "chicken",
+    "oil"
+   ],
+   "locked": {
+    "oil": 142.0
+   },
+   "ref_grams": {
+    "oil": 142.0,
+    "pb": 0.0,
+    "oats": 17.0,
+    "chicken": 146.0
+   },
+   "ref_achieved": [
+    35.79,
+    11.56,
+    144.942
+   ]
+  },
+  {
+   "target": [
+    78.7,
+    36.8,
+    61.6
+   ],
+   "foods": [
+    "oil",
+    "chicken",
+    "oats",
+    "broccoli"
+   ],
+   "locked": {
+    "chicken": 150.0
+   },
+   "ref_grams": {
+    "chicken": 150.0,
+    "oil": 56.0,
+    "oats": 0.0,
+    "broccoli": 927.0
+   },
+   "ref_achieved": [
+    60.456,
+    64.89,
+    61.508
+   ]
+  },
+  {
+   "target": [
+    15.8,
+    21.3,
+    26.0
+   ],
+   "foods": [
+    "oats",
+    "oil",
+    "rice",
+    "broccoli",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 0.0,
+    "oil": 25.0,
+    "rice": 15.0,
+    "broccoli": 133.0,
+    "chicken": 48.0
+   },
+   "ref_achieved": [
+    15.814,
+    21.31,
+    26.198
+   ]
+  },
+  {
+   "target": [
+    29.0,
+    65.4,
+    44.0
+   ],
+   "foods": [
+    "broccoli",
+    "oats",
+    "rice",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 137.0,
+    "oats": 6.0,
+    "rice": 43.0,
+    "pb": 85.0
+   },
+   "ref_achieved": [
+    28.876,
+    65.07,
+    43.726
+   ]
+  },
+  {
+   "target": [
+    52.4,
+    23.2,
+    7.0
+   ],
+   "foods": [
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    25.0,
+    20.0,
+    50.0
+   ]
+  },
+  {
+   "target": [
+    35.2,
+    30.8,
+    46.6
+   ],
+   "foods": [
+    "chicken",
+    "broccoli",
+    "rice",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 37.0,
+    "broccoli": 132.0,
+    "rice": 4.0,
+    "pb": 91.0
+   },
+   "ref_achieved": [
+    35.236,
+    30.64,
+    46.496
+   ]
+  },
+  {
+   "target": [
+    27.0,
+    32.6,
+    49.1
+   ],
+   "foods": [
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 120.0
+   },
+   "ref_achieved": [
+    27.6,
+    0.0,
+    1.44
+   ]
+  },
+  {
+   "target": [
+    77.1,
+    22.6,
+    10.2
+   ],
+   "foods": [
+    "broccoli",
+    "rice",
+    "oil",
+    "oats",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 156.0,
+    "rice": 0.0,
+    "oil": 5.0,
+    "oats": 17.0,
+    "chicken": 306.0
+   },
+   "ref_achieved": [
+    76.958,
+    22.48,
+    10.486
+   ]
+  },
+  {
+   "target": [
+    40.7,
+    7.0,
+    62.9
+   ],
+   "foods": [
+    "rice",
+    "oil",
+    "broccoli"
+   ],
+   "locked": {
+    "oil": 242.0
+   },
+   "ref_grams": {
+    "oil": 242.0,
+    "rice": 0.0,
+    "broccoli": 621.0
+   },
+   "ref_achieved": [
+    17.388,
+    43.47,
+    244.484
+   ]
+  },
+  {
+   "target": [
+    38.4,
+    10.0,
+    39.9
+   ],
+   "foods": [
+    "oats",
+    "rice",
+    "chicken",
+    "broccoli"
+   ],
+   "locked": {
+    "broccoli": 164.0
+   },
+   "ref_grams": {
+    "broccoli": 164.0,
+    "oats": 5.0,
+    "rice": 0.0,
+    "chicken": 146.0
+   },
+   "ref_achieved": [
+    38.822,
+    14.88,
+    2.758
+   ]
+  },
+  {
+   "target": [
+    38.2,
+    39.4,
+    79.2
+   ],
+   "foods": [
+    "oats",
+    "broccoli",
+    "oil"
+   ],
+   "locked": {
+    "oats": 133.0
+   },
+   "ref_grams": {
+    "oats": 133.0,
+    "broccoli": 294.0,
+    "oil": 60.0
+   },
+   "ref_achieved": [
+    25.522,
+    111.02,
+    70.486
+   ]
+  },
+  {
+   "target": [
+    20.9,
+    44.5,
+    25.6
+   ],
+   "foods": [
+    "rice",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "oats": 80.0
+   },
+   "ref_achieved": [
+    10.4,
+    54.4,
+    5.6
+   ]
+  },
+  {
+   "target": [
+    16.5,
+    6.7,
+    57.0
+   ],
+   "foods": [
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 75.0
+   },
+   "ref_achieved": [
+    17.25,
+    0.0,
+    0.9
+   ]
+  },
+  {
+   "target": [
+    72.0,
+    71.5,
+    74.9
+   ],
+   "foods": [
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 118.0
+   },
+   "ref_achieved": [
+    8.26,
+    94.4,
+    0.708
+   ]
+  },
+  {
+   "target": [
+    31.0,
+    77.0,
+    61.1
+   ],
+   "foods": [
+    "oil",
+    "rice"
+   ],
+   "locked": {
+    "oil": 230.0
+   },
+   "ref_grams": {
+    "oil": 230.0,
+    "rice": 107.0
+   },
+   "ref_achieved": [
+    7.49,
+    85.6,
+    230.642
+   ]
+  },
+  {
+   "target": [
+    28.7,
+    7.9,
+    58.2
+   ],
+   "foods": [
+    "rice",
+    "oil",
+    "oats",
+    "broccoli"
+   ],
+   "locked": {
+    "broccoli": 102.0
+   },
+   "ref_grams": {
+    "broccoli": 102.0,
+    "rice": 0.0,
+    "oil": 56.0,
+    "oats": 26.0
+   },
+   "ref_achieved": [
+    6.236,
+    24.82,
+    58.228
+   ]
+  },
+  {
+   "target": [
+    22.7,
+    80.0,
+    73.0
+   ],
+   "foods": [
+    "broccoli",
+    "chicken",
+    "pb",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 0.0,
+    "chicken": 0.0,
+    "pb": 95.0,
+    "oats": 80.0
+   },
+   "ref_achieved": [
+    34.15,
+    73.4,
+    53.1
+   ]
+  },
+  {
+   "target": [
+    71.2,
+    47.8,
+    53.7
+   ],
+   "foods": [
+    "pb",
+    "oil",
+    "oats",
+    "chicken",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 61.0,
+    "oil": 17.0,
+    "oats": 37.0,
+    "chicken": 204.0,
+    "broccoli": 151.0
+   },
+   "ref_achieved": [
+    71.208,
+    47.93,
+    53.142
+   ]
+  },
+  {
+   "target": [
+    7.3,
+    40.0,
+    4.0
+   ],
+   "foods": [
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 32.0
+   },
+   "ref_achieved": [
+    7.36,
+    0.0,
+    0.384
+   ]
+  },
+  {
+   "target": [
+    58.9,
+    52.6,
+    49.3
+   ],
+   "foods": [
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 49.0
+   },
+   "ref_achieved": [
+    0.0,
+    0.0,
+    49.0
+   ]
+  },
+  {
+   "target": [
+    42.7,
+    4.0,
+    75.1
+   ],
+   "foods": [
+    "broccoli",
+    "chicken",
+    "rice",
+    "pb"
+   ],
+   "locked": {
+    "rice": 141.0
+   },
+   "ref_grams": {
+    "rice": 141.0,
+    "broccoli": 0.0,
+    "chicken": 35.0,
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    42.92,
+    132.8,
+    51.266
+   ]
+  },
+  {
+   "target": [
+    27.8,
+    6.0,
+    56.6
+   ],
+   "foods": [
+    "oil",
+    "broccoli",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 55.0,
+    "broccoli": 436.0,
+    "rice": 0.0
+   },
+   "ref_achieved": [
+    12.208,
+    30.52,
+    56.744
+   ]
+  },
+  {
+   "target": [
+    41.8,
+    49.2,
+    79.2
+   ],
+   "foods": [
+    "chicken",
+    "broccoli",
+    "oats",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 139.0,
+    "broccoli": 0.0,
+    "oats": 82.0,
+    "rice": 0.0
+   },
+   "ref_achieved": [
+    42.63,
+    55.76,
+    7.408
+   ]
+  },
+  {
+   "target": [
+    33.0,
+    29.3,
+    39.5
+   ],
+   "foods": [
+    "rice",
+    "broccoli",
+    "oil"
+   ],
+   "locked": {
+    "broccoli": 68.0
+   },
+   "ref_grams": {
+    "broccoli": 68.0,
+    "rice": 43.0,
+    "oil": 39.0
+   },
+   "ref_achieved": [
+    4.914,
+    39.16,
+    39.53
+   ]
+  },
+  {
+   "target": [
+    27.5,
+    49.5,
+    72.2
+   ],
+   "foods": [
+    "chicken",
+    "oil",
+    "rice",
+    "pb",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 66.0,
+    "oil": 60.0,
+    "rice": 45.0,
+    "pb": 21.0,
+    "broccoli": 138.0
+   },
+   "ref_achieved": [
+    27.444,
+    49.86,
+    72.114
+   ]
+  },
+  {
+   "target": [
+    35.5,
+    52.0,
+    76.8
+   ],
+   "foods": [
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 60.0
+   },
+   "ref_achieved": [
+    0.0,
+    0.0,
+    60.0
+   ]
+  },
+  {
+   "target": [
+    50.8,
+    69.6,
+    26.1
+   ],
+   "foods": [
+    "pb",
+    "oil",
+    "chicken",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 20.0,
+    "oil": 8.0,
+    "chicken": 145.0,
+    "oats": 97.0
+   },
+   "ref_achieved": [
+    50.96,
+    69.96,
+    26.53
+   ]
+  },
+  {
+   "target": [
+    54.5,
+    16.1,
+    4.9
+   ],
+   "foods": [
+    "rice",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "broccoli": 891.0
+   },
+   "ref_achieved": [
+    24.948,
+    62.37,
+    3.564
+   ]
+  },
+  {
+   "target": [
+    53.3,
+    25.7,
+    52.7
+   ],
+   "foods": [
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 91.0
+   },
+   "ref_achieved": [
+    11.83,
+    61.88,
+    6.37
+   ]
+  },
+  {
+   "target": [
+    49.4,
+    35.8,
+    18.0
+   ],
+   "foods": [
+    "chicken",
+    "rice",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 201.0,
+    "rice": 45.0,
+    "oil": 15.0
+   },
+   "ref_achieved": [
+    49.38,
+    36.0,
+    17.682
+   ]
+  },
+  {
+   "target": [
+    59.6,
+    29.1,
+    7.0
+   ],
+   "foods": [
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 1000.0
+   },
+   "ref_achieved": [
+    28.0,
+    70.0,
+    4.0
+   ]
+  },
+  {
+   "target": [
+    49.8,
+    73.7,
+    71.0
+   ],
+   "foods": [
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 60.0
+   },
+   "ref_achieved": [
+    0.0,
+    0.0,
+    60.0
+   ]
+  },
+  {
+   "target": [
+    61.7,
+    20.9,
+    55.8
+   ],
+   "foods": [
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 271.0
+   },
+   "ref_achieved": [
+    62.33,
+    0.0,
+    3.252
+   ]
+  },
+  {
+   "target": [
+    42.4,
+    55.6,
+    51.0
+   ],
+   "foods": [
+    "pb",
+    "rice",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 100.0,
+    "rice": 0.0,
+    "oats": 62.0
+   },
+   "ref_achieved": [
+    33.06,
+    62.16,
+    54.34
+   ]
+  },
+  {
+   "target": [
+    45.0,
+    1.4,
+    39.9
+   ],
+   "foods": [
+    "broccoli",
+    "pb",
+    "chicken",
+    "oil",
+    "rice"
+   ],
+   "locked": {
+    "broccoli": 28.0
+   },
+   "ref_grams": {
+    "broccoli": 28.0,
+    "pb": 0.0,
+    "chicken": 192.0,
+    "oil": 37.0,
+    "rice": 0.0
+   },
+   "ref_achieved": [
+    44.944,
+    1.96,
+    39.416
+   ]
+  },
+  {
+   "target": [
+    28.4,
+    8.4,
+    49.6
+   ],
+   "foods": [
+    "oats",
+    "oil"
+   ],
+   "locked": {
+    "oil": 224.0
+   },
+   "ref_grams": {
+    "oil": 224.0,
+    "oats": 38.0
+   },
+   "ref_achieved": [
+    4.94,
+    25.84,
+    226.66
+   ]
+  },
+  {
+   "target": [
+    39.6,
+    9.4,
+    25.5
+   ],
+   "foods": [
+    "rice",
+    "chicken"
+   ],
+   "locked": {
+    "rice": 247.0
+   },
+   "ref_grams": {
+    "rice": 247.0,
+    "chicken": 98.0
+   },
+   "ref_achieved": [
+    39.83,
+    197.6,
+    2.658
+   ]
+  },
+  {
+   "target": [
+    34.6,
+    23.1,
+    65.7
+   ],
+   "foods": [
+    "oil",
+    "pb",
+    "rice",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 15.0,
+    "pb": 100.0,
+    "rice": 0.0,
+    "oats": 13.0
+   },
+   "ref_achieved": [
+    26.69,
+    28.84,
+    65.91
+   ]
+  },
+  {
+   "target": [
+    79.4,
+    48.9,
+    69.7
+   ],
+   "foods": [
+    "chicken",
+    "pb",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 236.0,
+    "pb": 100.0,
+    "oil": 17.0
+   },
+   "ref_achieved": [
+    79.28,
+    20.0,
+    69.832
+   ]
+  },
+  {
+   "target": [
+    74.1,
+    24.1,
+    31.6
+   ],
+   "foods": [
+    "rice",
+    "oats",
+    "pb",
+    "oil",
+    "broccoli"
+   ],
+   "locked": {
+    "oil": 177.0
+   },
+   "ref_grams": {
+    "oil": 177.0,
+    "rice": 0.0,
+    "oats": 0.0,
+    "pb": 82.0,
+    "broccoli": 782.0
+   },
+   "ref_achieved": [
+    42.396,
+    71.14,
+    221.128
+   ]
+  },
+  {
+   "target": [
+    52.8,
+    53.8,
+    37.1
+   ],
+   "foods": [
+    "oats",
+    "pb",
+    "rice"
+   ],
+   "locked": {
+    "oats": 189.0
+   },
+   "ref_grams": {
+    "oats": 189.0,
+    "pb": 74.0,
+    "rice": 0.0
+   },
+   "ref_achieved": [
+    43.07,
+    143.32,
+    50.23
+   ]
+  },
+  {
+   "target": [
+    18.8,
+    64.0,
+    65.4
+   ],
+   "foods": [
+    "chicken",
+    "pb",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 0.0,
+    "pb": 100.0,
+    "oil": 15.0
+   },
+   "ref_achieved": [
+    25.0,
+    20.0,
+    65.0
+   ]
+  },
+  {
+   "target": [
+    65.8,
+    58.2,
+    59.7
+   ],
+   "foods": [
+    "oil",
+    "chicken",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 51.0,
+    "chicken": 238.0,
+    "oats": 86.0
+   },
+   "ref_achieved": [
+    65.92,
+    58.48,
+    59.876
+   ]
+  },
+  {
+   "target": [
+    23.8,
+    53.8,
+    41.4
+   ],
+   "foods": [
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 41.0
+   },
+   "ref_achieved": [
+    0.0,
+    0.0,
+    41.0
+   ]
+  },
+  {
+   "target": [
+    33.7,
+    68.1,
+    54.5
+   ],
+   "foods": [
+    "pb",
+    "chicken",
+    "oats",
+    "broccoli",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 100.0,
+    "chicken": 0.0,
+    "oats": 51.0,
+    "broccoli": 48.0,
+    "rice": 13.0
+   },
+   "ref_achieved": [
+    33.884,
+    68.44,
+    53.84
+   ]
+  },
+  {
+   "target": [
+    40.6,
+    7.4,
+    31.4
+   ],
+   "foods": [
+    "pb",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 98.0,
+    "broccoli": 109.0
+   },
+   "ref_achieved": [
+    27.552,
+    27.23,
+    49.436
+   ]
+  },
+  {
+   "target": [
+    69.2,
+    40.7,
+    63.8
+   ],
+   "foods": [
+    "oil",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 60.0,
+    "chicken": 301.0
+   },
+   "ref_achieved": [
+    69.23,
+    0.0,
+    63.612
+   ]
+  },
+  {
+   "target": [
+    24.4,
+    79.1,
+    26.8
+   ],
+   "foods": [
+    "oil",
+    "pb",
+    "rice",
+    "broccoli"
+   ],
+   "locked": {
+    "pb": 236.0
+   },
+   "ref_grams": {
+    "pb": 236.0,
+    "oil": 0.0,
+    "rice": 39.0,
+    "broccoli": 0.0
+   },
+   "ref_achieved": [
+    61.73,
+    78.4,
+    118.234
+   ]
+  },
+  {
+   "target": [
+    68.3,
+    51.8,
+    34.2
+   ],
+   "foods": [
+    "chicken",
+    "pb"
+   ],
+   "locked": {
+    "chicken": 35.0
+   },
+   "ref_grams": {
+    "chicken": 35.0,
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    33.05,
+    20.0,
+    50.42
+   ]
+  },
+  {
+   "target": [
+    32.6,
+    73.9,
+    42.9
+   ],
+   "foods": [
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 43.0
+   },
+   "ref_achieved": [
+    0.0,
+    0.0,
+    43.0
+   ]
+  },
+  {
+   "target": [
+    11.7,
+    44.3,
+    12.7
+   ],
+   "foods": [
+    "pb",
+    "oil"
+   ],
+   "locked": {
+    "oil": 237.0
+   },
+   "ref_grams": {
+    "oil": 237.0,
+    "pb": 38.0
+   },
+   "ref_achieved": [
+    9.5,
+    7.6,
+    256.0
+   ]
+  },
+  {
+   "target": [
+    0.9,
+    57.2,
+    20.5
+   ],
+   "foods": [
+    "broccoli",
+    "pb",
+    "chicken",
+    "oil",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 0.0,
+    "pb": 0.0,
+    "chicken": 0.0,
+    "oil": 15.0,
+    "oats": 74.0
+   },
+   "ref_achieved": [
+    9.62,
+    50.32,
+    20.18
+   ]
+  },
+  {
+   "target": [
+    79.2,
+    63.8,
+    5.5
+   ],
+   "foods": [
+    "broccoli",
+    "chicken",
+    "rice",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 162.0,
+    "chicken": 305.0,
+    "rice": 66.0,
+    "oil": 1.0
+   },
+   "ref_achieved": [
+    79.306,
+    64.14,
+    5.704
+   ]
+  },
+  {
+   "target": [
+    19.8,
+    76.8,
+    59.6
+   ],
+   "foods": [
+    "pb",
+    "chicken",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 90.0,
+    "chicken": 0.0,
+    "rice": 70.0
+   },
+   "ref_achieved": [
+    27.4,
+    74.0,
+    45.42
+   ]
+  },
+  {
+   "target": [
+    25.3,
+    31.3,
+    35.3
+   ],
+   "foods": [
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 69.0
+   },
+   "ref_achieved": [
+    8.97,
+    46.92,
+    4.83
+   ]
+  },
+  {
+   "target": [
+    33.7,
+    61.7,
+    6.1
+   ],
+   "foods": [
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 89.0
+   },
+   "ref_achieved": [
+    6.23,
+    71.2,
+    0.534
+   ]
+  },
+  {
+   "target": [
+    8.4,
+    14.5,
+    24.7
+   ],
+   "foods": [
+    "broccoli",
+    "rice",
+    "chicken",
+    "oats",
+    "oil"
+   ],
+   "locked": {
+    "oil": 248.0
+   },
+   "ref_grams": {
+    "oil": 248.0,
+    "broccoli": 112.0,
+    "rice": 8.0,
+    "chicken": 20.0,
+    "oats": 0.0
+   },
+   "ref_achieved": [
+    8.296,
+    14.24,
+    248.736
+   ]
+  },
+  {
+   "target": [
+    73.9,
+    47.6,
+    27.9
+   ],
+   "foods": [
+    "broccoli",
+    "oats",
+    "pb",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 154.0,
+    "oats": 41.0,
+    "pb": 43.0,
+    "chicken": 232.0
+   },
+   "ref_achieved": [
+    73.752,
+    47.26,
+    27.77
+   ]
+  },
+  {
+   "target": [
+    11.0,
+    68.1,
+    50.0
+   ],
+   "foods": [
+    "oil",
+    "pb",
+    "rice",
+    "oats",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 47.0,
+    "pb": 2.0,
+    "rice": 56.0,
+    "oats": 19.0,
+    "broccoli": 144.0
+   },
+   "ref_achieved": [
+    10.922,
+    68.2,
+    50.242
+   ]
+  },
+  {
+   "target": [
+    29.3,
+    63.7,
+    52.9
+   ],
+   "foods": [
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    25.0,
+    20.0,
+    50.0
+   ]
+  },
+  {
+   "target": [
+    32.1,
+    51.0,
+    55.0
+   ],
+   "foods": [
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 55.0
+   },
+   "ref_achieved": [
+    0.0,
+    0.0,
+    55.0
+   ]
+  },
+  {
+   "target": [
+    15.1,
+    77.3,
+    37.3
+   ],
+   "foods": [
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 37.0
+   },
+   "ref_achieved": [
+    0.0,
+    0.0,
+    37.0
+   ]
+  },
+  {
+   "target": [
+    18.9,
+    5.0,
+    15.3
+   ],
+   "foods": [
+    "pb",
+    "chicken",
+    "oil"
+   ],
+   "locked": {
+    "pb": 110.0
+   },
+   "ref_grams": {
+    "pb": 110.0,
+    "chicken": 0.0,
+    "oil": 0.0
+   },
+   "ref_achieved": [
+    27.5,
+    22.0,
+    55.0
+   ]
+  },
+  {
+   "target": [
+    1.7,
+    8.3,
+    64.6
+   ],
+   "foods": [
+    "rice",
+    "broccoli",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "broccoli": 0.0,
+    "oats": 21.0
+   },
+   "ref_achieved": [
+    2.73,
+    14.28,
+    1.47
+   ]
+  },
+  {
+   "target": [
+    17.7,
+    68.7,
+    65.9
+   ],
+   "foods": [
+    "rice",
+    "pb",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 58.0,
+    "pb": 94.0,
+    "oats": 0.0
+   },
+   "ref_achieved": [
+    27.56,
+    65.2,
+    47.348
+   ]
+  },
+  {
+   "target": [
+    63.9,
+    69.0,
+    39.1
+   ],
+   "foods": [
+    "oats",
+    "broccoli",
+    "chicken",
+    "oil",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 36.0,
+    "broccoli": 152.0,
+    "chicken": 226.0,
+    "oil": 33.0,
+    "rice": 42.0
+   },
+   "ref_achieved": [
+    63.856,
+    68.72,
+    39.092
+   ]
+  },
+  {
+   "target": [
+    21.1,
+    38.5,
+    26.8
+   ],
+   "foods": [
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 635.0
+   },
+   "ref_achieved": [
+    17.78,
+    44.45,
+    2.54
+   ]
+  },
+  {
+   "target": [
+    30.7,
+    37.1,
+    76.5
+   ],
+   "foods": [
+    "oats",
+    "rice",
+    "oil",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 0.0,
+    "rice": 0.0,
+    "oil": 60.0,
+    "broccoli": 750.0
+   },
+   "ref_achieved": [
+    21.0,
+    52.5,
+    63.0
+   ]
+  },
+  {
+   "target": [
+    54.2,
+    21.6,
+    29.8
+   ],
+   "foods": [
+    "oats",
+    "rice"
+   ],
+   "locked": {
+    "oats": 76.0
+   },
+   "ref_grams": {
+    "oats": 76.0,
+    "rice": 19.0
+   },
+   "ref_achieved": [
+    11.21,
+    66.88,
+    5.434
+   ]
+  },
+  {
+   "target": [
+    18.4,
+    71.7,
+    68.4
+   ],
+   "foods": [
+    "pb",
+    "chicken",
+    "oats",
+    "rice",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 98.0,
+    "chicken": 0.0,
+    "oats": 0.0,
+    "rice": 61.0,
+    "broccoli": 0.0
+   },
+   "ref_achieved": [
+    28.77,
+    68.4,
+    49.366
+   ]
+  },
+  {
+   "target": [
+    17.8,
+    70.0,
+    60.9
+   ],
+   "foods": [
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 877.0
+   },
+   "ref_achieved": [
+    24.556,
+    61.39,
+    3.508
+   ]
+  },
+  {
+   "target": [
+    30.3,
+    26.5,
+    4.9
+   ],
+   "foods": [
+    "pb",
+    "oats",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 32.0,
+    "oats": 0.0,
+    "broccoli": 478.0
+   },
+   "ref_achieved": [
+    21.384,
+    39.86,
+    17.912
+   ]
+  },
+  {
+   "target": [
+    30.7,
+    26.6,
+    30.1
+   ],
+   "foods": [
+    "broccoli",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 667.0,
+    "oats": 0.0
+   },
+   "ref_achieved": [
+    18.676,
+    46.69,
+    2.668
+   ]
+  },
+  {
+   "target": [
+    63.6,
+    41.1,
+    36.7
+   ],
+   "foods": [
+    "oil",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 33.0,
+    "broccoli": 1000.0
+   },
+   "ref_achieved": [
+    28.0,
+    70.0,
+    37.0
+   ]
+  },
+  {
+   "target": [
+    67.9,
+    64.9,
+    53.5
+   ],
+   "foods": [
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 1000.0
+   },
+   "ref_achieved": [
+    28.0,
+    70.0,
+    4.0
+   ]
+  },
+  {
+   "target": [
+    20.6,
+    9.6,
+    31.8
+   ],
+   "foods": [
+    "oil",
+    "broccoli",
+    "chicken",
+    "oats"
+   ],
+   "locked": {
+    "broccoli": 168.0
+   },
+   "ref_grams": {
+    "broccoli": 168.0,
+    "oil": 30.0,
+    "chicken": 69.0,
+    "oats": 0.0
+   },
+   "ref_achieved": [
+    20.574,
+    11.76,
+    31.5
+   ]
+  },
+  {
+   "target": [
+    51.3,
+    67.1,
+    2.9
+   ],
+   "foods": [
+    "pb",
+    "broccoli",
+    "oats"
+   ],
+   "locked": {
+    "oats": 121.0
+   },
+   "ref_grams": {
+    "oats": 121.0,
+    "pb": 46.0,
+    "broccoli": 241.0
+   },
+   "ref_achieved": [
+    33.978,
+    108.35,
+    32.434
+   ]
+  },
+  {
+   "target": [
+    27.5,
+    52.4,
+    42.5
+   ],
+   "foods": [
+    "pb",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 91.0,
+    "rice": 44.0
+   },
+   "ref_achieved": [
+    25.83,
+    53.4,
+    45.764
+   ]
+  },
+  {
+   "target": [
+    57.8,
+    5.5,
+    75.7
+   ],
+   "foods": [
+    "rice",
+    "oil",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "oil": 26.0,
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    25.0,
+    20.0,
+    76.0
+   ]
+  },
+  {
+   "target": [
+    19.8,
+    21.2,
+    29.1
+   ],
+   "foods": [
+    "pb",
+    "broccoli",
+    "rice",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 59.0,
+    "broccoli": 151.0,
+    "rice": 0.0,
+    "oats": 0.0
+   },
+   "ref_achieved": [
+    18.978,
+    22.37,
+    30.104
+   ]
+  },
+  {
+   "target": [
+    16.1,
+    1.0,
+    78.2
+   ],
+   "foods": [
+    "oats",
+    "oil",
+    "broccoli"
+   ],
+   "locked": {
+    "oil": 139.0
+   },
+   "ref_grams": {
+    "oil": 139.0,
+    "oats": 0.0,
+    "broccoli": 232.0
+   },
+   "ref_achieved": [
+    6.496,
+    16.24,
+    139.928
+   ]
+  },
+  {
+   "target": [
+    14.9,
+    33.4,
+    29.9
+   ],
+   "foods": [
+    "chicken",
+    "oil",
+    "rice",
+    "pb"
+   ],
+   "locked": {
+    "pb": 198.0
+   },
+   "ref_grams": {
+    "pb": 198.0,
+    "chicken": 0.0,
+    "oil": 0.0,
+    "rice": 0.0
+   },
+   "ref_achieved": [
+    49.5,
+    39.6,
+    99.0
+   ]
+  },
+  {
+   "target": [
+    41.2,
+    56.2,
+    30.9
+   ],
+   "foods": [
+    "oats",
+    "oil",
+    "pb",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 65.0,
+    "oil": 0.0,
+    "pb": 89.0,
+    "rice": 0.0
+   },
+   "ref_achieved": [
+    30.7,
+    62.0,
+    49.05
+   ]
+  },
+  {
+   "target": [
+    21.5,
+    23.2,
+    79.4
+   ],
+   "foods": [
+    "pb",
+    "broccoli"
+   ],
+   "locked": {
+    "pb": 21.0
+   },
+   "ref_grams": {
+    "pb": 21.0,
+    "broccoli": 422.0
+   },
+   "ref_achieved": [
+    17.066,
+    33.74,
+    12.188
+   ]
+  },
+  {
+   "target": [
+    12.3,
+    67.2,
+    15.7
+   ],
+   "foods": [
+    "broccoli",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 756.0,
+    "chicken": 0.0
+   },
+   "ref_achieved": [
+    21.168,
+    52.92,
+    3.024
+   ]
+  },
+  {
+   "target": [
+    20.4,
+    7.4,
+    46.9
+   ],
+   "foods": [
+    "broccoli",
+    "rice",
+    "pb",
+    "oil",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 106.0,
+    "rice": 0.0,
+    "pb": 0.0,
+    "oil": 46.0,
+    "chicken": 76.0
+   },
+   "ref_achieved": [
+    20.448,
+    7.42,
+    47.336
+   ]
+  },
+  {
+   "target": [
+    39.0,
+    36.4,
+    32.5
+   ],
+   "foods": [
+    "oats",
+    "oil",
+    "rice",
+    "chicken"
+   ],
+   "locked": {
+    "oats": 74.0
+   },
+   "ref_grams": {
+    "oats": 74.0,
+    "oil": 26.0,
+    "rice": 0.0,
+    "chicken": 128.0
+   },
+   "ref_achieved": [
+    39.06,
+    50.32,
+    32.716
+   ]
+  },
+  {
+   "target": [
+    9.1,
+    16.4,
+    42.1
+   ],
+   "foods": [
+    "rice",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "oats": 35.0
+   },
+   "ref_achieved": [
+    4.55,
+    23.8,
+    2.45
+   ]
+  },
+  {
+   "target": [
+    77.8,
+    68.2,
+    34.4
+   ],
+   "foods": [
+    "chicken",
+    "oats",
+    "oil",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 271.0,
+    "oats": 84.0,
+    "oil": 25.0,
+    "broccoli": 160.0
+   },
+   "ref_achieved": [
+    77.73,
+    68.32,
+    34.772
+   ]
+  },
+  {
+   "target": [
+    16.4,
+    53.0,
+    47.2
+   ],
+   "foods": [
+    "oil",
+    "rice",
+    "pb",
+    "broccoli"
+   ],
+   "locked": {
+    "oil": 235.0
+   },
+   "ref_grams": {
+    "oil": 235.0,
+    "rice": 22.0,
+    "pb": 0.0,
+    "broccoli": 514.0
+   },
+   "ref_achieved": [
+    15.932,
+    53.58,
+    237.188
+   ]
+  },
+  {
+   "target": [
+    31.5,
+    70.8,
+    75.6
+   ],
+   "foods": [
+    "broccoli",
+    "chicken",
+    "oil",
+    "rice",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 140.0,
+    "chicken": 69.0,
+    "oil": 60.0,
+    "rice": 69.0,
+    "pb": 28.0
+   },
+   "ref_achieved": [
+    31.62,
+    70.6,
+    75.802
+   ]
+  },
+  {
+   "target": [
+    76.8,
+    0.7,
+    26.0
+   ],
+   "foods": [
+    "pb",
+    "chicken",
+    "rice",
+    "broccoli",
+    "oats"
+   ],
+   "locked": {
+    "rice": 130.0
+   },
+   "ref_grams": {
+    "rice": 130.0,
+    "pb": 38.0,
+    "chicken": 253.0,
+    "broccoli": 0.0,
+    "oats": 0.0
+   },
+   "ref_achieved": [
+    76.79,
+    111.6,
+    22.816
+   ]
+  },
+  {
+   "target": [
+    72.0,
+    55.0,
+    29.6
+   ],
+   "foods": [
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 1000.0
+   },
+   "ref_achieved": [
+    28.0,
+    70.0,
+    4.0
+   ]
+  },
+  {
+   "target": [
+    63.7,
+    26.1,
+    67.8
+   ],
+   "foods": [
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 59.0
+   },
+   "ref_achieved": [
+    4.13,
+    47.2,
+    0.354
+   ]
+  },
+  {
+   "target": [
+    27.8,
+    6.9,
+    69.4
+   ],
+   "foods": [
+    "rice",
+    "oil",
+    "chicken",
+    "pb",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "oil": 60.0,
+    "chicken": 97.0,
+    "pb": 16.0,
+    "broccoli": 55.0
+   },
+   "ref_achieved": [
+    27.85,
+    7.05,
+    69.384
+   ]
+  },
+  {
+   "target": [
+    15.7,
+    3.5,
+    27.4
+   ],
+   "foods": [
+    "pb",
+    "oats",
+    "broccoli",
+    "rice",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 49.0,
+    "oats": 0.0,
+    "broccoli": 0.0,
+    "rice": 0.0,
+    "chicken": 15.0
+   },
+   "ref_achieved": [
+    15.7,
+    9.8,
+    24.68
+   ]
+  },
+  {
+   "target": [
+    77.8,
+    0.5,
+    23.6
+   ],
+   "foods": [
+    "chicken",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 339.0,
+    "rice": 1.0
+   },
+   "ref_achieved": [
+    78.04,
+    0.8,
+    4.074
+   ]
+  },
+  {
+   "target": [
+    11.4,
+    47.4,
+    44.4
+   ],
+   "foods": [
+    "chicken",
+    "broccoli",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 0.0,
+    "broccoli": 280.0,
+    "pb": 57.0
+   },
+   "ref_achieved": [
+    22.09,
+    31.0,
+    29.62
+   ]
+  },
+  {
+   "target": [
+    72.4,
+    71.0,
+    28.8
+   ],
+   "foods": [
+    "pb",
+    "oil",
+    "chicken",
+    "rice",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 50.0,
+    "oil": 0.0,
+    "chicken": 222.0,
+    "rice": 63.0,
+    "broccoli": 153.0
+   },
+   "ref_achieved": [
+    72.254,
+    71.11,
+    28.654
+   ]
+  },
+  {
+   "target": [
+    22.5,
+    28.0,
+    77.2
+   ],
+   "foods": [
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 68.0
+   },
+   "ref_achieved": [
+    8.84,
+    46.24,
+    4.76
+   ]
+  },
+  {
+   "target": [
+    23.8,
+    64.7,
+    9.1
+   ],
+   "foods": [
+    "chicken",
+    "pb",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 63.0,
+    "pb": 16.0,
+    "rice": 77.0
+   },
+   "ref_achieved": [
+    23.88,
+    64.8,
+    9.218
+   ]
+  },
+  {
+   "target": [
+    22.3,
+    41.7,
+    17.1
+   ],
+   "foods": [
+    "broccoli",
+    "rice",
+    "oats",
+    "oil",
+    "chicken"
+   ],
+   "locked": {
+    "chicken": 115.0
+   },
+   "ref_grams": {
+    "chicken": 115.0,
+    "broccoli": 0.0,
+    "rice": 51.0,
+    "oats": 0.0,
+    "oil": 15.0
+   },
+   "ref_achieved": [
+    30.02,
+    40.8,
+    16.686
+   ]
+  },
+  {
+   "target": [
+    19.8,
+    23.4,
+    66.6
+   ],
+   "foods": [
+    "oats",
+    "chicken",
+    "oil",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 34.0,
+    "chicken": 66.0,
+    "oil": 60.0,
+    "broccoli": 7.0
+   },
+   "ref_achieved": [
+    19.796,
+    23.61,
+    63.2
+   ]
+  },
+  {
+   "target": [
+    28.6,
+    64.4,
+    62.6
+   ],
+   "foods": [
+    "broccoli",
+    "chicken",
+    "rice",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 154.0,
+    "chicken": 85.0,
+    "rice": 67.0,
+    "oil": 60.0
+   },
+   "ref_achieved": [
+    28.552,
+    64.38,
+    62.038
+   ]
+  },
+  {
+   "target": [
+    26.5,
+    42.5,
+    48.5
+   ],
+   "foods": [
+    "broccoli",
+    "chicken",
+    "pb",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 29.0,
+    "chicken": 0.0,
+    "pb": 96.0,
+    "rice": 27.0
+   },
+   "ref_achieved": [
+    26.702,
+    42.83,
+    48.278
+   ]
+  },
+  {
+   "target": [
+    42.5,
+    10.1,
+    65.6
+   ],
+   "foods": [
+    "oil",
+    "rice",
+    "oats",
+    "pb",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 53.0,
+    "rice": 7.0,
+    "oats": 0.0,
+    "pb": 22.0,
+    "chicken": 159.0
+   },
+   "ref_achieved": [
+    42.56,
+    10.0,
+    65.95
+   ]
+  },
+  {
+   "target": [
+    4.0,
+    65.8,
+    55.5
+   ],
+   "foods": [
+    "broccoli",
+    "oats",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 0.0,
+    "oats": 95.0,
+    "chicken": 0.0
+   },
+   "ref_achieved": [
+    12.35,
+    64.6,
+    6.65
+   ]
+  },
+  {
+   "target": [
+    62.8,
+    69.8,
+    28.4
+   ],
+   "foods": [
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 112.0
+   },
+   "ref_achieved": [
+    7.84,
+    89.6,
+    0.672
+   ]
+  },
+  {
+   "target": [
+    0.5,
+    18.5,
+    26.5
+   ],
+   "foods": [
+    "oats",
+    "broccoli"
+   ],
+   "locked": {
+    "oats": 112.0
+   },
+   "ref_grams": {
+    "oats": 112.0,
+    "broccoli": 11.0
+   },
+   "ref_achieved": [
+    14.868,
+    76.93,
+    7.884
+   ]
+  },
+  {
+   "target": [
+    37.6,
+    47.7,
+    33.8
+   ],
+   "foods": [
+    "rice",
+    "broccoli",
+    "oil",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "broccoli": 930.0,
+    "oil": 30.0,
+    "oats": 0.0
+   },
+   "ref_achieved": [
+    26.04,
+    65.1,
+    33.72
+   ]
+  },
+  {
+   "target": [
+    6.9,
+    77.0,
+    39.9
+   ],
+   "foods": [
+    "oats",
+    "pb",
+    "oil",
+    "rice"
+   ],
+   "locked": {
+    "oil": 193.0
+   },
+   "ref_grams": {
+    "oil": 193.0,
+    "oats": 1.0,
+    "pb": 0.0,
+    "rice": 96.0
+   },
+   "ref_achieved": [
+    6.85,
+    77.48,
+    193.646
+   ]
+  },
+  {
+   "target": [
+    7.1,
+    42.2,
+    59.4
+   ],
+   "foods": [
+    "oil",
+    "pb",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 33.0,
+    "pb": 54.0,
+    "chicken": 0.0
+   },
+   "ref_achieved": [
+    13.5,
+    10.8,
+    60.0
+   ]
+  },
+  {
+   "target": [
+    44.4,
+    72.4,
+    66.2
+   ],
+   "foods": [
+    "rice",
+    "oil",
+    "pb",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 85.0,
+    "oil": 52.0,
+    "pb": 23.0,
+    "chicken": 142.0
+   },
+   "ref_achieved": [
+    44.36,
+    72.6,
+    65.714
+   ]
+  },
+  {
+   "target": [
+    23.7,
+    37.4,
+    66.0
+   ],
+   "foods": [
+    "rice",
+    "chicken",
+    "oats",
+    "pb",
+    "broccoli"
+   ],
+   "locked": {
+    "pb": 127.0
+   },
+   "ref_grams": {
+    "pb": 127.0,
+    "rice": 15.0,
+    "chicken": 0.0,
+    "oats": 0.0,
+    "broccoli": 0.0
+   },
+   "ref_achieved": [
+    32.8,
+    37.4,
+    63.59
+   ]
+  },
+  {
+   "target": [
+    65.8,
+    19.6,
+    24.3
+   ],
+   "foods": [
+    "oats",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 36.0,
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    29.68,
+    44.48,
+    52.52
+   ]
+  },
+  {
+   "target": [
+    70.4,
+    20.0,
+    59.6
+   ],
+   "foods": [
+    "chicken",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 306.0,
+    "oil": 56.0
+   },
+   "ref_achieved": [
+    70.38,
+    0.0,
+    59.672
+   ]
+  },
+  {
+   "target": [
+    10.2,
+    13.3,
+    61.1
+   ],
+   "foods": [
+    "broccoli",
+    "oil",
+    "rice",
+    "chicken",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 131.0,
+    "oil": 60.0,
+    "rice": 5.0,
+    "chicken": 27.0,
+    "pb": 0.0
+   },
+   "ref_achieved": [
+    10.228,
+    13.17,
+    60.878
+   ]
+  },
+  {
+   "target": [
+    11.6,
+    20.8,
+    64.0
+   ],
+   "foods": [
+    "broccoli",
+    "oats",
+    "oil",
+    "chicken",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 70.0,
+    "oats": 24.0,
+    "oil": 60.0,
+    "chicken": 29.0,
+    "rice": -0.0
+   },
+   "ref_achieved": [
+    11.75,
+    21.22,
+    62.308
+   ]
+  },
+  {
+   "target": [
+    14.1,
+    39.7,
+    18.5
+   ],
+   "foods": [
+    "broccoli",
+    "oats",
+    "pb",
+    "oil"
+   ],
+   "locked": {
+    "oats": 101.0
+   },
+   "ref_grams": {
+    "oats": 101.0,
+    "broccoli": 0.0,
+    "pb": 3.0,
+    "oil": 10.0
+   },
+   "ref_achieved": [
+    13.88,
+    69.28,
+    18.57
+   ]
+  },
+  {
+   "target": [
+    78.0,
+    70.9,
+    50.7
+   ],
+   "foods": [
+    "chicken",
+    "oil",
+    "pb",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 149.0,
+    "oil": 0.0,
+    "pb": 93.0,
+    "broccoli": 736.0
+   },
+   "ref_achieved": [
+    78.128,
+    70.12,
+    51.232
+   ]
+  },
+  {
+   "target": [
+    78.4,
+    47.9,
+    40.5
+   ],
+   "foods": [
+    "oats",
+    "chicken",
+    "rice",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 44.0,
+    "chicken": 309.0,
+    "rice": 22.0,
+    "oil": 34.0
+   },
+   "ref_achieved": [
+    78.33,
+    47.52,
+    40.92
+   ]
+  },
+  {
+   "target": [
+    1.5,
+    19.1,
+    14.2
+   ],
+   "foods": [
+    "rice",
+    "chicken"
+   ],
+   "locked": {
+    "chicken": 16.0
+   },
+   "ref_grams": {
+    "chicken": 16.0,
+    "rice": 23.0
+   },
+   "ref_achieved": [
+    5.29,
+    18.4,
+    0.33
+   ]
+  },
+  {
+   "target": [
+    17.6,
+    68.2,
+    9.8
+   ],
+   "foods": [
+    "pb",
+    "rice",
+    "broccoli",
+    "chicken",
+    "oats"
+   ],
+   "locked": {
+    "rice": 66.0
+   },
+   "ref_grams": {
+    "rice": 66.0,
+    "pb": 17.0,
+    "broccoli": 135.0,
+    "chicken": 20.0,
+    "oats": 4.0
+   },
+   "ref_achieved": [
+    17.77,
+    68.37,
+    9.956
+   ]
+  },
+  {
+   "target": [
+    55.5,
+    50.1,
+    26.9
+   ],
+   "foods": [
+    "chicken",
+    "broccoli",
+    "rice",
+    "oats",
+    "oil"
+   ],
+   "locked": {
+    "rice": 198.0
+   },
+   "ref_grams": {
+    "rice": 198.0,
+    "chicken": 181.0,
+    "broccoli": 3.0,
+    "oats": 0.0,
+    "oil": 24.0
+   },
+   "ref_achieved": [
+    55.574,
+    158.61,
+    27.372
+   ]
+  },
+  {
+   "target": [
+    3.6,
+    72.1,
+    30.6
+   ],
+   "foods": [
+    "oil",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 28.0,
+    "broccoli": 672.0
+   },
+   "ref_achieved": [
+    18.816,
+    47.04,
+    30.688
+   ]
+  },
+  {
+   "target": [
+    54.0,
+    12.6,
+    48.4
+   ],
+   "foods": [
+    "broccoli",
+    "oil",
+    "oats",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 148.0,
+    "oil": 45.0,
+    "oats": 3.0,
+    "chicken": 215.0
+   },
+   "ref_achieved": [
+    53.984,
+    12.4,
+    48.382
+   ]
+  },
+  {
+   "target": [
+    61.2,
+    9.8,
+    1.1
+   ],
+   "foods": [
+    "broccoli",
+    "pb",
+    "chicken",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 139.0,
+    "pb": 0.0,
+    "chicken": 249.0,
+    "oil": 0.0
+   },
+   "ref_achieved": [
+    61.162,
+    9.73,
+    3.544
+   ]
+  },
+  {
+   "target": [
+    16.8,
+    16.7,
+    32.2
+   ],
+   "foods": [
+    "broccoli",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 392.0,
+    "rice": 0.0
+   },
+   "ref_achieved": [
+    10.976,
+    27.44,
+    1.568
+   ]
+  },
+  {
+   "target": [
+    44.7,
+    28.8,
+    18.7
+   ],
+   "foods": [
+    "chicken",
+    "broccoli",
+    "pb"
+   ],
+   "locked": {
+    "pb": 88.0
+   },
+   "ref_grams": {
+    "pb": 88.0,
+    "chicken": 79.0,
+    "broccoli": 159.0
+   },
+   "ref_achieved": [
+    44.622,
+    28.73,
+    45.584
+   ]
+  },
+  {
+   "target": [
+    62.9,
+    53.4,
+    1.5
+   ],
+   "foods": [
+    "oil",
+    "oats"
+   ],
+   "locked": {
+    "oats": 172.0
+   },
+   "ref_grams": {
+    "oats": 172.0,
+    "oil": 0.0
+   },
+   "ref_achieved": [
+    22.36,
+    116.96,
+    12.04
+   ]
+  },
+  {
+   "target": [
+    9.2,
+    51.7,
+    7.0
+   ],
+   "foods": [
+    "pb",
+    "oil",
+    "chicken",
+    "rice"
+   ],
+   "locked": {
+    "oil": 194.0
+   },
+   "ref_grams": {
+    "oil": 194.0,
+    "pb": 0.0,
+    "chicken": 20.0,
+    "rice": 65.0
+   },
+   "ref_achieved": [
+    9.15,
+    52.0,
+    194.63
+   ]
+  },
+  {
+   "target": [
+    58.7,
+    48.5,
+    15.8
+   ],
+   "foods": [
+    "broccoli",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 1000.0,
+    "oats": 4.0
+   },
+   "ref_achieved": [
+    28.52,
+    72.72,
+    4.28
+   ]
+  },
+  {
+   "target": [
+    52.2,
+    59.4,
+    29.7
+   ],
+   "foods": [
+    "rice",
+    "pb",
+    "broccoli",
+    "chicken",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 39.0,
+    "pb": 53.0,
+    "broccoli": 143.0,
+    "chicken": 134.0,
+    "oats": 12.0
+   },
+   "ref_achieved": [
+    52.364,
+    59.97,
+    29.754
+   ]
+  },
+  {
+   "target": [
+    46.4,
+    74.7,
+    3.2
+   ],
+   "foods": [
+    "rice",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 110.0,
+    "oil": 3.0
+   },
+   "ref_achieved": [
+    7.7,
+    88.0,
+    3.66
+   ]
+  },
+  {
+   "target": [
+    58.1,
+    66.0,
+    52.1
+   ],
+   "foods": [
+    "broccoli",
+    "oats"
+   ],
+   "locked": {
+    "oats": 220.0
+   },
+   "ref_grams": {
+    "oats": 220.0,
+    "broccoli": 425.0
+   },
+   "ref_achieved": [
+    40.5,
+    179.35,
+    17.1
+   ]
+  },
+  {
+   "target": [
+    62.3,
+    3.7,
+    59.7
+   ],
+   "foods": [
+    "chicken",
+    "oil",
+    "pb",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 264.0,
+    "oil": 56.0,
+    "pb": 0.0,
+    "broccoli": 55.0
+   },
+   "ref_achieved": [
+    62.26,
+    3.85,
+    59.388
+   ]
+  },
+  {
+   "target": [
+    78.1,
+    50.9,
+    40.2
+   ],
+   "foods": [
+    "rice",
+    "pb",
+    "broccoli",
+    "chicken",
+    "oats"
+   ],
+   "locked": {
+    "broccoli": 39.0
+   },
+   "ref_grams": {
+    "broccoli": 39.0,
+    "rice": 25.0,
+    "pb": 71.0,
+    "chicken": 238.0,
+    "oats": 21.0
+   },
+   "ref_achieved": [
+    78.062,
+    51.21,
+    40.132
+   ]
+  },
+  {
+   "target": [
+    46.2,
+    46.1,
+    42.4
+   ],
+   "foods": [
+    "oats",
+    "broccoli",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 0.0,
+    "broccoli": 1000.0,
+    "oil": 38.0
+   },
+   "ref_achieved": [
+    28.0,
+    70.0,
+    42.0
+   ]
+  },
+  {
+   "target": [
+    37.6,
+    52.9,
+    17.3
+   ],
+   "foods": [
+    "chicken",
+    "rice"
+   ],
+   "locked": {
+    "chicken": 53.0
+   },
+   "ref_grams": {
+    "chicken": 53.0,
+    "rice": 75.0
+   },
+   "ref_achieved": [
+    17.44,
+    60.0,
+    1.086
+   ]
+  },
+  {
+   "target": [
+    57.3,
+    60.0,
+    35.5
+   ],
+   "foods": [
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 251.0
+   },
+   "ref_achieved": [
+    57.73,
+    0.0,
+    3.012
+   ]
+  },
+  {
+   "target": [
+    29.9,
+    12.0,
+    50.1
+   ],
+   "foods": [
+    "broccoli",
+    "rice",
+    "chicken",
+    "oil",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 138.0,
+    "rice": 3.0,
+    "chicken": 112.0,
+    "oil": 48.0,
+    "pb": 0.0
+   },
+   "ref_achieved": [
+    29.834,
+    12.06,
+    49.914
+   ]
+  },
+  {
+   "target": [
+    46.1,
+    20.8,
+    60.3
+   ],
+   "foods": [
+    "rice",
+    "chicken",
+    "oats",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "chicken": 91.0,
+    "oats": 2.0,
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    46.19,
+    21.36,
+    51.232
+   ]
+  },
+  {
+   "target": [
+    57.5,
+    58.9,
+    27.1
+   ],
+   "foods": [
+    "oil",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 23.0,
+    "broccoli": 1000.0
+   },
+   "ref_achieved": [
+    28.0,
+    70.0,
+    27.0
+   ]
+  },
+  {
+   "target": [
+    43.5,
+    58.6,
+    10.0
+   ],
+   "foods": [
+    "rice",
+    "oil",
+    "oats",
+    "broccoli",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "oil": 0.0,
+    "oats": 0.0,
+    "broccoli": 903.0,
+    "pb": 38.0
+   },
+   "ref_achieved": [
+    34.784,
+    70.81,
+    22.612
+   ]
+  },
+  {
+   "target": [
+    11.9,
+    76.9,
+    27.7
+   ],
+   "foods": [
+    "oil",
+    "chicken",
+    "pb",
+    "oats",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 20.0,
+    "chicken": 0.0,
+    "pb": 0.0,
+    "oats": 110.0,
+    "broccoli": 0.0
+   },
+   "ref_achieved": [
+    14.3,
+    74.8,
+    27.7
+   ]
+  },
+  {
+   "target": [
+    7.0,
+    50.4,
+    61.9
+   ],
+   "foods": [
+    "pb",
+    "rice",
+    "oil",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 2.0,
+    "rice": 54.0,
+    "oil": 60.0,
+    "broccoli": 98.0
+   },
+   "ref_achieved": [
+    7.024,
+    50.46,
+    61.716
+   ]
+  },
+  {
+   "target": [
+    75.0,
+    23.8,
+    75.2
+   ],
+   "foods": [
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 61.0
+   },
+   "ref_achieved": [
+    4.27,
+    48.8,
+    0.366
+   ]
+  },
+  {
+   "target": [
+    68.9,
+    56.3,
+    56.2
+   ],
+   "foods": [
+    "pb",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 100.0,
+    "broccoli": 920.0
+   },
+   "ref_achieved": [
+    50.76,
+    84.4,
+    53.68
+   ]
+  },
+  {
+   "target": [
+    40.5,
+    29.4,
+    69.2
+   ],
+   "foods": [
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 60.0
+   },
+   "ref_achieved": [
+    0.0,
+    0.0,
+    60.0
+   ]
+  },
+  {
+   "target": [
+    22.0,
+    14.7,
+    15.8
+   ],
+   "foods": [
+    "chicken",
+    "oats",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 83.0,
+    "oats": 23.0,
+    "broccoli": 0.0
+   },
+   "ref_achieved": [
+    22.08,
+    15.64,
+    2.606
+   ]
+  },
+  {
+   "target": [
+    61.9,
+    1.7,
+    38.6
+   ],
+   "foods": [
+    "rice",
+    "oil",
+    "pb",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "oil": 0.0,
+    "pb": 100.0,
+    "broccoli": 346.0
+   },
+   "ref_achieved": [
+    34.688,
+    44.22,
+    51.384
+   ]
+  },
+  {
+   "target": [
+    72.5,
+    79.5,
+    68.0
+   ],
+   "foods": [
+    "chicken",
+    "oil"
+   ],
+   "locked": {
+    "chicken": 193.0
+   },
+   "ref_grams": {
+    "chicken": 193.0,
+    "oil": 60.0
+   },
+   "ref_achieved": [
+    44.39,
+    0.0,
+    62.316
+   ]
+  },
+  {
+   "target": [
+    73.8,
+    70.2,
+    31.3
+   ],
+   "foods": [
+    "oats",
+    "rice",
+    "pb"
+   ],
+   "locked": {
+    "rice": 247.0
+   },
+   "ref_grams": {
+    "rice": 247.0,
+    "oats": 3.0,
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    42.68,
+    219.64,
+    51.692
+   ]
+  },
+  {
+   "target": [
+    28.2,
+    19.8,
+    23.7
+   ],
+   "foods": [
+    "rice",
+    "oats",
+    "pb",
+    "broccoli",
+    "oil"
+   ],
+   "locked": {
+    "pb": 71.0
+   },
+   "ref_grams": {
+    "pb": 71.0,
+    "rice": 0.0,
+    "oats": 0.0,
+    "broccoli": 193.0,
+    "oil": 0.0
+   },
+   "ref_achieved": [
+    23.154,
+    27.71,
+    36.272
+   ]
+  },
+  {
+   "target": [
+    47.6,
+    17.7,
+    53.4
+   ],
+   "foods": [
+    "pb",
+    "oil",
+    "rice",
+    "oats",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 29.0,
+    "oil": 37.0,
+    "rice": 15.0,
+    "oats": 0.0,
+    "chicken": 171.0
+   },
+   "ref_achieved": [
+    47.63,
+    17.8,
+    53.642
+   ]
+  },
+  {
+   "target": [
+    39.3,
+    77.6,
+    69.3
+   ],
+   "foods": [
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 146.0
+   },
+   "ref_achieved": [
+    18.98,
+    99.28,
+    10.22
+   ]
+  },
+  {
+   "target": [
+    22.0,
+    75.5,
+    51.6
+   ],
+   "foods": [
+    "broccoli",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 256.0,
+    "oats": 94.0
+   },
+   "ref_achieved": [
+    19.388,
+    81.84,
+    7.604
+   ]
+  },
+  {
+   "target": [
+    42.4,
+    8.8,
+    15.2
+   ],
+   "foods": [
+    "pb",
+    "rice",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 27.0,
+    "rice": 4.0,
+    "chicken": 154.0
+   },
+   "ref_achieved": [
+    42.45,
+    8.6,
+    15.372
+   ]
+  },
+  {
+   "target": [
+    68.0,
+    6.6,
+    26.9
+   ],
+   "foods": [
+    "oil",
+    "chicken",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 23.0,
+    "chicken": 284.0,
+    "broccoli": 96.0
+   },
+   "ref_achieved": [
+    68.008,
+    6.72,
+    26.792
+   ]
+  },
+  {
+   "target": [
+    59.6,
+    59.9,
+    57.1
+   ],
+   "foods": [
+    "oil",
+    "broccoli",
+    "oats",
+    "pb",
+    "rice"
+   ],
+   "locked": {
+    "oil": 195.0
+   },
+   "ref_grams": {
+    "oil": 195.0,
+    "broccoli": 1000.0,
+    "oats": 0.0,
+    "pb": 51.0,
+    "rice": 0.0
+   },
+   "ref_achieved": [
+    40.75,
+    80.2,
+    224.5
+   ]
+  },
+  {
+   "target": [
+    21.0,
+    0.7,
+    42.7
+   ],
+   "foods": [
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 27.0
+   },
+   "ref_achieved": [
+    3.51,
+    18.36,
+    1.89
+   ]
+  },
+  {
+   "target": [
+    7.6,
+    39.5,
+    8.0
+   ],
+   "foods": [
+    "pb",
+    "oats",
+    "chicken",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 5.0,
+    "oats": 56.0,
+    "chicken": 0.0,
+    "broccoli": 0.0
+   },
+   "ref_achieved": [
+    8.53,
+    39.08,
+    6.42
+   ]
+  },
+  {
+   "target": [
+    68.4,
+    30.4,
+    75.4
+   ],
+   "foods": [
+    "broccoli",
+    "oats",
+    "oil",
+    "rice",
+    "pb"
+   ],
+   "locked": {
+    "oats": 246.0
+   },
+   "ref_grams": {
+    "oats": 246.0,
+    "broccoli": 0.0,
+    "oil": 8.0,
+    "rice": 0.0,
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    56.98,
+    187.28,
+    75.22
+   ]
+  },
+  {
+   "target": [
+    58.8,
+    23.3,
+    33.9
+   ],
+   "foods": [
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 257.0
+   },
+   "ref_achieved": [
+    59.11,
+    0.0,
+    3.084
+   ]
+  },
+  {
+   "target": [
+    8.3,
+    59.2,
+    17.7
+   ],
+   "foods": [
+    "rice",
+    "chicken",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 59.0,
+    "chicken": 0.0,
+    "broccoli": 172.0
+   },
+   "ref_achieved": [
+    8.946,
+    59.24,
+    1.042
+   ]
+  },
+  {
+   "target": [
+    52.0,
+    56.4,
+    65.7
+   ],
+   "foods": [
+    "chicken",
+    "rice",
+    "oil",
+    "pb"
+   ],
+   "locked": {
+    "rice": 122.0
+   },
+   "ref_grams": {
+    "rice": 122.0,
+    "chicken": 184.0,
+    "oil": 60.0,
+    "pb": 5.0
+   },
+   "ref_achieved": [
+    52.11,
+    98.6,
+    65.44
+   ]
+  },
+  {
+   "target": [
+    1.6,
+    73.6,
+    50.1
+   ],
+   "foods": [
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 102.0
+   },
+   "ref_achieved": [
+    13.26,
+    69.36,
+    7.14
+   ]
+  },
+  {
+   "target": [
+    10.9,
+    60.9,
+    42.6
+   ],
+   "foods": [
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 82.0
+   },
+   "ref_achieved": [
+    20.5,
+    16.4,
+    41.0
+   ]
+  },
+  {
+   "target": [
+    74.2,
+    66.1,
+    42.5
+   ],
+   "foods": [
+    "broccoli",
+    "chicken",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 929.0,
+    "chicken": 210.0,
+    "oil": 36.0
+   },
+   "ref_achieved": [
+    74.312,
+    65.03,
+    42.236
+   ]
+  },
+  {
+   "target": [
+    57.2,
+    27.4,
+    55.8
+   ],
+   "foods": [
+    "pb",
+    "broccoli",
+    "rice",
+    "oil",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 39.0,
+    "broccoli": 146.0,
+    "rice": 12.0,
+    "oil": 33.0,
+    "chicken": 185.0
+   },
+   "ref_achieved": [
+    57.228,
+    27.62,
+    55.376
+   ]
+  },
+  {
+   "target": [
+    49.3,
+    67.7,
+    52.7
+   ],
+   "foods": [
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 104.0
+   },
+   "ref_achieved": [
+    7.28,
+    83.2,
+    0.624
+   ]
+  },
+  {
+   "target": [
+    20.2,
+    14.2,
+    69.9
+   ],
+   "foods": [
+    "oats",
+    "broccoli",
+    "pb",
+    "oil",
+    "rice"
+   ],
+   "locked": {
+    "broccoli": 54.0
+   },
+   "ref_grams": {
+    "broccoli": 54.0,
+    "oats": 0.0,
+    "pb": 72.0,
+    "oil": 34.0,
+    "rice": 0.0
+   },
+   "ref_achieved": [
+    19.512,
+    18.18,
+    70.216
+   ]
+  },
+  {
+   "target": [
+    35.9,
+    10.9,
+    21.5
+   ],
+   "foods": [
+    "rice",
+    "broccoli",
+    "chicken",
+    "pb",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 1.0,
+    "broccoli": 140.0,
+    "chicken": 139.0,
+    "pb": 0.0,
+    "oil": 19.0
+   },
+   "ref_achieved": [
+    35.96,
+    10.6,
+    21.234
+   ]
+  },
+  {
+   "target": [
+    30.1,
+    57.6,
+    23.6
+   ],
+   "foods": [
+    "chicken",
+    "oats",
+    "oil"
+   ],
+   "locked": {
+    "oil": 81.0
+   },
+   "ref_grams": {
+    "oil": 81.0,
+    "chicken": 83.0,
+    "oats": 84.0
+   },
+   "ref_achieved": [
+    30.01,
+    57.12,
+    87.876
+   ]
+  },
+  {
+   "target": [
+    71.3,
+    54.7,
+    59.8
+   ],
+   "foods": [
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 1000.0
+   },
+   "ref_achieved": [
+    28.0,
+    70.0,
+    4.0
+   ]
+  },
+  {
+   "target": [
+    62.1,
+    74.7,
+    79.8
+   ],
+   "foods": [
+    "broccoli",
+    "chicken",
+    "oil",
+    "rice",
+    "pb"
+   ],
+   "locked": {
+    "oil": 167.0
+   },
+   "ref_grams": {
+    "oil": 167.0,
+    "broccoli": 72.0,
+    "chicken": 234.0,
+    "rice": 87.0,
+    "pb": 0.0
+   },
+   "ref_achieved": [
+    61.926,
+    74.64,
+    170.618
+   ]
+  },
+  {
+   "target": [
+    22.3,
+    1.5,
+    61.3
+   ],
+   "foods": [
+    "oats",
+    "broccoli",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 0.0,
+    "broccoli": 351.0,
+    "rice": 0.0
+   },
+   "ref_achieved": [
+    9.828,
+    24.57,
+    1.404
+   ]
+  },
+  {
+   "target": [
+    37.7,
+    16.1,
+    47.6
+   ],
+   "foods": [
+    "rice",
+    "chicken",
+    "pb",
+    "oil",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 18.0,
+    "chicken": 149.0,
+    "pb": 9.0,
+    "oil": 41.0,
+    "oats": 0.0
+   },
+   "ref_achieved": [
+    37.78,
+    16.2,
+    47.396
+   ]
+  },
+  {
+   "target": [
+    21.0,
+    69.6,
+    63.0
+   ],
+   "foods": [
+    "oats",
+    "pb",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 92.0,
+    "pb": 36.0,
+    "oil": 38.0
+   },
+   "ref_achieved": [
+    20.96,
+    69.76,
+    62.44
+   ]
+  },
+  {
+   "target": [
+    22.9,
+    19.2,
+    69.6
+   ],
+   "foods": [
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 515.0
+   },
+   "ref_achieved": [
+    14.42,
+    36.05,
+    2.06
+   ]
+  },
+  {
+   "target": [
+    70.0,
+    30.5,
+    35.8
+   ],
+   "foods": [
+    "oil",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 28.0,
+    "oats": 108.0
+   },
+   "ref_achieved": [
+    14.04,
+    73.44,
+    35.56
+   ]
+  },
+  {
+   "target": [
+    41.2,
+    8.0,
+    62.4
+   ],
+   "foods": [
+    "pb",
+    "chicken",
+    "oats",
+    "rice"
+   ],
+   "locked": {
+    "pb": 164.0
+   },
+   "ref_grams": {
+    "pb": 164.0,
+    "chicken": 1.0,
+    "oats": 0.0,
+    "rice": 0.0
+   },
+   "ref_achieved": [
+    41.23,
+    32.8,
+    82.012
+   ]
+  },
+  {
+   "target": [
+    44.0,
+    71.4,
+    62.8
+   ],
+   "foods": [
+    "broccoli",
+    "pb",
+    "chicken"
+   ],
+   "locked": {
+    "pb": 210.0
+   },
+   "ref_grams": {
+    "pb": 210.0,
+    "broccoli": 254.0,
+    "chicken": 0.0
+   },
+   "ref_achieved": [
+    59.612,
+    59.78,
+    106.016
+   ]
+  },
+  {
+   "target": [
+    56.0,
+    63.8,
+    64.5
+   ],
+   "foods": [
+    "broccoli",
+    "oil",
+    "chicken",
+    "rice"
+   ],
+   "locked": {
+    "rice": 146.0
+   },
+   "ref_grams": {
+    "rice": 146.0,
+    "broccoli": 4.0,
+    "oil": 60.0,
+    "chicken": 199.0
+   },
+   "ref_achieved": [
+    56.102,
+    117.08,
+    63.28
+   ]
+  },
+  {
+   "target": [
+    64.6,
+    30.4,
+    42.3
+   ],
+   "foods": [
+    "rice",
+    "broccoli",
+    "pb",
+    "oats",
+    "oil"
+   ],
+   "locked": {
+    "oil": 192.0
+   },
+   "ref_grams": {
+    "oil": 192.0,
+    "rice": 0.0,
+    "broccoli": 793.0,
+    "pb": 66.0,
+    "oats": -0.0
+   },
+   "ref_achieved": [
+    38.704,
+    68.71,
+    228.172
+   ]
+  },
+  {
+   "target": [
+    55.5,
+    2.9,
+    73.4
+   ],
+   "foods": [
+    "chicken",
+    "oats",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 239.0,
+    "oats": 6.0,
+    "oil": 60.0
+   },
+   "ref_achieved": [
+    55.75,
+    4.08,
+    63.288
+   ]
+  },
+  {
+   "target": [
+    27.0,
+    41.1,
+    15.6
+   ],
+   "foods": [
+    "chicken",
+    "broccoli",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 61.0,
+    "broccoli": 438.0,
+    "rice": 13.0
+   },
+   "ref_achieved": [
+    27.204,
+    41.06,
+    2.562
+   ]
+  },
+  {
+   "target": [
+    20.1,
+    5.1,
+    70.4
+   ],
+   "foods": [
+    "rice",
+    "broccoli",
+    "chicken",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "broccoli": 0.0,
+    "chicken": 82.0,
+    "oats": 17.0
+   },
+   "ref_achieved": [
+    21.07,
+    11.56,
+    2.174
+   ]
+  },
+  {
+   "target": [
+    73.7,
+    56.5,
+    48.5
+   ],
+   "foods": [
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 48.0
+   },
+   "ref_achieved": [
+    0.0,
+    0.0,
+    48.0
+   ]
+  },
+  {
+   "target": [
+    40.6,
+    2.5,
+    31.5
+   ],
+   "foods": [
+    "rice",
+    "pb",
+    "broccoli",
+    "chicken",
+    "oats"
+   ],
+   "locked": {
+    "pb": 205.0
+   },
+   "ref_grams": {
+    "pb": 205.0,
+    "rice": 0.0,
+    "broccoli": 2.0,
+    "chicken": 0.0,
+    "oats": 0.0
+   },
+   "ref_achieved": [
+    51.306,
+    41.14,
+    102.508
+   ]
+  },
+  {
+   "target": [
+    30.1,
+    67.5,
+    75.7
+   ],
+   "foods": [
+    "oats",
+    "pb",
+    "oil",
+    "broccoli"
+   ],
+   "locked": {
+    "pb": 13.0
+   },
+   "ref_grams": {
+    "pb": 13.0,
+    "oats": 9.0,
+    "oil": 60.0,
+    "broccoli": 863.0
+   },
+   "ref_achieved": [
+    28.584,
+    69.13,
+    70.582
+   ]
+  },
+  {
+   "target": [
+    68.8,
+    48.6,
+    65.4
+   ],
+   "foods": [
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    25.0,
+    20.0,
+    50.0
+   ]
+  },
+  {
+   "target": [
+    35.5,
+    53.6,
+    17.3
+   ],
+   "foods": [
+    "pb",
+    "broccoli",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 42.0,
+    "broccoli": 732.0,
+    "oats": 0.0
+   },
+   "ref_achieved": [
+    30.996,
+    59.64,
+    23.928
+   ]
+  },
+  {
+   "target": [
+    56.8,
+    64.3,
+    33.9
+   ],
+   "foods": [
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 102.0
+   },
+   "ref_achieved": [
+    7.14,
+    81.6,
+    0.612
+   ]
+  },
+  {
+   "target": [
+    60.5,
+    1.6,
+    9.0
+   ],
+   "foods": [
+    "oats",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 62.0,
+    "rice": 0.0
+   },
+   "ref_achieved": [
+    8.06,
+    42.16,
+    4.34
+   ]
+  },
+  {
+   "target": [
+    73.0,
+    4.7,
+    71.3
+   ],
+   "foods": [
+    "oats",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 86.0,
+    "rice": 0.0
+   },
+   "ref_achieved": [
+    11.18,
+    58.48,
+    6.02
+   ]
+  },
+  {
+   "target": [
+    34.4,
+    56.4,
+    19.5
+   ],
+   "foods": [
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 19.0
+   },
+   "ref_achieved": [
+    0.0,
+    0.0,
+    19.0
+   ]
+  },
+  {
+   "target": [
+    0.2,
+    15.7,
+    66.7
+   ],
+   "foods": [
+    "chicken",
+    "pb",
+    "broccoli",
+    "oil"
+   ],
+   "locked": {
+    "oil": 69.0
+   },
+   "ref_grams": {
+    "oil": 69.0,
+    "chicken": 0.0,
+    "pb": 0.0,
+    "broccoli": 139.0
+   },
+   "ref_achieved": [
+    3.892,
+    9.73,
+    69.556
+   ]
+  },
+  {
+   "target": [
+    46.9,
+    70.2,
+    68.4
+   ],
+   "foods": [
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 144.0
+   },
+   "ref_achieved": [
+    18.72,
+    97.92,
+    10.08
+   ]
+  },
+  {
+   "target": [
+    11.4,
+    76.5,
+    18.3
+   ],
+   "foods": [
+    "oats",
+    "oil",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 109.0,
+    "oil": 11.0,
+    "pb": 0.0
+   },
+   "ref_achieved": [
+    14.17,
+    74.12,
+    18.63
+   ]
+  },
+  {
+   "target": [
+    33.7,
+    17.6,
+    68.8
+   ],
+   "foods": [
+    "rice",
+    "chicken",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "chicken": 39.0,
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    33.97,
+    20.0,
+    50.468
+   ]
+  },
+  {
+   "target": [
+    14.1,
+    68.6,
+    61.2
+   ],
+   "foods": [
+    "oil",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 60.0,
+    "chicken": 61.0
+   },
+   "ref_achieved": [
+    14.03,
+    0.0,
+    60.732
+   ]
+  },
+  {
+   "target": [
+    14.3,
+    48.8,
+    23.0
+   ],
+   "foods": [
+    "pb",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 66.0,
+    "oil": 0.0
+   },
+   "ref_achieved": [
+    16.5,
+    13.2,
+    33.0
+   ]
+  },
+  {
+   "target": [
+    64.8,
+    33.2,
+    65.4
+   ],
+   "foods": [
+    "broccoli",
+    "pb",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 670.0,
+    "pb": 100.0,
+    "oats": 0.0
+   },
+   "ref_achieved": [
+    43.76,
+    66.9,
+    52.68
+   ]
+  },
+  {
+   "target": [
+    21.8,
+    52.6,
+    30.3
+   ],
+   "foods": [
+    "chicken",
+    "oil",
+    "broccoli",
+    "oats",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 42.0,
+    "oil": 25.0,
+    "broccoli": 143.0,
+    "oats": 63.0,
+    "pb": 0.0
+   },
+   "ref_achieved": [
+    21.854,
+    52.85,
+    30.486
+   ]
+  },
+  {
+   "target": [
+    15.4,
+    7.5,
+    3.9
+   ],
+   "foods": [
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 4.0
+   },
+   "ref_achieved": [
+    0.0,
+    0.0,
+    4.0
+   ]
+  },
+  {
+   "target": [
+    74.8,
+    50.1,
+    64.9
+   ],
+   "foods": [
+    "oil",
+    "oats",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 56.0,
+    "oats": 74.0,
+    "chicken": 284.0
+   },
+   "ref_achieved": [
+    74.94,
+    50.32,
+    64.588
+   ]
+  },
+  {
+   "target": [
+    76.0,
+    37.2,
+    75.8
+   ],
+   "foods": [
+    "oats",
+    "pb",
+    "broccoli"
+   ],
+   "locked": {
+    "pb": 24.0
+   },
+   "ref_grams": {
+    "pb": 24.0,
+    "oats": 1.0,
+    "broccoli": 1000.0
+   },
+   "ref_achieved": [
+    34.13,
+    75.48,
+    16.07
+   ]
+  },
+  {
+   "target": [
+    32.9,
+    40.7,
+    74.9
+   ],
+   "foods": [
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    25.0,
+    20.0,
+    50.0
+   ]
+  },
+  {
+   "target": [
+    18.7,
+    41.5,
+    37.4
+   ],
+   "foods": [
+    "oats",
+    "chicken",
+    "pb",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 41.0,
+    "chicken": 0.0,
+    "pb": 62.0,
+    "broccoli": 0.0
+   },
+   "ref_achieved": [
+    20.83,
+    40.28,
+    33.87
+   ]
+  },
+  {
+   "target": [
+    48.5,
+    62.5,
+    38.4
+   ],
+   "foods": [
+    "pb",
+    "chicken",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 100.0,
+    "chicken": 101.0,
+    "oil": 0.0
+   },
+   "ref_achieved": [
+    48.23,
+    20.0,
+    51.212
+   ]
+  },
+  {
+   "target": [
+    79.8,
+    26.5,
+    75.7
+   ],
+   "foods": [
+    "oil",
+    "chicken",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 60.0,
+    "chicken": 301.0,
+    "broccoli": 380.0
+   },
+   "ref_achieved": [
+    79.87,
+    26.6,
+    65.132
+   ]
+  },
+  {
+   "target": [
+    0.2,
+    17.4,
+    25.7
+   ],
+   "foods": [
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 21.0
+   },
+   "ref_achieved": [
+    1.47,
+    16.8,
+    0.126
+   ]
+  },
+  {
+   "target": [
+    43.9,
+    37.9,
+    2.6
+   ],
+   "foods": [
+    "oats",
+    "broccoli"
+   ],
+   "locked": {
+    "broccoli": 17.0
+   },
+   "ref_grams": {
+    "broccoli": 17.0,
+    "oats": 89.0
+   },
+   "ref_achieved": [
+    12.046,
+    61.71,
+    6.298
+   ]
+  },
+  {
+   "target": [
+    41.3,
+    72.8,
+    26.3
+   ],
+   "foods": [
+    "oil",
+    "broccoli",
+    "pb",
+    "rice",
+    "oats"
+   ],
+   "locked": {
+    "broccoli": 19.0
+   },
+   "ref_grams": {
+    "broccoli": 19.0,
+    "oil": 0.0,
+    "pb": 75.0,
+    "rice": 0.0,
+    "oats": 92.0
+   },
+   "ref_achieved": [
+    31.242,
+    78.89,
+    44.016
+   ]
+  },
+  {
+   "target": [
+    47.7,
+    67.6,
+    48.0
+   ],
+   "foods": [
+    "oats",
+    "oil",
+    "rice"
+   ],
+   "locked": {
+    "oil": 74.0
+   },
+   "ref_grams": {
+    "oil": 74.0,
+    "oats": 132.0,
+    "rice": 0.0
+   },
+   "ref_achieved": [
+    17.16,
+    89.76,
+    83.24
+   ]
+  },
+  {
+   "target": [
+    10.8,
+    70.8,
+    78.8
+   ],
+   "foods": [
+    "chicken",
+    "rice",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 21.0,
+    "rice": 89.0,
+    "oil": 60.0
+   },
+   "ref_achieved": [
+    11.06,
+    71.2,
+    60.786
+   ]
+  },
+  {
+   "target": [
+    46.7,
+    70.3,
+    77.4
+   ],
+   "foods": [
+    "rice",
+    "oats",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "oats": 28.0,
+    "broccoli": 1000.0
+   },
+   "ref_achieved": [
+    31.64,
+    89.04,
+    5.96
+   ]
+  },
+  {
+   "target": [
+    41.5,
+    5.7,
+    8.9
+   ],
+   "foods": [
+    "rice",
+    "pb",
+    "oats"
+   ],
+   "locked": {
+    "rice": 82.0
+   },
+   "ref_grams": {
+    "rice": 82.0,
+    "pb": 74.0,
+    "oats": 0.0
+   },
+   "ref_achieved": [
+    24.24,
+    80.4,
+    37.492
+   ]
+  },
+  {
+   "target": [
+    8.9,
+    52.5,
+    53.8
+   ],
+   "foods": [
+    "pb",
+    "rice",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 67.0,
+    "rice": 44.0,
+    "oats": 0.0
+   },
+   "ref_achieved": [
+    19.83,
+    48.6,
+    33.764
+   ]
+  },
+  {
+   "target": [
+    16.9,
+    59.3,
+    15.4
+   ],
+   "foods": [
+    "broccoli",
+    "oats",
+    "pb",
+    "oil",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 162.0,
+    "oats": 35.0,
+    "pb": 24.0,
+    "oil": 0.0,
+    "rice": 24.0
+   },
+   "ref_achieved": [
+    16.766,
+    59.14,
+    15.242
+   ]
+  },
+  {
+   "target": [
+    35.6,
+    21.9,
+    64.4
+   ],
+   "foods": [
+    "oats",
+    "broccoli",
+    "chicken",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 5.0,
+    "broccoli": 0.0,
+    "chicken": 44.0,
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    35.77,
+    23.4,
+    50.878
+   ]
+  },
+  {
+   "target": [
+    78.4,
+    53.2,
+    72.0
+   ],
+   "foods": [
+    "rice",
+    "pb",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 42.0,
+    "pb": 100.0,
+    "chicken": 221.0
+   },
+   "ref_achieved": [
+    78.77,
+    53.6,
+    52.904
+   ]
+  },
+  {
+   "target": [
+    7.2,
+    37.9,
+    48.4
+   ],
+   "foods": [
+    "oil",
+    "chicken"
+   ],
+   "locked": {
+    "chicken": 182.0
+   },
+   "ref_grams": {
+    "chicken": 182.0,
+    "oil": 46.0
+   },
+   "ref_achieved": [
+    41.86,
+    0.0,
+    48.184
+   ]
+  },
+  {
+   "target": [
+    32.9,
+    66.7,
+    33.7
+   ],
+   "foods": [
+    "oats",
+    "broccoli",
+    "oil",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 33.0,
+    "broccoli": 461.0,
+    "oil": 0.0,
+    "pb": 61.0
+   },
+   "ref_achieved": [
+    32.448,
+    66.91,
+    34.654
+   ]
+  },
+  {
+   "target": [
+    78.0,
+    7.8,
+    4.4
+   ],
+   "foods": [
+    "chicken",
+    "pb",
+    "oats",
+    "rice",
+    "oil"
+   ],
+   "locked": {
+    "oil": 234.0
+   },
+   "ref_grams": {
+    "oil": 234.0,
+    "chicken": 336.0,
+    "pb": 0.0,
+    "oats": 0.0,
+    "rice": 10.0
+   },
+   "ref_achieved": [
+    77.98,
+    8.0,
+    238.092
+   ]
+  },
+  {
+   "target": [
+    55.2,
+    1.4,
+    69.2
+   ],
+   "foods": [
+    "rice",
+    "oats",
+    "broccoli",
+    "chicken",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "oats": 3.0,
+    "broccoli": 0.0,
+    "chicken": 239.0,
+    "oil": 60.0
+   },
+   "ref_achieved": [
+    55.36,
+    2.04,
+    63.078
+   ]
+  },
+  {
+   "target": [
+    16.7,
+    52.4,
+    50.3
+   ],
+   "foods": [
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 71.0
+   },
+   "ref_achieved": [
+    4.97,
+    56.8,
+    0.426
+   ]
+  },
+  {
+   "target": [
+    37.1,
+    72.8,
+    43.1
+   ],
+   "foods": [
+    "chicken",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 136.0,
+    "rice": 91.0
+   },
+   "ref_achieved": [
+    37.65,
+    72.8,
+    2.178
+   ]
+  },
+  {
+   "target": [
+    39.2,
+    54.5,
+    39.3
+   ],
+   "foods": [
+    "oil",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 0.0,
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    25.0,
+    20.0,
+    50.0
+   ]
+  },
+  {
+   "target": [
+    31.6,
+    67.4,
+    75.0
+   ],
+   "foods": [
+    "rice",
+    "oats",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "oats": 108.0,
+    "chicken": 80.0
+   },
+   "ref_achieved": [
+    32.44,
+    73.44,
+    8.52
+   ]
+  },
+  {
+   "target": [
+    69.0,
+    38.6,
+    4.6
+   ],
+   "foods": [
+    "rice",
+    "chicken",
+    "pb",
+    "oil"
+   ],
+   "locked": {
+    "rice": 156.0
+   },
+   "ref_grams": {
+    "rice": 156.0,
+    "chicken": 252.0,
+    "pb": 0.0,
+    "oil": 0.0
+   },
+   "ref_achieved": [
+    68.88,
+    124.8,
+    3.96
+   ]
+  },
+  {
+   "target": [
+    1.8,
+    49.8,
+    32.8
+   ],
+   "foods": [
+    "oats",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 59.0,
+    "rice": 9.0
+   },
+   "ref_achieved": [
+    8.3,
+    47.32,
+    4.184
+   ]
+  },
+  {
+   "target": [
+    73.5,
+    77.4,
+    62.3
+   ],
+   "foods": [
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 60.0
+   },
+   "ref_achieved": [
+    0.0,
+    0.0,
+    60.0
+   ]
+  },
+  {
+   "target": [
+    41.2,
+    31.7,
+    32.5
+   ],
+   "foods": [
+    "broccoli",
+    "oats",
+    "pb",
+    "chicken",
+    "oil"
+   ],
+   "locked": {
+    "broccoli": 75.0
+   },
+   "ref_grams": {
+    "broccoli": 75.0,
+    "oats": 37.0,
+    "pb": 7.0,
+    "chicken": 141.0,
+    "oil": 24.0
+   },
+   "ref_achieved": [
+    41.09,
+    31.81,
+    32.082
+   ]
+  },
+  {
+   "target": [
+    8.3,
+    44.3,
+    35.7
+   ],
+   "foods": [
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 58.0
+   },
+   "ref_achieved": [
+    4.06,
+    46.4,
+    0.348
+   ]
+  },
+  {
+   "target": [
+    70.6,
+    30.8,
+    52.9
+   ],
+   "foods": [
+    "rice",
+    "broccoli",
+    "oil",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "broccoli": 722.0,
+    "oil": 0.0,
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    45.216,
+    70.54,
+    52.888
+   ]
+  },
+  {
+   "target": [
+    42.5,
+    7.6,
+    18.0
+   ],
+   "foods": [
+    "oil",
+    "rice",
+    "chicken",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 16.0,
+    "rice": 0.0,
+    "chicken": 171.0,
+    "broccoli": 109.0
+   },
+   "ref_achieved": [
+    42.382,
+    7.63,
+    18.488
+   ]
+  },
+  {
+   "target": [
+    79.9,
+    20.9,
+    11.7
+   ],
+   "foods": [
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    25.0,
+    20.0,
+    50.0
+   ]
+  },
+  {
+   "target": [
+    56.8,
+    44.9,
+    49.7
+   ],
+   "foods": [
+    "broccoli",
+    "pb",
+    "rice",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 652.0,
+    "pb": 100.0,
+    "rice": 0.0,
+    "oil": 0.0
+   },
+   "ref_achieved": [
+    43.256,
+    65.64,
+    52.608
+   ]
+  },
+  {
+   "target": [
+    78.4,
+    68.8,
+    8.4
+   ],
+   "foods": [
+    "pb",
+    "oats",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 97.0,
+    "oats": 0.0,
+    "broccoli": 1000.0
+   },
+   "ref_achieved": [
+    52.25,
+    89.4,
+    52.5
+   ]
+  },
+  {
+   "target": [
+    23.5,
+    48.5,
+    4.4
+   ],
+   "foods": [
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 85.0
+   },
+   "ref_achieved": [
+    11.05,
+    57.8,
+    5.95
+   ]
+  },
+  {
+   "target": [
+    33.9,
+    18.4,
+    68.9
+   ],
+   "foods": [
+    "pb",
+    "chicken",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 100.0,
+    "chicken": 40.0,
+    "broccoli": 0.0
+   },
+   "ref_achieved": [
+    34.2,
+    20.0,
+    50.48
+   ]
+  },
+  {
+   "target": [
+    17.4,
+    48.9,
+    15.9
+   ],
+   "foods": [
+    "oil",
+    "rice",
+    "broccoli",
+    "oats"
+   ],
+   "locked": {
+    "oats": 129.0
+   },
+   "ref_grams": {
+    "oats": 129.0,
+    "oil": 7.0,
+    "rice": 0.0,
+    "broccoli": 11.0
+   },
+   "ref_achieved": [
+    17.078,
+    88.49,
+    16.074
+   ]
+  },
+  {
+   "target": [
+    21.9,
+    24.6,
+    70.3
+   ],
+   "foods": [
+    "chicken",
+    "oats",
+    "oil",
+    "rice"
+   ],
+   "locked": {
+    "chicken": 93.0
+   },
+   "ref_grams": {
+    "chicken": 93.0,
+    "oats": 6.0,
+    "oil": 60.0,
+    "rice": 25.0
+   },
+   "ref_achieved": [
+    23.92,
+    24.08,
+    61.686
+   ]
+  },
+  {
+   "target": [
+    55.6,
+    64.9,
+    4.6
+   ],
+   "foods": [
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 102.0
+   },
+   "ref_achieved": [
+    7.14,
+    81.6,
+    0.612
+   ]
+  },
+  {
+   "target": [
+    23.4,
+    63.1,
+    6.0
+   ],
+   "foods": [
+    "pb",
+    "oil",
+    "oats",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 6.0,
+    "oil": 0.0,
+    "oats": 27.0,
+    "broccoli": 633.0
+   },
+   "ref_achieved": [
+    22.734,
+    63.87,
+    7.422
+   ]
+  },
+  {
+   "target": [
+    4.1,
+    34.4,
+    30.0
+   ],
+   "foods": [
+    "rice",
+    "oats",
+    "chicken",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "oats": 52.0,
+    "chicken": 0.0,
+    "broccoli": 0.0
+   },
+   "ref_achieved": [
+    6.76,
+    35.36,
+    3.64
+   ]
+  },
+  {
+   "target": [
+    32.4,
+    29.2,
+    61.4
+   ],
+   "foods": [
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 77.0
+   },
+   "ref_achieved": [
+    10.01,
+    52.36,
+    5.39
+   ]
+  },
+  {
+   "target": [
+    31.8,
+    11.5,
+    33.4
+   ],
+   "foods": [
+    "oil",
+    "oats",
+    "pb",
+    "broccoli",
+    "chicken"
+   ],
+   "locked": {
+    "chicken": 115.0
+   },
+   "ref_grams": {
+    "chicken": 115.0,
+    "oil": 29.0,
+    "oats": 1.0,
+    "pb": 5.0,
+    "broccoli": 144.0
+   },
+   "ref_achieved": [
+    31.862,
+    11.76,
+    33.526
+   ]
+  },
+  {
+   "target": [
+    16.3,
+    40.1,
+    78.3
+   ],
+   "foods": [
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 77.0
+   },
+   "ref_achieved": [
+    10.01,
+    52.36,
+    5.39
+   ]
+  },
+  {
+   "target": [
+    48.1,
+    37.2,
+    28.9
+   ],
+   "foods": [
+    "oil",
+    "chicken",
+    "pb",
+    "broccoli",
+    "oats"
+   ],
+   "locked": {
+    "pb": 26.0
+   },
+   "ref_grams": {
+    "pb": 26.0,
+    "oil": 11.0,
+    "chicken": 145.0,
+    "broccoli": 147.0,
+    "oats": 32.0
+   },
+   "ref_achieved": [
+    48.126,
+    37.25,
+    28.568
+   ]
+  },
+  {
+   "target": [
+    3.3,
+    74.5,
+    52.1
+   ],
+   "foods": [
+    "oil",
+    "broccoli",
+    "oats",
+    "chicken",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 45.0,
+    "broccoli": 0.0,
+    "oats": 99.0,
+    "chicken": 0.0,
+    "pb": 0.0
+   },
+   "ref_achieved": [
+    12.87,
+    67.32,
+    51.93
+   ]
+  },
+  {
+   "target": [
+    0.5,
+    1.3,
+    41.6
+   ],
+   "foods": [
+    "broccoli",
+    "oats"
+   ],
+   "locked": {
+    "broccoli": 139.0
+   },
+   "ref_grams": {
+    "broccoli": 139.0,
+    "oats": 5.0
+   },
+   "ref_achieved": [
+    4.542,
+    13.13,
+    0.906
+   ]
+  },
+  {
+   "target": [
+    7.9,
+    59.1,
+    42.6
+   ],
+   "foods": [
+    "chicken",
+    "rice",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 0.0,
+    "rice": 57.0,
+    "pb": 51.0
+   },
+   "ref_achieved": [
+    16.74,
+    55.8,
+    25.842
+   ]
+  },
+  {
+   "target": [
+    38.1,
+    16.1,
+    29.9
+   ],
+   "foods": [
+    "pb",
+    "chicken",
+    "rice",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 57.0,
+    "chicken": 95.0,
+    "rice": 0.0,
+    "broccoli": 69.0
+   },
+   "ref_achieved": [
+    38.032,
+    16.23,
+    29.916
+   ]
+  },
+  {
+   "target": [
+    65.2,
+    3.7,
+    69.2
+   ],
+   "foods": [
+    "oats",
+    "pb",
+    "oil",
+    "broccoli",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 0.0,
+    "pb": 12.0,
+    "oil": 60.0,
+    "broccoli": 22.0,
+    "chicken": 268.0
+   },
+   "ref_achieved": [
+    65.256,
+    3.94,
+    69.304
+   ]
+  },
+  {
+   "target": [
+    42.4,
+    7.1,
+    71.0
+   ],
+   "foods": [
+    "oats",
+    "broccoli",
+    "chicken"
+   ],
+   "locked": {
+    "oats": 170.0
+   },
+   "ref_grams": {
+    "oats": 170.0,
+    "broccoli": 32.0,
+    "chicken": 88.0
+   },
+   "ref_achieved": [
+    43.236,
+    117.84,
+    13.084
+   ]
+  },
+  {
+   "target": [
+    3.2,
+    20.3,
+    26.1
+   ],
+   "foods": [
+    "pb",
+    "oats",
+    "broccoli",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 31.0,
+    "oats": 0.0,
+    "broccoli": 0.0,
+    "rice": 15.0
+   },
+   "ref_achieved": [
+    8.8,
+    18.2,
+    15.59
+   ]
+  },
+  {
+   "target": [
+    57.9,
+    56.4,
+    39.2
+   ],
+   "foods": [
+    "pb",
+    "chicken",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 74.0,
+    "chicken": 155.0,
+    "rice": 52.0
+   },
+   "ref_achieved": [
+    57.79,
+    56.4,
+    39.172
+   ]
+  },
+  {
+   "target": [
+    42.6,
+    50.3,
+    35.3
+   ],
+   "foods": [
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 187.0
+   },
+   "ref_achieved": [
+    43.01,
+    0.0,
+    2.244
+   ]
+  },
+  {
+   "target": [
+    57.5,
+    71.9,
+    74.0
+   ],
+   "foods": [
+    "rice",
+    "oats",
+    "oil"
+   ],
+   "locked": {
+    "oats": 107.0
+   },
+   "ref_grams": {
+    "oats": 107.0,
+    "rice": 19.0,
+    "oil": 60.0
+   },
+   "ref_achieved": [
+    15.24,
+    87.96,
+    67.604
+   ]
+  },
+  {
+   "target": [
+    47.7,
+    19.3,
+    31.1
+   ],
+   "foods": [
+    "rice",
+    "pb",
+    "oats",
+    "broccoli",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "pb": 100.0,
+    "oats": 0.0,
+    "broccoli": 299.0,
+    "oil": 0.0
+   },
+   "ref_achieved": [
+    33.372,
+    40.93,
+    51.196
+   ]
+  },
+  {
+   "target": [
+    51.0,
+    58.0,
+    13.8
+   ],
+   "foods": [
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 222.0
+   },
+   "ref_achieved": [
+    51.06,
+    0.0,
+    2.664
+   ]
+  },
+  {
+   "target": [
+    31.2,
+    41.2,
+    35.5
+   ],
+   "foods": [
+    "pb",
+    "oats",
+    "oil",
+    "broccoli",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 0.0,
+    "oats": 46.0,
+    "oil": 31.0,
+    "broccoli": 145.0,
+    "chicken": 92.0
+   },
+   "ref_achieved": [
+    31.2,
+    41.43,
+    35.904
+   ]
+  },
+  {
+   "target": [
+    13.3,
+    34.8,
+    7.1
+   ],
+   "foods": [
+    "broccoli",
+    "oats",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 291.0,
+    "oats": 18.0,
+    "pb": 10.0
+   },
+   "ref_achieved": [
+    12.988,
+    34.61,
+    7.424
+   ]
+  },
+  {
+   "target": [
+    8.7,
+    31.8,
+    62.4
+   ],
+   "foods": [
+    "broccoli",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 0.0,
+    "oats": 57.0
+   },
+   "ref_achieved": [
+    7.41,
+    38.76,
+    3.99
+   ]
+  },
+  {
+   "target": [
+    61.3,
+    42.1,
+    53.8
+   ],
+   "foods": [
+    "oil",
+    "chicken",
+    "broccoli",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 47.0,
+    "chicken": 222.0,
+    "broccoli": 153.0,
+    "oats": 46.0
+   },
+   "ref_achieved": [
+    61.324,
+    41.99,
+    53.496
+   ]
+  },
+  {
+   "target": [
+    67.7,
+    34.4,
+    0.8
+   ],
+   "foods": [
+    "chicken",
+    "oats"
+   ],
+   "locked": {
+    "oats": 153.0
+   },
+   "ref_grams": {
+    "oats": 153.0,
+    "chicken": 208.0
+   },
+   "ref_achieved": [
+    67.73,
+    104.04,
+    13.206
+   ]
+  },
+  {
+   "target": [
+    18.2,
+    44.2,
+    27.5
+   ],
+   "foods": [
+    "broccoli",
+    "rice",
+    "pb",
+    "oats",
+    "oil"
+   ],
+   "locked": {
+    "oats": 176.0
+   },
+   "ref_grams": {
+    "oats": 176.0,
+    "broccoli": 2.0,
+    "rice": 0.0,
+    "pb": 0.0,
+    "oil": 15.0
+   },
+   "ref_achieved": [
+    22.936,
+    119.82,
+    27.328
+   ]
+  },
+  {
+   "target": [
+    20.2,
+    38.3,
+    50.4
+   ],
+   "foods": [
+    "oil",
+    "chicken",
+    "pb",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 46.0,
+    "chicken": 56.0,
+    "pb": 0.0,
+    "oats": 56.0
+   },
+   "ref_achieved": [
+    20.16,
+    38.08,
+    50.592
+   ]
+  },
+  {
+   "target": [
+    35.0,
+    72.2,
+    44.7
+   ],
+   "foods": [
+    "oil",
+    "chicken",
+    "broccoli",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 20.0,
+    "chicken": 0.0,
+    "broccoli": 891.0,
+    "pb": 41.0
+   },
+   "ref_achieved": [
+    35.198,
+    70.57,
+    44.064
+   ]
+  },
+  {
+   "target": [
+    18.7,
+    60.6,
+    60.1
+   ],
+   "foods": [
+    "rice",
+    "chicken",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "chicken": 30.0,
+    "oats": 96.0
+   },
+   "ref_achieved": [
+    19.38,
+    65.28,
+    7.08
+   ]
+  },
+  {
+   "target": [
+    24.8,
+    1.6,
+    14.8
+   ],
+   "foods": [
+    "oil",
+    "broccoli",
+    "pb",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 0.0,
+    "broccoli": 69.0,
+    "pb": 55.0,
+    "rice": 0.0
+   },
+   "ref_achieved": [
+    15.682,
+    15.83,
+    27.776
+   ]
+  },
+  {
+   "target": [
+    55.3,
+    56.5,
+    34.7
+   ],
+   "foods": [
+    "oats",
+    "broccoli",
+    "oil",
+    "pb",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 60.0,
+    "broccoli": 151.0,
+    "oil": 15.0,
+    "pb": 26.0,
+    "chicken": 160.0
+   },
+   "ref_achieved": [
+    55.328,
+    56.57,
+    34.724
+   ]
+  },
+  {
+   "target": [
+    24.5,
+    0.2,
+    47.5
+   ],
+   "foods": [
+    "broccoli",
+    "oats"
+   ],
+   "locked": {
+    "oats": 76.0
+   },
+   "ref_grams": {
+    "oats": 76.0,
+    "broccoli": 223.0
+   },
+   "ref_achieved": [
+    16.124,
+    67.29,
+    6.212
+   ]
+  },
+  {
+   "target": [
+    8.2,
+    50.4,
+    43.1
+   ],
+   "foods": [
+    "pb",
+    "oats"
+   ],
+   "locked": {
+    "pb": 157.0
+   },
+   "ref_grams": {
+    "pb": 157.0,
+    "oats": 24.0
+   },
+   "ref_achieved": [
+    42.37,
+    47.72,
+    80.18
+   ]
+  },
+  {
+   "target": [
+    63.9,
+    40.3,
+    73.2
+   ],
+   "foods": [
+    "oats",
+    "rice"
+   ],
+   "locked": {
+    "rice": 64.0
+   },
+   "ref_grams": {
+    "rice": 64.0,
+    "oats": 67.0
+   },
+   "ref_achieved": [
+    13.19,
+    96.76,
+    5.074
+   ]
+  },
+  {
+   "target": [
+    48.3,
+    3.7,
+    2.9
+   ],
+   "foods": [
+    "rice",
+    "pb",
+    "broccoli",
+    "oil",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "pb": 65.0,
+    "broccoli": 346.0,
+    "oil": 0.0,
+    "oats": 0.0
+   },
+   "ref_achieved": [
+    25.938,
+    37.22,
+    33.884
+   ]
+  },
+  {
+   "target": [
+    35.1,
+    6.8,
+    70.1
+   ],
+   "foods": [
+    "chicken",
+    "oats",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 45.0,
+    "oats": 0.0,
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    35.35,
+    20.0,
+    50.54
+   ]
+  },
+  {
+   "target": [
+    33.9,
+    53.8,
+    19.5
+   ],
+   "foods": [
+    "oil",
+    "oats",
+    "pb"
+   ],
+   "locked": {
+    "oats": 59.0
+   },
+   "ref_grams": {
+    "oats": 59.0,
+    "oil": 0.0,
+    "pb": 68.0
+   },
+   "ref_achieved": [
+    24.67,
+    53.72,
+    38.13
+   ]
+  },
+  {
+   "target": [
+    16.5,
+    19.3,
+    70.9
+   ],
+   "foods": [
+    "rice",
+    "oil",
+    "oats",
+    "pb",
+    "broccoli"
+   ],
+   "locked": {
+    "broccoli": 89.0
+   },
+   "ref_grams": {
+    "broccoli": 89.0,
+    "rice": 3.0,
+    "oil": 43.0,
+    "oats": 0.0,
+    "pb": 55.0
+   },
+   "ref_achieved": [
+    16.452,
+    19.63,
+    70.874
+   ]
+  },
+  {
+   "target": [
+    25.7,
+    79.8,
+    65.7
+   ],
+   "foods": [
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    25.0,
+    20.0,
+    50.0
+   ]
+  },
+  {
+   "target": [
+    60.2,
+    66.1,
+    18.0
+   ],
+   "foods": [
+    "broccoli",
+    "rice",
+    "oil"
+   ],
+   "locked": {
+    "oil": 43.0
+   },
+   "ref_grams": {
+    "oil": 43.0,
+    "broccoli": 1000.0,
+    "rice": 9.0
+   },
+   "ref_achieved": [
+    28.63,
+    77.2,
+    47.054
+   ]
+  },
+  {
+   "target": [
+    50.3,
+    4.4,
+    15.4
+   ],
+   "foods": [
+    "rice",
+    "broccoli"
+   ],
+   "locked": {
+    "broccoli": 75.0
+   },
+   "ref_grams": {
+    "broccoli": 75.0,
+    "rice": 21.0
+   },
+   "ref_achieved": [
+    3.57,
+    22.05,
+    0.426
+   ]
+  },
+  {
+   "target": [
+    53.3,
+    77.8,
+    63.6
+   ],
+   "foods": [
+    "broccoli",
+    "oats",
+    "chicken",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 154.0,
+    "oats": 99.0,
+    "chicken": 157.0,
+    "oil": 54.0
+   },
+   "ref_achieved": [
+    53.292,
+    78.1,
+    63.43
+   ]
+  },
+  {
+   "target": [
+    64.3,
+    39.2,
+    69.0
+   ],
+   "foods": [
+    "broccoli",
+    "pb",
+    "rice",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 280.0,
+    "pb": 100.0,
+    "rice": 0.0,
+    "chicken": 138.0
+   },
+   "ref_achieved": [
+    64.58,
+    39.6,
+    52.776
+   ]
+  },
+  {
+   "target": [
+    19.3,
+    18.2,
+    73.0
+   ],
+   "foods": [
+    "broccoli",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 430.0,
+    "oil": 60.0
+   },
+   "ref_achieved": [
+    12.04,
+    30.1,
+    61.72
+   ]
+  },
+  {
+   "target": [
+    34.9,
+    61.2,
+    13.3
+   ],
+   "foods": [
+    "oil",
+    "broccoli",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 9.0,
+    "broccoli": 1000.0,
+    "oats": 0.0
+   },
+   "ref_achieved": [
+    28.0,
+    70.0,
+    13.0
+   ]
+  },
+  {
+   "target": [
+    13.2,
+    61.5,
+    65.9
+   ],
+   "foods": [
+    "chicken",
+    "pb",
+    "broccoli"
+   ],
+   "locked": {
+    "pb": 111.0
+   },
+   "ref_grams": {
+    "pb": 111.0,
+    "chicken": 0.0,
+    "broccoli": 344.0
+   },
+   "ref_achieved": [
+    37.382,
+    46.28,
+    56.876
+   ]
+  },
+  {
+   "target": [
+    16.9,
+    44.4,
+    44.9
+   ],
+   "foods": [
+    "oil",
+    "rice",
+    "pb"
+   ],
+   "locked": {
+    "pb": 42.0
+   },
+   "ref_grams": {
+    "pb": 42.0,
+    "oil": 24.0,
+    "rice": 46.0
+   },
+   "ref_achieved": [
+    13.72,
+    45.2,
+    45.276
+   ]
+  },
+  {
+   "target": [
+    36.6,
+    51.7,
+    60.9
+   ],
+   "foods": [
+    "pb",
+    "rice",
+    "broccoli",
+    "oil",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 1.0,
+    "rice": 52.0,
+    "broccoli": 144.0,
+    "oil": 58.0,
+    "chicken": 125.0
+   },
+   "ref_achieved": [
+    36.672,
+    51.88,
+    60.888
+   ]
+  },
+  {
+   "target": [
+    40.8,
+    46.9,
+    60.4
+   ],
+   "foods": [
+    "broccoli",
+    "chicken",
+    "pb",
+    "rice",
+    "oats"
+   ],
+   "locked": {
+    "oats": 161.0
+   },
+   "ref_grams": {
+    "oats": 161.0,
+    "broccoli": 0.0,
+    "chicken": 0.0,
+    "pb": 82.0,
+    "rice": 0.0
+   },
+   "ref_achieved": [
+    41.43,
+    125.88,
+    52.27
+   ]
+  },
+  {
+   "target": [
+    34.1,
+    35.2,
+    26.1
+   ],
+   "foods": [
+    "oil",
+    "oats",
+    "pb",
+    "broccoli",
+    "chicken"
+   ],
+   "locked": {
+    "broccoli": 124.0
+   },
+   "ref_grams": {
+    "broccoli": 124.0,
+    "oil": 22.0,
+    "oats": 39.0,
+    "pb": 0.0,
+    "chicken": 111.0
+   },
+   "ref_achieved": [
+    34.072,
+    35.2,
+    26.558
+   ]
+  },
+  {
+   "target": [
+    14.3,
+    77.4,
+    68.8
+   ],
+   "foods": [
+    "rice",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 69.0,
+    "pb": 89.0
+   },
+   "ref_achieved": [
+    27.08,
+    73.0,
+    44.914
+   ]
+  },
+  {
+   "target": [
+    37.3,
+    65.0,
+    66.5
+   ],
+   "foods": [
+    "oil",
+    "pb"
+   ],
+   "locked": {
+    "pb": 18.0
+   },
+   "ref_grams": {
+    "pb": 18.0,
+    "oil": 57.0
+   },
+   "ref_achieved": [
+    4.5,
+    3.6,
+    66.0
+   ]
+  },
+  {
+   "target": [
+    37.5,
+    72.6,
+    73.5
+   ],
+   "foods": [
+    "oil",
+    "rice",
+    "pb",
+    "broccoli",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 60.0,
+    "rice": 73.0,
+    "pb": 23.0,
+    "broccoli": 143.0,
+    "chicken": 99.0
+   },
+   "ref_achieved": [
+    37.634,
+    73.01,
+    73.698
+   ]
+  },
+  {
+   "target": [
+    32.0,
+    57.4,
+    0.5
+   ],
+   "foods": [
+    "pb",
+    "oil",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 53.0,
+    "oil": 0.0,
+    "rice": 64.0
+   },
+   "ref_achieved": [
+    17.73,
+    61.8,
+    26.884
+   ]
+  },
+  {
+   "target": [
+    31.0,
+    19.8,
+    43.2
+   ],
+   "foods": [
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    25.0,
+    20.0,
+    50.0
+   ]
+  },
+  {
+   "target": [
+    64.6,
+    48.6,
+    10.6
+   ],
+   "foods": [
+    "chicken",
+    "pb",
+    "rice",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 243.0,
+    "pb": 12.0,
+    "rice": 37.0,
+    "oats": 25.0
+   },
+   "ref_achieved": [
+    64.73,
+    49.0,
+    10.888
+   ]
+  },
+  {
+   "target": [
+    25.7,
+    35.9,
+    78.1
+   ],
+   "foods": [
+    "broccoli",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 702.0,
+    "rice": 0.0
+   },
+   "ref_achieved": [
+    19.656,
+    49.14,
+    2.808
+   ]
+  },
+  {
+   "target": [
+    44.2,
+    17.5,
+    7.4
+   ],
+   "foods": [
+    "pb",
+    "rice",
+    "oats",
+    "chicken",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 10.0,
+    "rice": 7.0,
+    "oats": 0.0,
+    "chicken": 162.0,
+    "broccoli": 143.0
+   },
+   "ref_achieved": [
+    44.254,
+    17.61,
+    7.558
+   ]
+  },
+  {
+   "target": [
+    28.9,
+    13.3,
+    67.5
+   ],
+   "foods": [
+    "pb",
+    "oil",
+    "rice",
+    "chicken",
+    "broccoli"
+   ],
+   "locked": {
+    "pb": 188.0
+   },
+   "ref_grams": {
+    "pb": 188.0,
+    "oil": 0.0,
+    "rice": 0.0,
+    "chicken": 0.0,
+    "broccoli": 2.0
+   },
+   "ref_achieved": [
+    47.056,
+    37.74,
+    94.008
+   ]
+  },
+  {
+   "target": [
+    61.7,
+    10.8,
+    60.5
+   ],
+   "foods": [
+    "rice",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 5.0,
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    25.35,
+    24.0,
+    50.03
+   ]
+  },
+  {
+   "target": [
+    25.8,
+    14.0,
+    59.6
+   ],
+   "foods": [
+    "broccoli",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 506.0,
+    "rice": 0.0
+   },
+   "ref_achieved": [
+    14.168,
+    35.42,
+    2.024
+   ]
+  },
+  {
+   "target": [
+    28.2,
+    50.1,
+    29.2
+   ],
+   "foods": [
+    "pb",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 78.0,
+    "rice": 45.0
+   },
+   "ref_achieved": [
+    22.65,
+    51.6,
+    39.27
+   ]
+  },
+  {
+   "target": [
+    48.0,
+    60.5,
+    76.1
+   ],
+   "foods": [
+    "oil",
+    "pb"
+   ],
+   "locked": {
+    "pb": 55.0
+   },
+   "ref_grams": {
+    "pb": 55.0,
+    "oil": 49.0
+   },
+   "ref_achieved": [
+    13.75,
+    11.0,
+    76.5
+   ]
+  },
+  {
+   "target": [
+    26.6,
+    52.1,
+    54.3
+   ],
+   "foods": [
+    "oil",
+    "pb",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 4.0,
+    "pb": 100.0,
+    "chicken": 7.0
+   },
+   "ref_achieved": [
+    26.61,
+    20.0,
+    54.084
+   ]
+  },
+  {
+   "target": [
+    7.8,
+    57.1,
+    72.5
+   ],
+   "foods": [
+    "broccoli",
+    "oil",
+    "oats",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 0.0,
+    "oil": 60.0,
+    "oats": 82.0,
+    "chicken": 0.0
+   },
+   "ref_achieved": [
+    10.66,
+    55.76,
+    65.74
+   ]
+  },
+  {
+   "target": [
+    50.4,
+    58.4,
+    45.5
+   ],
+   "foods": [
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 222.0
+   },
+   "ref_achieved": [
+    51.06,
+    0.0,
+    2.664
+   ]
+  },
+  {
+   "target": [
+    72.3,
+    64.0,
+    63.4
+   ],
+   "foods": [
+    "rice",
+    "oil",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 73.0,
+    "oil": 13.0,
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    30.11,
+    78.4,
+    63.438
+   ]
+  },
+  {
+   "target": [
+    40.1,
+    30.2,
+    58.7
+   ],
+   "foods": [
+    "oil",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 9.0,
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    25.0,
+    20.0,
+    59.0
+   ]
+  },
+  {
+   "target": [
+    71.0,
+    30.0,
+    41.4
+   ],
+   "foods": [
+    "chicken",
+    "oil",
+    "broccoli",
+    "pb",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 220.0,
+    "oil": 7.0,
+    "broccoli": 149.0,
+    "pb": 62.0,
+    "rice": 9.0
+   },
+   "ref_achieved": [
+    70.902,
+    30.03,
+    41.29
+   ]
+  },
+  {
+   "target": [
+    69.1,
+    14.5,
+    68.2
+   ],
+   "foods": [
+    "pb",
+    "broccoli",
+    "chicken",
+    "oats"
+   ],
+   "locked": {
+    "chicken": 139.0
+   },
+   "ref_grams": {
+    "chicken": 139.0,
+    "pb": 100.0,
+    "broccoli": 129.0,
+    "oats": 0.0
+   },
+   "ref_achieved": [
+    60.582,
+    29.03,
+    52.184
+   ]
+  },
+  {
+   "target": [
+    77.6,
+    0.2,
+    51.5
+   ],
+   "foods": [
+    "broccoli",
+    "chicken",
+    "oil",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 6.0,
+    "chicken": 337.0,
+    "oil": 47.0,
+    "pb": 0.0
+   },
+   "ref_achieved": [
+    77.678,
+    0.42,
+    51.068
+   ]
+  },
+  {
+   "target": [
+    20.9,
+    5.3,
+    7.4
+   ],
+   "foods": [
+    "oats",
+    "rice",
+    "pb",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 0.0,
+    "rice": 0.0,
+    "pb": 36.0,
+    "broccoli": 146.0
+   },
+   "ref_achieved": [
+    13.088,
+    17.42,
+    18.584
+   ]
+  },
+  {
+   "target": [
+    0.2,
+    74.6,
+    70.4
+   ],
+   "foods": [
+    "oats",
+    "rice",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 104.0,
+    "rice": 0.0,
+    "broccoli": 0.0
+   },
+   "ref_achieved": [
+    13.52,
+    70.72,
+    7.28
+   ]
+  },
+  {
+   "target": [
+    19.9,
+    73.0,
+    33.6
+   ],
+   "foods": [
+    "chicken",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 87.0,
+    "oil": 33.0
+   },
+   "ref_achieved": [
+    20.01,
+    0.0,
+    34.044
+   ]
+  },
+  {
+   "target": [
+    61.4,
+    31.7,
+    21.0
+   ],
+   "foods": [
+    "rice",
+    "oats",
+    "pb",
+    "oil",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "oats": 0.0,
+    "pb": 95.0,
+    "oil": 0.0,
+    "broccoli": 618.0
+   },
+   "ref_achieved": [
+    41.054,
+    62.26,
+    49.972
+   ]
+  },
+  {
+   "target": [
+    3.7,
+    73.8,
+    75.4
+   ],
+   "foods": [
+    "oats",
+    "oil",
+    "chicken"
+   ],
+   "locked": {
+    "chicken": 14.0
+   },
+   "ref_grams": {
+    "chicken": 14.0,
+    "oats": 96.0,
+    "oil": 60.0
+   },
+   "ref_achieved": [
+    15.7,
+    65.28,
+    66.888
+   ]
+  },
+  {
+   "target": [
+    73.0,
+    11.0,
+    55.1
+   ],
+   "foods": [
+    "oats",
+    "rice",
+    "oil",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 36.0,
+    "rice": 0.0,
+    "oil": 3.0,
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    29.68,
+    44.48,
+    55.52
+   ]
+  },
+  {
+   "target": [
+    0.4,
+    4.5,
+    79.5
+   ],
+   "foods": [
+    "chicken",
+    "broccoli",
+    "oats",
+    "rice",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 0.0,
+    "broccoli": -0.0,
+    "oats": 9.0,
+    "rice": 0.0,
+    "oil": 60.0
+   },
+   "ref_achieved": [
+    1.17,
+    6.12,
+    60.63
+   ]
+  },
+  {
+   "target": [
+    47.4,
+    20.0,
+    62.1
+   ],
+   "foods": [
+    "pb",
+    "broccoli",
+    "rice",
+    "chicken"
+   ],
+   "locked": {
+    "rice": 43.0
+   },
+   "ref_grams": {
+    "rice": 43.0,
+    "pb": 100.0,
+    "broccoli": 0.0,
+    "chicken": 85.0
+   },
+   "ref_achieved": [
+    47.56,
+    54.4,
+    51.278
+   ]
+  },
+  {
+   "target": [
+    24.2,
+    11.9,
+    48.3
+   ],
+   "foods": [
+    "chicken",
+    "broccoli",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 94.0,
+    "broccoli": 0.0,
+    "oats": 24.0
+   },
+   "ref_achieved": [
+    24.74,
+    16.32,
+    2.808
+   ]
+  },
+  {
+   "target": [
+    42.4,
+    21.8,
+    15.9
+   ],
+   "foods": [
+    "rice",
+    "chicken",
+    "pb",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 8.0,
+    "chicken": 135.0,
+    "pb": 27.0,
+    "broccoli": 141.0
+   },
+   "ref_achieved": [
+    42.308,
+    21.67,
+    15.732
+   ]
+  },
+  {
+   "target": [
+    69.3,
+    19.1,
+    33.0
+   ],
+   "foods": [
+    "oil",
+    "chicken",
+    "oats",
+    "broccoli",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 28.0,
+    "chicken": 276.0,
+    "oats": 12.0,
+    "broccoli": 153.0,
+    "rice": 0.0
+   },
+   "ref_achieved": [
+    69.324,
+    18.87,
+    32.764
+   ]
+  },
+  {
+   "target": [
+    67.9,
+    15.8,
+    77.6
+   ],
+   "foods": [
+    "oats",
+    "pb",
+    "broccoli",
+    "oil"
+   ],
+   "locked": {
+    "pb": 67.0
+   },
+   "ref_grams": {
+    "pb": 67.0,
+    "oats": 0.0,
+    "broccoli": 727.0,
+    "oil": 41.0
+   },
+   "ref_achieved": [
+    37.106,
+    64.29,
+    77.408
+   ]
+  },
+  {
+   "target": [
+    73.0,
+    13.3,
+    26.3
+   ],
+   "foods": [
+    "rice",
+    "pb",
+    "broccoli",
+    "chicken"
+   ],
+   "locked": {
+    "rice": 247.0
+   },
+   "ref_grams": {
+    "rice": 247.0,
+    "pb": 39.0,
+    "broccoli": 0.0,
+    "chicken": 201.0
+   },
+   "ref_achieved": [
+    73.27,
+    205.4,
+    23.394
+   ]
+  },
+  {
+   "target": [
+    21.1,
+    40.8,
+    12.9
+   ],
+   "foods": [
+    "chicken",
+    "oil",
+    "pb",
+    "oats",
+    "rice"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 76.0,
+    "oil": 12.0,
+    "pb": 0.0,
+    "oats": 0.0,
+    "rice": 51.0
+   },
+   "ref_achieved": [
+    21.05,
+    40.8,
+    13.218
+   ]
+  },
+  {
+   "target": [
+    21.7,
+    1.1,
+    75.1
+   ],
+   "foods": [
+    "chicken",
+    "oats",
+    "rice"
+   ],
+   "locked": {
+    "chicken": 16.0
+   },
+   "ref_grams": {
+    "chicken": 16.0,
+    "oats": 29.0,
+    "rice": 0.0
+   },
+   "ref_achieved": [
+    7.45,
+    19.72,
+    2.222
+   ]
+  },
+  {
+   "target": [
+    42.7,
+    25.9,
+    20.0
+   ],
+   "foods": [
+    "rice",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "rice": 0.0,
+    "broccoli": 821.0
+   },
+   "ref_achieved": [
+    22.988,
+    57.47,
+    3.284
+   ]
+  },
+  {
+   "target": [
+    21.9,
+    58.1,
+    6.7
+   ],
+   "foods": [
+    "chicken",
+    "rice",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 50.0,
+    "rice": 51.0,
+    "broccoli": 248.0
+   },
+   "ref_achieved": [
+    22.014,
+    58.16,
+    1.898
+   ]
+  },
+  {
+   "target": [
+    28.3,
+    33.7,
+    37.5
+   ],
+   "foods": [
+    "chicken",
+    "oats",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 94.0,
+    "oats": 54.0,
+    "broccoli": 0.0
+   },
+   "ref_achieved": [
+    28.64,
+    36.72,
+    4.908
+   ]
+  },
+  {
+   "target": [
+    63.1,
+    25.0,
+    18.2
+   ],
+   "foods": [
+    "chicken",
+    "oats",
+    "rice",
+    "oil",
+    "pb"
+   ],
+   "locked": {
+    "chicken": 157.0
+   },
+   "ref_grams": {
+    "chicken": 157.0,
+    "oats": 27.0,
+    "rice": 0.0,
+    "oil": 0.0,
+    "pb": 59.0
+   },
+   "ref_achieved": [
+    54.37,
+    30.16,
+    33.274
+   ]
+  },
+  {
+   "target": [
+    47.1,
+    35.1,
+    78.1
+   ],
+   "foods": [
+    "oats",
+    "chicken"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oats": 61.0,
+    "chicken": 174.0
+   },
+   "ref_achieved": [
+    47.95,
+    41.48,
+    6.358
+   ]
+  },
+  {
+   "target": [
+    20.2,
+    5.3,
+    74.6
+   ],
+   "foods": [
+    "pb",
+    "rice",
+    "oats",
+    "oil",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 73.0,
+    "rice": 0.0,
+    "oats": 0.0,
+    "oil": 38.0,
+    "broccoli": 0.0
+   },
+   "ref_achieved": [
+    18.25,
+    14.6,
+    74.5
+   ]
+  },
+  {
+   "target": [
+    12.5,
+    9.9,
+    35.7
+   ],
+   "foods": [
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 36.0
+   },
+   "ref_achieved": [
+    0.0,
+    0.0,
+    36.0
+   ]
+  },
+  {
+   "target": [
+    7.1,
+    51.8,
+    63.4
+   ],
+   "foods": [
+    "broccoli",
+    "rice"
+   ],
+   "locked": {
+    "broccoli": 82.0
+   },
+   "ref_grams": {
+    "broccoli": 82.0,
+    "rice": 58.0
+   },
+   "ref_achieved": [
+    6.356,
+    52.14,
+    0.676
+   ]
+  },
+  {
+   "target": [
+    32.8,
+    69.3,
+    31.3
+   ],
+   "foods": [
+    "pb",
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 100.0,
+    "oil": 0.0
+   },
+   "ref_achieved": [
+    25.0,
+    20.0,
+    50.0
+   ]
+  },
+  {
+   "target": [
+    15.8,
+    37.0,
+    77.4
+   ],
+   "foods": [
+    "oil",
+    "rice",
+    "pb",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 51.0,
+    "rice": 25.0,
+    "pb": 51.0,
+    "oats": 10.0
+   },
+   "ref_achieved": [
+    15.8,
+    37.0,
+    77.35
+   ]
+  },
+  {
+   "target": [
+    26.1,
+    79.2,
+    14.6
+   ],
+   "foods": [
+    "oil"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "oil": 15.0
+   },
+   "ref_achieved": [
+    0.0,
+    0.0,
+    15.0
+   ]
+  },
+  {
+   "target": [
+    30.9,
+    21.7,
+    78.4
+   ],
+   "foods": [
+    "pb",
+    "chicken",
+    "oats",
+    "broccoli"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "pb": 100.0,
+    "chicken": 24.0,
+    "oats": 6.0,
+    "broccoli": 0.0
+   },
+   "ref_achieved": [
+    31.3,
+    24.08,
+    50.708
+   ]
+  },
+  {
+   "target": [
+    30.7,
+    52.8,
+    78.4
+   ],
+   "foods": [
+    "chicken",
+    "rice",
+    "oats",
+    "oil",
+    "pb"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "chicken": 77.0,
+    "rice": 50.0,
+    "oats": 9.0,
+    "oil": 60.0,
+    "pb": 33.0
+   },
+   "ref_achieved": [
+    30.63,
+    52.72,
+    78.354
+   ]
+  },
+  {
+   "target": [
+    38.9,
+    14.3,
+    55.7
+   ],
+   "foods": [
+    "broccoli",
+    "oil",
+    "oats"
+   ],
+   "locked": {},
+   "ref_grams": {
+    "broccoli": 660.0,
+    "oil": 53.0,
+    "oats": 0.0
+   },
+   "ref_achieved": [
+    18.48,
+    46.2,
+    55.64
+   ]
+  },
+  {
+   "target": [
+    66.2,
+    6.1,
+    49.1
+   ],
+   "foods": [
+    "oil",
+    "chicken",
+    "rice",
+    "pb"
+   ],
+   "locked": {
+    "rice": 250.0
+   },
+   "ref_grams": {
+    "rice": 250.0,
+    "oil": 45.0,
+    "chicken": 211.0,
+    "pb": 0.0
+   },
+   "ref_achieved": [
+    66.03,
+    200.0,
+    49.032
+   ]
+  },
+  {
+   "target": [
+    62.6,
+    24.1,
+    33.5
+   ],
+   "foods": [
+    "pb",
+    "rice"
+   ],
+   "locked": {
+    "rice": 42.0
+   },
+   "ref_grams": {
+    "rice": 42.0,
+    "pb": 100.0
+   },
+   "ref_achieved": [
+    27.94,
+    53.6,
+    50.252
+   ]
+  }
+ ]
+}

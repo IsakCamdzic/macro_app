@@ -156,16 +156,17 @@ type SolverResult = {
 
 1. Subtract contribution of all `fixed` foods from the target → **residual target** `T'` (clamp each component at 0, but record that it was over-consumed).
 2. Let `A` be the 3×n matrix with `A[k][i] = per100_i[k] / 100` (grams of macro k per gram of food i), `g` the vector of grams for auto foods.
-3. Solve the **bounded, regularised, relative least squares**:
+3. Solve the **bounded, regularised least squares in absolute grams**:
 
 ```
-minimise   Σ_k  w_k · ((A g − T')_k / max(T'_k, 1))²   +   λ · Σ_i ((g_i − g0_i) / max(g0_i, 1))²
+minimise   Σ_k (w_k · (A g − T')_k)²   +   λ · Σ_i (g_i − g0_i)²
 subject to minGrams_i ≤ g_i ≤ maxGrams_i
 ```
-- `w_k = 1` for all macros by default (configurable; protein could be weighted ×1.5 later).
-- `g0_i` = `defaultGrams` or a role-based prior (protein source 150 g, carb source 100 g, veg 150 g, fat source 10 g).
-- `λ = 1e-3` — a tie-breaker that makes the answer **unique and sensible when n > 3** (underdetermined) and keeps portions realistic. It must be small enough that it never visibly harms the macro fit when an exact solution exists.
-- Relative error scaling stops carbs (large numbers) dominating fat (small numbers).
+- Errors are measured in **absolute grams of macro**, not relative to the target. (An earlier draft used relative error; it breaks when a target component is 0 or small — a 0 g fat target made the solver cut chicken to ~5 g to avoid 2 g of fat. Do not reintroduce relative scaling.)
+- `w = (protein 2, carbs 1, fat 1)`. Protein is weighted higher so that when a macro is unreachable (e.g. fat with no fat source) the solver sacrifices the unreachable macro, not protein.
+- `g0_i` = `defaultGrams` or a role-based prior (protein source 150 g, carb source 100 g, veg 150 g, fat source 10 g, oats 60 g).
+- `λ = 1e-4` — a tie-breaker that makes the answer **unique and sensible when n > 3** (underdetermined) and keeps portions realistic. It must be small enough that it never visibly harms the macro fit when an exact solution exists.
+- The independent reference implementation is `reference_solver.py`; the TypeScript solver must match its macro accuracy (see `SOLVER_TESTS.md`).
 
 4. Algorithm: **bounded-variable least squares via an active-set method** (or equivalently Lawson–Hanson NNLS with bound shifting). n is tiny (≤ ~10), so correctness and determinism matter far more than speed. Do **not** use random or iterative-until-it-looks-right heuristics. Same input must always give the same output.
 
@@ -441,7 +442,9 @@ Rules: `/lib/solver` and `/lib/targets` must not import from React, Next, or Sup
 
 ## 11. Acceptance criteria
 
-**Solver (illustrative per-100 g values; use seed data equivalents)**
+**Solver — the full test plan, golden values and calibration procedure are in `SOLVER_TESTS.md`. It overrides the numbers below if they differ.**
+
+Illustrative per-100 g values:
 - chicken breast raw ≈ 23 P / 0 C / 1.2 F · white rice raw ≈ 7 P / 80 C / 0.6 F · broccoli ≈ 2.8 P / 7 C / 0.4 F · olive oil 0 / 0 / 100.
 1. Target 50 / 52.5 / 25 with **chicken + rice + broccoli(locked 150 g)**: status `infeasible`, fat shortfall ≈ 20+ g reported, top suggestion is **add olive oil ≈ 20–23 g**, never negative grams.
 2. Same target with **chicken + rice + broccoli(locked 150 g) + olive oil**: status `exact`; roughly chicken ≈ 180 g, rice ≈ 52 g, oil ≈ 22 g (verify numerically in test with ±1 g macro tolerance).
@@ -469,6 +472,22 @@ Rules: `/lib/solver` and `/lib/targets` must not import from React, Next, or Sup
 - GitHub repo → Vercel project; preview deploys per PR; production on `main`.
 - Supabase: separate **dev** and **prod** projects. Migrations applied via Supabase CLI in CI.
 - Env vars: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY` (server only), `USDA_API_KEY`, `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN`.
+### 12.1 USDA API key handling
+
+The owner has a personal USDA FoodData Central API key. **The key itself is deliberately NOT written in this file or in any file that gets committed**; USDA deactivates keys found in code repositories, and this spec will live in the repo. The owner gives it to you directly (chat/message) and you handle it like this:
+
+1. Variable name: `USDA_API_KEY` (server-only; never `NEXT_PUBLIC_`).
+2. Before the first commit, make sure `.gitignore` contains `.env`, `.env.local` and `.env*.local`. Commit only `.env.example` with `USDA_API_KEY=your_usda_key_here`.
+3. Put the real key in `.env.local` for local development, and in Vercel (Project Settings → Environment Variables, enabled for Production and Preview; mark it Sensitive if offered).
+4. Read it in exactly two places: `lib/server/usda.ts` and `scripts/import-usda.ts`, via a single Zod-validated env module that fails fast on startup if it is missing.
+5. Never log it, never return it to the client, never include it in error messages, and never log full request URLs (the key may be in the query string). If the API accepts it as an `X-Api-Key` header, prefer the header (verify with a test call); otherwise use the `api_key` query parameter.
+6. Verify the key works before building on it:
+   `curl "https://api.nal.usda.gov/fdc/v1/foods/search?query=chicken%20breast%20raw&dataType=Foundation&api_key=$USDA_API_KEY"`
+   Expect HTTP 200 and a `foods` array. Check the `X-RateLimit-Remaining` response header.
+7. Respect limits (default 1,000 requests/hour per IP): cache every result in the `foods` table, debounce searches, handle HTTP 429 by falling back to local results, 3 s timeout.
+8. If the key is ever exposed (committed, pasted in a public place, appears in logs): tell the owner immediately so they request a new key at https://fdc.nal.usda.gov/api-key-signup, then replace it everywhere.
+9. Add a CI check that fails the build if the string `USDA_API_KEY=` is followed by a real-looking value anywhere in tracked files.
+
 - Supabase Auth settings: site URL + redirect allow-list for the Vercel domain(s), email confirmation on, leaked password protection on.
 - Enable daily Supabase backups (or PITR on paid tier).
 

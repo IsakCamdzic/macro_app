@@ -8,6 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "test": "vitest run",
+    "test:solver": "vitest run lib/solver/solver.test.ts",
+    "test:calibration": "vitest run lib/solver/calibration.test.ts",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit"
   },

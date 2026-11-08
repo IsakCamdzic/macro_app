@@ -1,17 +1,28 @@
 import "server-only";
 import { CachedFoodInsert, upsertGlobalFoodCache } from "./food-cache";
+import { getServerEnv } from "./env";
 
 export async function searchUSDA(query: string): Promise<CachedFoodInsert[]> {
-  const apiKey = process.env.USDA_API_KEY || "DEMO_KEY";
+  const { USDA_API_KEY } = getServerEnv();
   const url = `https://api.nal.usda.gov/fdc/v1/foods/search?query=${encodeURIComponent(
     query
-  )}&pageSize=8&api_key=${apiKey}&dataType=Foundation,Survey%20(FNDDS)`;
+  )}&pageSize=8&dataType=Foundation,Survey%20(FNDDS)`;
 
   try {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 3000);
 
-    const res = await fetch(url, { signal: controller.signal });
+    const headers: Record<string, string> = {
+      "User-Agent": "MacroMeal/1.0",
+    };
+    if (USDA_API_KEY) {
+      headers["X-Api-Key"] = USDA_API_KEY;
+    }
+
+    const res = await fetch(url, {
+      signal: controller.signal,
+      headers,
+    });
     clearTimeout(timeout);
 
     if (!res.ok) return [];

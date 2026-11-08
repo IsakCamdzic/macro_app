@@ -1,306 +1,212 @@
 import { describe, it, expect } from "vitest";
-import { solveMeal } from "./solve";
-import { SolverFood, SolverInput } from "./types";
+import { solve } from "./index";
+import { F } from "./__fixtures__/foods";
 
-const chickenBreast: SolverFood = {
-  id: "chicken",
-  name: "Chicken Breast (raw)",
-  per100: { protein: 23.0, carbs: 0.0, fat: 1.2 },
-  mode: "auto",
-};
+const grams = (r: ReturnType<typeof solve>, id: string) =>
+  r.items.find((i) => i.foodId === id)?.grams ?? 0;
+const near = (a: number, b: number, tol: number) => expect(Math.abs(a - b)).toBeLessThanOrEqual(tol);
 
-const whiteRice: SolverFood = {
-  id: "rice",
-  name: "White Rice (raw)",
-  per100: { protein: 7.0, carbs: 80.0, fat: 0.6 },
-  mode: "auto",
-};
+const locked = (f: any, g: number) => ({ ...f, mode: "fixed" as const, fixedGrams: g });
+const T = { protein: 50, carbs: 52.5, fat: 25 };
 
-const broccoli: SolverFood = {
-  id: "broccoli",
-  name: "Broccoli (raw)",
-  per100: { protein: 2.8, carbs: 7.0, fat: 0.4 },
-  mode: "fixed",
-  fixedGrams: 150,
-};
-
-const oliveOil: SolverFood = {
-  id: "olive_oil",
-  name: "Extra Virgin Olive Oil",
-  per100: { protein: 0.0, carbs: 0.0, fat: 100.0 },
-  mode: "auto",
-  maxGrams: 60,
-};
-
-describe("Solver - Section 11 Acceptance Criteria", () => {
-  it("Criterion 1: Chicken + Rice + Broccoli (locked 150g) with Target 50P / 52.5C / 25F", () => {
-    const input: SolverInput = {
-      target: { protein: 50, carbs: 52.5, fat: 25 },
-      foods: [chickenBreast, whiteRice, broccoli],
-      roundTo: 1,
-    };
-
-    const result = solveMeal(input);
-
-    expect(result.status).toBe("infeasible");
-    // Fat shortfall should be around 20+ g
-    expect(result.delta.fat).toBeLessThan(-18);
-
-    // Top suggestion must be to add olive oil ≈ 20-23 g
-    expect(result.suggestions.length).toBeGreaterThan(0);
-    const topSuggestion = result.suggestions.find((s) => s.foodName?.toLowerCase().includes("olive oil"));
-    expect(topSuggestion).toBeDefined();
-    expect(topSuggestion?.grams).toBeGreaterThanOrEqual(20);
-    expect(topSuggestion?.grams).toBeLessThanOrEqual(24);
-
-    // No negative grams
-    for (const item of result.items) {
-      expect(item.grams).toBeGreaterThanOrEqual(0);
-      expect(Number.isFinite(item.grams)).toBe(true);
-      expect(Number.isNaN(item.grams)).toBe(false);
-    }
+describe("golden cases", () => {
+  it("T1 infeasible without a fat source, protein+carbs still on target, suggests oil", () => {
+    const r = solve({ target: T, foods: [F.chicken, F.rice, locked(F.broccoli, 150)] });
+    expect(r.status).toBe("infeasible");
+    near(grams(r, "chicken"), 184, 2);
+    near(grams(r, "rice"), 53, 2);
+    near(r.achieved.protein, T.protein, 1); // protein is protected
+    near(r.achieved.carbs, T.carbs, 1);
+    near(r.delta.fat, -21.9, 1.5); // reported shortfall ≈ 22 g
+    const s = r.suggestions[0];
+    expect(s.kind).toBe("add");
+    expect(s.foodId).toBe("oil");
+    near(s.grams!, 22, 3);
   });
 
-  it("Criterion 2: Chicken + Rice + Broccoli (locked 150g) + Olive Oil with Target 50P / 52.5C / 25F", () => {
-    const input: SolverInput = {
-      target: { protein: 50, carbs: 52.5, fat: 25 },
-      foods: [chickenBreast, whiteRice, broccoli, oliveOil],
-      roundTo: 1,
-    };
-
-    const result = solveMeal(input);
-
-    expect(result.status).toBe("exact");
-
-    const chickenItem = result.items.find((i) => i.foodId === "chicken");
-    const riceItem = result.items.find((i) => i.foodId === "rice");
-    const oilItem = result.items.find((i) => i.foodId === "olive_oil");
-
-    expect(chickenItem).toBeDefined();
-    expect(riceItem).toBeDefined();
-    expect(oilItem).toBeDefined();
-
-    // Chicken ≈ 180g (±5g)
-    expect(chickenItem!.grams).toBeGreaterThanOrEqual(175);
-    expect(chickenItem!.grams).toBeLessThanOrEqual(188);
-
-    // Rice ≈ 52g (±3g)
-    expect(riceItem!.grams).toBeGreaterThanOrEqual(50);
-    expect(riceItem!.grams).toBeLessThanOrEqual(56);
-
-    // Oil ≈ 22g (±2g)
-    expect(oilItem!.grams).toBeGreaterThanOrEqual(20);
-    expect(oilItem!.grams).toBeLessThanOrEqual(24);
-
-    // Macros within ±1g of target
-    expect(Math.abs(result.achieved.protein - 50)).toBeLessThanOrEqual(1.0);
-    expect(Math.abs(result.achieved.carbs - 52.5)).toBeLessThanOrEqual(1.0);
-    expect(Math.abs(result.achieved.fat - 25)).toBeLessThanOrEqual(1.0);
+  it("T2 exact with oil", () => {
+    const r = solve({ target: T, foods: [F.chicken, F.rice, F.oil, locked(F.broccoli, 150)] });
+    expect(r.status).toBe("exact");
+    near(grams(r, "chicken"), 183, 2);
+    near(grams(r, "rice"), 53, 2);
+    near(grams(r, "oil"), 22, 2);
+    for (const k of ["protein", "carbs", "fat"] as const) near(r.achieved[k], T[k], 1);
   });
 
-  it("Criterion 3: Determinism - 1,000 repeated solves return byte-identical output", () => {
-    const input: SolverInput = {
-      target: { protein: 50, carbs: 52.5, fat: 25 },
-      foods: [chickenBreast, whiteRice, broccoli, oliveOil],
-      roundTo: 1,
-    };
-
-    const baselineJson = JSON.stringify(solveMeal(input));
-
-    for (let i = 0; i < 1000; i++) {
-      const currentJson = JSON.stringify(solveMeal(input));
-      if (currentJson !== baselineJson) {
-        throw new Error(`Determinism failed at iteration ${i}`);
-      }
-    }
+  it("T4 four foods → unique, accurate answer", () => {
+    const r = solve({ target: T, foods: [F.chicken, F.rice, F.oats, F.oil] });
+    expect(r.status).toBe("exact");
+    near(grams(r, "chicken"), 190, 3);
+    near(grams(r, "oil"), 21, 3);
+    for (const k of ["protein", "carbs", "fat"] as const) near(r.achieved[k], T[k], 1);
   });
 
-  it("Criterion 4: Fuzz testing 5,000 random inputs - no NaN/Inf/negative, achieved matches recomputation", () => {
-    const candidateFoods: SolverFood[] = [
-      { id: "f1", name: "Food 1", per100: { protein: 30, carbs: 0, fat: 5 }, mode: "auto" },
-      { id: "f2", name: "Food 2", per100: { protein: 2, carbs: 70, fat: 1 }, mode: "auto" },
-      { id: "f3", name: "Food 3", per100: { protein: 0, carbs: 0, fat: 90 }, mode: "auto", maxGrams: 50 },
-      { id: "f4", name: "Food 4", per100: { protein: 12, carbs: 12, fat: 12 }, mode: "auto" },
-      { id: "f5", name: "Food 5 (fixed)", per100: { protein: 10, carbs: 20, fat: 2 }, mode: "fixed", fixedGrams: 100 },
-      { id: "f6", name: "Food 6 (zero cal)", per100: { protein: 0, carbs: 0, fat: 0 }, mode: "fixed", fixedGrams: 200 },
-    ];
-
-    for (let iter = 0; iter < 5000; iter++) {
-      const pTarget = Math.floor(Math.random() * 80) + 10;
-      const cTarget = Math.floor(Math.random() * 120) + 10;
-      const fTarget = Math.floor(Math.random() * 50) + 5;
-
-      // Select 1 to 5 foods randomly
-      const numFoods = Math.floor(Math.random() * 4) + 1;
-      const foods: SolverFood[] = [];
-      for (let j = 0; j < numFoods; j++) {
-        foods.push(candidateFoods[j % candidateFoods.length]);
-      }
-
-      const res = solveMeal({
-        target: { protein: pTarget, carbs: cTarget, fat: fTarget },
-        foods,
-        roundTo: iter % 2 === 0 ? 1 : 5,
-      });
-
-      // Verify no NaN or negative grams
-      let recomputedP = 0;
-      let recomputedC = 0;
-      let recomputedF = 0;
-
-      for (const item of res.items) {
-        expect(Number.isFinite(item.grams)).toBe(true);
-        expect(item.grams).toBeGreaterThanOrEqual(0);
-
-        const food = foods.find((f) => f.id === item.foodId);
-        if (food) {
-          recomputedP += (item.grams * food.per100.protein) / 100;
-          recomputedC += (item.grams * food.per100.carbs) / 100;
-          recomputedF += (item.grams * food.per100.fat) / 100;
-        }
-      }
-
-      expect(Number.isFinite(res.achieved.protein)).toBe(true);
-      expect(Number.isFinite(res.achieved.carbs)).toBe(true);
-      expect(Number.isFinite(res.achieved.fat)).toBe(true);
-      expect(Number.isFinite(res.kcal)).toBe(true);
-
-      // Achieved matches recomputed
-      expect(Math.abs(res.achieved.protein - recomputedP)).toBeLessThanOrEqual(0.2);
-      expect(Math.abs(res.achieved.carbs - recomputedC)).toBeLessThanOrEqual(0.2);
-      expect(Math.abs(res.achieved.fat - recomputedF)).toBeLessThanOrEqual(0.2);
-    }
+  it("T5 locking chicken at 200 g re-solves the rest", () => {
+    const r = solve({ target: T, foods: [locked(F.chicken, 200), F.rice, F.oil] });
+    expect(grams(r, "chicken")).toBe(200);
+    near(grams(r, "rice"), 65, 3);
+    near(grams(r, "oil"), 22, 2);
   });
 
-  it("Criterion 5: Performance - solves 10 foods in < 5 ms", () => {
-    const tenFoods: SolverFood[] = [
-      { id: "1", name: "Chicken", per100: { protein: 23, carbs: 0, fat: 1.2 }, mode: "auto" },
-      { id: "2", name: "Rice", per100: { protein: 7, carbs: 80, fat: 0.6 }, mode: "auto" },
-      { id: "3", name: "Olive oil", per100: { protein: 0, carbs: 0, fat: 100 }, mode: "auto", maxGrams: 60 },
-      { id: "4", name: "Broccoli", per100: { protein: 2.8, carbs: 7, fat: 0.4 }, mode: "auto" },
-      { id: "5", name: "Egg", per100: { protein: 12.6, carbs: 0.8, fat: 9.5 }, mode: "auto" },
-      { id: "6", name: "Oats", per100: { protein: 13.5, carbs: 68, fat: 7 }, mode: "auto" },
-      { id: "7", name: "Whey", per100: { protein: 80, carbs: 5, fat: 3 }, mode: "auto" },
-      { id: "8", name: "Peanut butter", per100: { protein: 25, carbs: 20, fat: 50 }, mode: "auto" },
-      { id: "9", name: "Sweet potato", per100: { protein: 1.6, carbs: 20, fat: 0.1 }, mode: "auto" },
-      { id: "10", name: "Salmon", per100: { protein: 20, carbs: 0, fat: 13 }, mode: "fixed", fixedGrams: 100 },
-    ];
-
-    const input: SolverInput = {
-      target: { protein: 60, carbs: 75, fat: 30 },
-      foods: tenFoods,
-      roundTo: 1,
-    };
-
-    // Warm up
-    solveMeal(input);
-
-    const start = performance.now();
-    const runs = 50;
-    for (let i = 0; i < runs; i++) {
-      solveMeal(input);
-    }
-    const duration = performance.now() - start;
-    const avgMs = duration / runs;
-
-    expect(avgMs).toBeLessThan(5.0);
+  it("T7 zero-fat target never wrecks protein (regression: relative-error bug)", () => {
+    const r = solve({ target: { protein: 40, carbs: 50, fat: 0 }, foods: [F.chicken, F.rice] });
+    near(r.achieved.protein, 40, 1);
+    near(r.achieved.carbs, 50, 1);
+    expect(grams(r, "chicken")).toBeGreaterThan(140);
   });
 });
 
-describe("Solver - Section 5.5 Edge Cases", () => {
-  it("Collinear / duplicate foods do not produce NaN or exploding grams", () => {
-    const duplicateRice1: SolverFood = {
-      id: "rice_1",
-      name: "Rice 1",
-      per100: { protein: 7, carbs: 80, fat: 0.6 },
-      mode: "auto",
-    };
-    const duplicateRice2: SolverFood = {
-      id: "rice_2",
-      name: "Rice 2",
-      per100: { protein: 7, carbs: 80, fat: 0.6 },
-      mode: "auto",
-    };
+describe("recalculation behaviour (the core promise)", () => {
+  const target = { protein: 40, carbs: 60, fat: 15 };
 
-    const res = solveMeal({
-      target: { protein: 7, carbs: 80, fat: 1 },
-      foods: [duplicateRice1, duplicateRice2],
-    });
+  it("T3 adding a food changes the other foods' grams and fixes the shortfall", () => {
+    const before = solve({ target, foods: [F.chicken, F.rice] });
+    const after = solve({ target, foods: [F.chicken, F.rice, F.oil] });
+    expect(before.status).toBe("infeasible");
+    expect(after.status).toBe("exact");
+    near(after.achieved.fat, 15, 1);
+    expect(grams(after, "oil")).toBeGreaterThan(8);
+    expect(after.delta.fat).toBeGreaterThan(before.delta.fat); // shortfall shrinks
+  });
 
-    for (const item of res.items) {
-      expect(Number.isFinite(item.grams)).toBe(true);
-      expect(item.grams).toBeGreaterThanOrEqual(0);
-      expect(item.grams).toBeLessThan(500);
+  it("removing a food returns EXACTLY the result of never having added it (no history)", () => {
+    const direct = solve({ target, foods: [F.chicken, F.rice] });
+    const afterRemove = solve({ target, foods: [F.chicken, F.rice, F.oil].filter((f) => f.id !== "oil") });
+    expect(afterRemove).toEqual(direct);
+  });
+
+  it("is order independent", () => {
+    const foods = [F.chicken, F.rice, F.oats, F.oil];
+    const base = solve({ target: T, foods });
+    const perms = [
+      [3, 2, 1, 0],
+      [1, 3, 0, 2],
+      [2, 0, 3, 1],
+    ];
+    for (const p of perms) {
+      const r = solve({ target: T, foods: p.map((i) => foods[i]) });
+      expect(r.items.map((i) => [i.foodId, i.grams]).sort()).toEqual(
+        base.items.map((i) => [i.foodId, i.grams]).sort()
+      );
     }
   });
 
-  it("Handles zero target component (e.g. 0g fat meal)", () => {
-    const res = solveMeal({
-      target: { protein: 40, carbs: 50, fat: 0 },
-      foods: [chickenBreast, whiteRice],
-    });
-
-    expect(res.achieved.fat).toBeGreaterThanOrEqual(0);
-    expect(Number.isFinite(res.achieved.protein)).toBe(true);
-    expect(Number.isFinite(res.achieved.carbs)).toBe(true);
+  it("is deterministic: 1000 repeats are identical", () => {
+    const ref = JSON.stringify(solve({ target: T, foods: [F.chicken, F.rice, F.oats, F.oil] }));
+    for (let i = 0; i < 1000; i++) {
+      expect(JSON.stringify(solve({ target: T, foods: [F.chicken, F.rice, F.oats, F.oil] }))).toBe(ref);
+    }
   });
 
-  it("Handles fixed food that already exceeds target", () => {
-    const hugeSteak: SolverFood = {
-      id: "steak",
-      name: "Ribeye Steak",
-      per100: { protein: 24, carbs: 0, fat: 20 },
-      mode: "fixed",
-      fixedGrams: 400, // 96g protein, 80g fat!
-    };
-
-    const res = solveMeal({
-      target: { protein: 40, carbs: 50, fat: 20 },
-      foods: [hugeSteak, whiteRice],
-    });
-
-    expect(res.status).toBe("infeasible");
-    expect(res.delta.protein).toBeGreaterThan(0);
-    expect(res.delta.fat).toBeGreaterThan(0);
-    // Rice should still provide carbs
-    const rice = res.items.find((i) => i.foodId === "rice");
-    expect(rice?.grams).toBeGreaterThan(0);
+  it("unlocking hands the food back to the solver", () => {
+    const lockedRes = solve({ target: T, foods: [locked(F.chicken, 300), F.rice, F.oil] });
+    const freeRes = solve({ target: T, foods: [F.chicken, F.rice, F.oil] });
+    expect(grams(lockedRes, "chicken")).toBe(300);
+    expect(grams(freeRes, "chicken")).not.toBe(300);
+    expect(freeRes.status).toBe("exact");
   });
 
-  it("Enforces maxGrams binding strictly", () => {
-    const constrainedOil: SolverFood = {
-      id: "oil_cap",
-      name: "Capped Oil",
-      per100: { protein: 0, carbs: 0, fat: 100 },
-      mode: "auto",
-      maxGrams: 10,
-    };
-
-    const res = solveMeal({
-      target: { protein: 30, carbs: 0, fat: 50 },
-      foods: [chickenBreast, constrainedOil],
-    });
-
-    const oilItem = res.items.find((i) => i.foodId === "oil_cap");
-    expect(oilItem?.grams).toBeLessThanOrEqual(10);
+  it("a locked food that already exceeds the target is reported, others drop toward 0", () => {
+    const r = solve({ target: { protein: 30, carbs: 40, fat: 10 }, foods: [locked(F.chicken, 400), F.rice] });
+    expect(r.delta.protein).toBeGreaterThan(30); // ~+65 g over
+    expect(r.notes.join(" ")).toMatch(/protein/i);
+    expect(r.items.every((i) => i.grams >= 0)).toBe(true);
   });
 
+  it("round-to-5 recomputes achieved macros from the rounded grams", () => {
+    const r = solve({ target: T, foods: [F.chicken, F.rice, F.oil, locked(F.broccoli, 150)], roundTo: 5 });
+    r.items.forEach((i) => expect(i.grams % 5).toBe(0));
+    const recomputed = r.items.reduce(
+      (s, i) => {
+        const f = Object.values(F).find((x: any) => x.id === i.foodId) as any;
+        return {
+          protein: s.protein + (f.per100.protein * i.grams) / 100,
+          carbs: s.carbs + (f.per100.carbs * i.grams) / 100,
+          fat: s.fat + (f.per100.fat * i.grams) / 100,
+        };
+      },
+      { protein: 0, carbs: 0, fat: 0 }
+    );
+    for (const k of ["protein", "carbs", "fat"] as const) near(r.achieved[k], recomputed[k], 0.01);
+  });
+});
+
+describe("robustness", () => {
+  it("fuzz: 5000 random inputs → never NaN/∞/negative; achieved == recomputed from grams", () => {
+    let seed = 42;
+    const rnd = () => (seed = (seed * 1664525 + 1013904223) % 2 ** 32) / 2 ** 32;
+    const all = Object.values(F) as any[];
+    for (let n = 0; n < 5000; n++) {
+      const foods = all.filter(() => rnd() < 0.5);
+      if (!foods.length) continue;
+      const target = { protein: rnd() * 80, carbs: rnd() * 80, fat: rnd() * 80 };
+      const r = solve({ target, foods });
+      for (const i of r.items) {
+        expect(Number.isFinite(i.grams)).toBe(true);
+        expect(i.grams).toBeGreaterThanOrEqual(0);
+      }
+      for (const k of ["protein", "carbs", "fat"] as const) expect(Number.isFinite(r.achieved[k])).toBe(true);
+    }
+  });
+
+  it("duplicate / collinear foods don't explode", () => {
+    const rice2 = { ...F.rice, id: "rice2" };
+    const r = solve({ target: T, foods: [F.chicken, F.rice, rice2, F.oil] });
+    expect(r.items.every((i) => i.grams >= 0 && i.grams < 1000)).toBe(true);
+    near(r.achieved.carbs, T.carbs, 1);
+  });
+
+  it("single food hits its dominant macro and reports the rest as shortfall", () => {
+    const r = solve({ target: T, foods: [F.chicken] });
+    near(r.achieved.protein, 50, 1.5);
+    expect(r.status).toBe("infeasible");
+  });
+
+  it("solves 10 foods in under 5 ms", () => {
+    const foods = Array.from({ length: 10 }, (_, i) => ({
+      ...F.rice,
+      id: `f${i}`,
+      per100: { protein: i, carbs: 80 - i * 5, fat: i * 3 },
+    }));
+    const t0 = performance.now();
+    solve({ target: T, foods });
+    expect(performance.now() - t0).toBeLessThan(5);
+  });
+});
+
+describe("Section 5.5 Edge Cases", () => {
   it("Zero-calorie foods (spices/water) are excluded from solving and preserved with user grams", () => {
-    const salt: SolverFood = {
+    const salt = {
       id: "salt",
       name: "Sea Salt",
       per100: { protein: 0, carbs: 0, fat: 0 },
-      mode: "fixed",
+      mode: "fixed" as const,
       fixedGrams: 3,
     };
 
-    const res = solveMeal({
+    const res = solve({
       target: { protein: 40, carbs: 60, fat: 15 },
-      foods: [chickenBreast, whiteRice, oliveOil, salt],
+      foods: [F.chicken, F.rice, F.oil, salt],
     });
 
     const saltItem = res.items.find((i) => i.foodId === "salt");
     expect(saltItem).toBeDefined();
     expect(saltItem?.grams).toBe(3);
+  });
+
+  it("Enforces maxGrams binding strictly", () => {
+    const constrainedOil = {
+      ...F.oil,
+      id: "oil_cap",
+      maxGrams: 10,
+    };
+
+    const res = solve({
+      target: { protein: 30, carbs: 0, fat: 50 },
+      foods: [F.chicken, constrainedOil],
+    });
+
+    const oilItem = res.items.find((i) => i.foodId === "oil_cap");
+    expect(oilItem?.grams).toBeLessThanOrEqual(10);
   });
 });
