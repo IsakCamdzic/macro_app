@@ -1,0 +1,16 @@
+{
+  "name": "MacroMeal",
+  "short_name": "MacroMeal",
+  "description": "Precision Macro & Calorie Tracking with Active-Set Solver",
+  "start_url": "/today",
+  "display": "standalone",
+  "background_color": "#f9f9fc",
+  "theme_color": "#1f7a5c",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

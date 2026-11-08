@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Unit & Solver Tests
+        run: npm test
+
+      - name: Security Check - Service Role Key Isolation
+        run: |
+          LEAKS=$(grep -rn "SUPABASE_SERVICE_ROLE_KEY" --exclude-dir=node_modules --exclude-dir=.next --exclude-dir=.git --exclude="food-cache.ts" --exclude="*.md" --exclude=".env.example" . || true)
+          if [ -n "$LEAKS" ]; then
+            echo "SECURITY LEAK: SUPABASE_SERVICE_ROLE_KEY found outside food-cache.ts:"
+            echo "$LEAKS"
+            exit 1
+          fi
+
+      - name: Next.js Production Build
+        run: npm run build

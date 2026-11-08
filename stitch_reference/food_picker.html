@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f9f9fc;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-background": "#1a1c1e", "on-secondary-fixed": "#001944", "primary-container": "#1f7a5c", "on-tertiary-fixed": "#291800", "on-secondary-fixed-variant": "#004299", "surface-container-low": "#f3f3f6", "surface": "#f9f9fc", "surface-variant": "#e2e2e5", "primary": "#006046", "surface-container-high": "#e8e8ea", "on-tertiary-container": "#ffebd4", "error": "#ba1a1a", "background": "#f9f9fc", "on-surface": "#1a1c1e", "surface-container": "#eeeef0", "on-secondary-container": "#002760", "secondary": "#0159c7", "tertiary": "#734c00", "secondary-fixed": "#d9e2ff", "secondary-fixed-dim": "#afc6ff", "surface-dim": "#dadadc", "on-primary-container": "#b0ffdc", "primary-fixed": "#9ef4cf", "surface-tint": "#036c4f", "primary-fixed-dim": "#82d7b3", "surface-container-highest": "#e2e2e5", "inverse-primary": "#82d7b3", "on-secondary": "#ffffff", "on-error": "#ffffff", "on-primary-fixed-variant": "#00513a", "outline": "#6f7a73", "surface-bright": "#f9f9fc", "tertiary-fixed": "#ffddb1", "surface-container-lowest": "#ffffff", "secondary-container": "#548dfe", "on-primary-fixed": "#002115", "on-surface-variant": "#3f4943", "on-tertiary": "#ffffff", "on-error-container": "#93000a", "tertiary-container": "#936200", "error-container": "#ffdad6", "on-tertiary-fixed-variant": "#624000", "inverse-surface": "#2f3133", "inverse-on-surface": "#f0f0f3", "outline-variant": "#bec9c2", "tertiary-fixed-dim": "#ffba49", "on-primary": "#ffffff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xs": "0.25rem", "space-lg": "1rem", "space-sm": "0.5rem", "space-md": "0.75rem", "gutter": "0.75rem", "space-xl": "1.5rem", "margin": "1rem" }, fontFamily: { "data-metric-sm": ["Geist"], "display-hero": ["Geist"], "label-caption": ["Geist"], "body-lg": ["Geist"], "data-metric": ["Geist"], "headline-md": ["Geist"], "headline-lg": ["Geist"], "body-sm": ["Geist"] }, fontSize: { "data-metric-sm": ["16px", { lineHeight: "20px", letterSpacing: "-0.01em", fontWeight: "600" }], "display-hero": ["40px", { lineHeight: "44px", letterSpacing: "-0.03em", fontWeight: "600" }], "label-caption": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "500" }], "body-lg": ["16px", { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" }], "data-metric": ["24px", { lineHeight: "28px", letterSpacing: "-0.02em", fontWeight: "600" }], "headline-md": ["20px", { lineHeight: "26px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-lg": ["28px", { lineHeight: "34px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-sm": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-sm text-body-sm text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-14 px-space-sm flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go Back" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-high transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><img alt="MacroMeal Brand Icon" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCTlkzrFr3bqAbteg1aP9XGLcjHENim3uE79tKCh0QulYMDY8muxzYYOE6jVhPpfxhOW_UM9MlakWllceVPotiJmpHeCJ5nFegKAiSLcbNozxuGnDxWXxjvdSDV981sG-iwNm0fsBhzlG233ZPVK0cmZMXxe6Eze9NqCoRV67I3gU_OUCtgF13kCTP8IkIuqjFPNJCa-I7J6MK1DpCLw3IB-EK4s2IRJIag1WIMmp2E"/><h1 class="font-headline-md text-headline-md text-on-surface ml-space-xs">Food Detail</h1></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center mr-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 pb-safe bg-surface"><div class="flex flex-col w-full relative">
+<!-- Backdrop Illusion for Sheet Depth -->
+<div class="fixed inset-0 bg-on-background/25 backdrop-blur-[2px] z-20 pointer-events-none transition-opacity"></div>
+<!-- Bottom Sheet Container (85% simulated mobile drawer) -->
+<div class="relative z-30 flex flex-col w-full bg-surface-container-lowest rounded-t-[24px] shadow-2xl overflow-hidden mt-4">
+<!-- Drag Handle Area -->
+<div class="w-full flex justify-center items-center pt-space-sm pb-space-xs cursor-grab active:cursor-grabbing">
+<div class="w-9 h-1 rounded-full bg-surface-variant"></div>
+</div>
+<!-- Sheet Header -->
+<div class="px-margin pt-space-xs pb-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<button aria-label="Close dialog" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors active:scale-95" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Add Food to Meal 2</h2>
+<span class="font-label-caption text-label-caption text-on-surface-variant">Lunch Balance · Targeted Macros</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs px-space-md py-1 rounded-full bg-primary-fixed text-on-primary-fixed">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-caption text-label-caption font-semibold">2 added</span>
+</div>
+</div>
+<!-- Sticky Search Box & Segment Scroller -->
+<div class="sticky top-0 z-40 bg-surface-container-lowest/95 backdrop-blur-md px-margin pb-space-sm shadow-sm space-y-space-sm">
+<!-- Search Input Recess -->
+<div class="relative flex items-center w-full h-12 bg-surface-container-low rounded-xl px-space-md group focus-within:bg-surface-container">
+<span class="material-symbols-outlined text-outline mr-space-sm text-[22px] transition-colors group-focus-within:text-primary">search</span>
+<input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none" id="food-search" placeholder="Search foods (e.g. olive oil, oats, eggs)..." type="search" value="O"/>
+<button aria-label="Clear query" class="w-8 h-8 flex items-center justify-center rounded-full text-outline hover:text-on-surface hover:bg-surface-container-highest transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+<!-- Segment Chips -->
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-0.5">
+<!-- Active Chip -->
+<button class="flex items-center gap-1.5 px-space-md h-8 rounded-full bg-primary text-on-primary font-label-caption text-label-caption font-medium shadow-sm transition-transform active:scale-95 shrink-0" type="button">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">history</span>
+<span>Recent</span>
+<span class="px-1.5 py-0.2 rounded-full bg-on-primary/20 text-[10px]">14</span>
+</button>
+<!-- Standard Chips -->
+<button class="flex items-center gap-1.5 px-space-md h-8 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-caption text-label-caption font-medium transition-colors shrink-0" type="button">
+<span class="material-symbols-outlined text-[15px]">grade</span>
+<span>Favourites</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md h-8 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-caption text-label-caption font-medium transition-colors shrink-0" type="button">
+<span class="material-symbols-outlined text-[15px]">inventory_2</span>
+<span>All</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md h-8 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-caption text-label-caption font-medium transition-colors shrink-0" type="button">
+<span class="material-symbols-outlined text-[15px]">person_pin</span>
+<span>My foods</span>
+</button>
+</div>
+</div>
+<!-- Food Results List -->
+<div class="px-margin py-space-sm flex flex-col gap-space-sm pb-28">
+<!-- Item 1: Olive Oil (Matches Fat Highlight) -->
+<div class="relative flex flex-col p-space-md bg-surface rounded-xl shadow-[0_1px_3px_rgba(22,24,26,0.04)] hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="relative w-12 h-12 rounded-lg bg-surface-container-high overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Golden organic extra virgin olive oil splashing softly into a textured matte ceramic ladle with soft studio lighting and warm neutral kitchen accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDToVcWXJPf5ryLdM6YNnrMB2Y-5wOJZN6tDgEy36UHLL5RNoaoQ2UY5iNXntlunrqLMCzzmjvZcNvt7m3bWthWyy2eA5TG_56OaZsPAKGFSJSa7B_M7jrtCZyTUrHSRzAJWE1yLBMSnVzfCMHN0ngwqOSvUtmFHeytl_oC3b8sm5hTcio-Qg9P7k3JTdPKv3Hi6KUelnOQG8awBEjKsjoRhxs08RzYG77WWKlKdsY"/>
+</div>
+<div class="min-w-0 flex flex-col">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-data-metric-sm text-data-metric-sm text-on-surface truncate">Extra Virgin Olive Oil</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-caption text-[11px] font-semibold tracking-wide">Matches Fat</span>
+</div>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="font-label-caption text-label-caption text-on-surface-variant truncate">Bertolli</span>
+<span class="text-outline text-[10px]">•</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-high font-label-caption text-[10px] text-on-surface-variant font-mono">N.A.</span>
+</div>
+</div>
+</div>
+<button aria-label="Favorite Olive Oil" class="w-9 h-9 flex items-center justify-center rounded-full text-outline hover:text-tertiary transition-colors active:scale-90 shrink-0" type="button">
+<span class="material-symbols-outlined text-[20px]">grade</span>
+</button>
+</div>
+<!-- Macro Breakdown & Action Bar -->
+<div class="mt-space-sm pt-space-xs flex items-center justify-between bg-surface-container-low rounded-lg px-space-md py-1.5">
+<div class="flex items-center gap-space-md font-mono text-[11px] tracking-tight">
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="text-on-surface-variant">P</span>
+<span class="font-semibold text-on-surface">0</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="text-on-surface-variant">C</span>
+<span class="font-semibold text-on-surface">0</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="text-on-surface-variant">F</span>
+<span class="font-semibold text-on-surface">100g</span>
+</div>
+<span class="text-outline">|</span>
+<span class="font-semibold text-on-surface">884 <span class="text-on-surface-variant font-normal">kcal</span></span>
+</div>
+<button class="h-8 px-space-md rounded-full bg-primary text-on-primary font-label-caption text-label-caption font-semibold flex items-center gap-1 shadow-sm hover:opacity-95 active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Add</span>
+</button>
+</div>
+</div>
+<!-- Item 2: Chicken Breast (Already Added State) -->
+<div class="relative flex flex-col p-space-md bg-surface rounded-xl shadow-[0_1px_3px_rgba(22,24,26,0.04)]">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="relative w-12 h-12 rounded-lg bg-surface-container-high overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Tender lean cut fresh chicken breast prepared on a light slate prep board, crisp culinary composition with natural kitchen daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyt3T6ZiOn0cg3JCQcmS-zWFiUS36SDM3T3eSmgixE-DPGIfizmxaNvO-IsxCl-PLlLYbVVSoTixf6jjfhTny5BGbvK4TvcuJmvEB9vheI4cSknWawjq2ME9pfzy-IKD1pnZ9iY58rPwJWVPndAGFG1tJ6dlH2rTMeRPGm4j92gRIjLmbEZ3VblzDik6Bm8UxGPEoj5BT0GLUDMxumip9J_VrhX1aouvI6l2-4ykA"/>
+</div>
+<div class="min-w-0 flex flex-col">
+<span class="font-data-metric-sm text-data-metric-sm text-on-surface truncate">Chicken Breast</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="font-label-caption text-label-caption text-on-surface-variant truncate">Kirkland</span>
+<span class="text-outline text-[10px]">•</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-caption text-[10px] font-bold tracking-wider">RAW</span>
+</div>
+</div>
+</div>
+<button aria-label="Favorite Chicken Breast" class="w-9 h-9 flex items-center justify-center rounded-full text-tertiary transition-colors active:scale-90 shrink-0" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">grade</span>
+</button>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between bg-surface-container-low rounded-lg px-space-md py-1.5">
+<div class="flex items-center gap-space-md font-mono text-[11px] tracking-tight">
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="text-on-surface-variant">P</span>
+<span class="font-semibold text-on-surface">23g</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="text-on-surface-variant">C</span>
+<span class="font-semibold text-on-surface">0</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="text-on-surface-variant">F</span>
+<span class="font-semibold text-on-surface">1.2g</span>
+</div>
+<span class="text-outline">|</span>
+<span class="font-semibold text-on-surface">110 <span class="text-on-surface-variant font-normal">kcal</span></span>
+</div>
+<div class="h-8 px-space-md rounded-full bg-surface-container-highest text-on-surface font-label-caption text-label-caption font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">check</span>
+<span>Added</span>
+</div>
+</div>
+</div>
+<!-- Item 3: Jasmine Rice (Already Added State) -->
+<div class="relative flex flex-col p-space-md bg-surface rounded-xl shadow-[0_1px_3px_rgba(22,24,26,0.04)]">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="relative w-12 h-12 rounded-lg bg-surface-container-high overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="A clean artisanal bowl of pure uncooked dry jasmine grains on a pale linen placemat with soft top-down lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6tF8I-kBiCXb9MCWgI43do-CmqSteEAM6--utFRRLcAiIqLddQWocwRCQ-qrxGB3qrGz5rHeIxp31ibXMh_tTOcVyNofwkkm-coIWkZ7MADBq2RffQgYA-mma0JQ59caCLarPiiJq3gaCQsX4q2JeWFOrOo4Ga0FgdVVhtm_PG-28VXKnpZeLebPhDT2NjCbbjOIqbXgdHCWwC6TCBpOFezkJ_YoO-yc9Gs3ZiQA"/>
+</div>
+<div class="min-w-0 flex flex-col">
+<span class="font-data-metric-sm text-data-metric-sm text-on-surface truncate">Jasmine Rice</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="font-label-caption text-label-caption text-on-surface-variant truncate">Royal</span>
+<span class="text-outline text-[10px]">•</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-caption text-[10px] font-bold tracking-wider">RAW</span>
+</div>
+</div>
+</div>
+<button aria-label="Favorite Jasmine Rice" class="w-9 h-9 flex items-center justify-center rounded-full text-outline hover:text-tertiary transition-colors active:scale-90 shrink-0" type="button">
+<span class="material-symbols-outlined text-[20px]">grade</span>
+</button>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between bg-surface-container-low rounded-lg px-space-md py-1.5">
+<div class="flex items-center gap-space-md font-mono text-[11px] tracking-tight">
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="text-on-surface-variant">P</span>
+<span class="font-semibold text-on-surface">7.1g</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="text-on-surface-variant">C</span>
+<span class="font-semibold text-on-surface">80g</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="text-on-surface-variant">F</span>
+<span class="font-semibold text-on-surface">0.7g</span>
+</div>
+<span class="text-outline">|</span>
+<span class="font-semibold text-on-surface">356 <span class="text-on-surface-variant font-normal">kcal</span></span>
+</div>
+<div class="h-8 px-space-md rounded-full bg-surface-container-highest text-on-surface font-label-caption text-label-caption font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">check</span>
+<span>Added</span>
+</div>
+</div>
+</div>
+<!-- Item 4: Avocado, Hass -->
+<div class="relative flex flex-col p-space-md bg-surface rounded-xl shadow-[0_1px_3px_rgba(22,24,26,0.04)] hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="relative w-12 h-12 rounded-lg bg-surface-container-high overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Fresh sliced Hass avocado displaying deep green outer layer and pale creamy center on a light wood kitchen block." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA07D4bwJ1CfIGq1n2ldC_dDZ69rA4ADzHQNSra34ohmN4858PFF29p0OR7jlvSvZN2iDd3X5B0aH2LEE7xH6NZhjiMImJmFQyZj5rBXt0Rs4tZNB57P_2CJmWtRBbZaYvkRL7ELaTCs4zSYeoyoW7lSJUZq0segpEI0nldJXqQAq8I3FLvrlSQHaxM4cAZIkI6hqIYRfC55lyM8gJxoFOKgd6uv94mH7YRWX0OhN4"/>
+</div>
+<div class="min-w-0 flex flex-col">
+<span class="font-data-metric-sm text-data-metric-sm text-on-surface truncate">Avocado, Hass</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="font-label-caption text-label-caption text-on-surface-variant truncate">Fresh</span>
+<span class="text-outline text-[10px]">•</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-caption text-[10px] font-bold tracking-wider">RAW</span>
+</div>
+</div>
+</div>
+<button aria-label="Favorite Avocado" class="w-9 h-9 flex items-center justify-center rounded-full text-tertiary transition-colors active:scale-90 shrink-0" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">grade</span>
+</button>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between bg-surface-container-low rounded-lg px-space-md py-1.5">
+<div class="flex items-center gap-space-md font-mono text-[11px] tracking-tight">
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="text-on-surface-variant">P</span>
+<span class="font-semibold text-on-surface">2g</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="text-on-surface-variant">C</span>
+<span class="font-semibold text-on-surface">9g</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="text-on-surface-variant">F</span>
+<span class="font-semibold text-on-surface">15g</span>
+</div>
+<span class="text-outline">|</span>
+<span class="font-semibold text-on-surface">160 <span class="text-on-surface-variant font-normal">kcal</span></span>
+</div>
+<button class="h-8 px-space-md rounded-full bg-primary text-on-primary font-label-caption text-label-caption font-semibold flex items-center gap-1 shadow-sm hover:opacity-95 active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Add</span>
+</button>
+</div>
+</div>
+<!-- Bottom Helper / Custom Food Creation -->
+<div class="mt-space-sm p-space-md bg-surface-container rounded-xl flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-outline text-[20px]">help_outline</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Can't find it?</span>
+</div>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-primary hover:bg-surface font-label-caption text-label-caption font-semibold flex items-center gap-1 shadow-sm active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+<span>Create custom food</span>
+</button>
+</div>
+</div>
+<!-- Fixed Bottom Action Bar -->
+<div class="fixed bottom-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl px-margin pt-space-sm pb-space-lg shadow-[0_-4px_16px_rgba(0,0,0,0.06)] flex flex-col gap-space-xs max-w-[440px] mx-auto">
+<button class="w-full h-12 rounded-xl bg-primary text-on-primary font-headline-md text-[16px] tracking-wide font-semibold shadow-md hover:bg-primary/95 active:scale-[0.98] transition-all flex items-center justify-center gap-space-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">check</span>
+<span>Done · Add to meal</span>
+</button>
+<div class="w-full text-center">
+<span class="font-label-caption text-[11px] text-on-surface-variant">Scale balance will auto-recalculate</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interactions for UX delight
+  document.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      if (this.innerText.includes('Add') && !this.innerText.includes('meal')) {
+        this.innerHTML = '<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: \'FILL\' 1;">check</span><span>Added</span>';
+        this.className = 'h-8 px-space-md rounded-full bg-surface-container-highest text-on-surface font-label-caption text-label-caption font-semibold flex items-center gap-1.5';
+      }
+    });
+  });
+</script></main></body></html>

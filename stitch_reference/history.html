@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f9f9fc;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-background": "#1a1c1e", "on-secondary-fixed": "#001944", "primary-container": "#1f7a5c", "on-tertiary-fixed": "#291800", "on-secondary-fixed-variant": "#004299", "surface-container-low": "#f3f3f6", "surface": "#f9f9fc", "surface-variant": "#e2e2e5", "primary": "#006046", "surface-container-high": "#e8e8ea", "on-tertiary-container": "#ffebd4", "error": "#ba1a1a", "background": "#f9f9fc", "on-surface": "#1a1c1e", "surface-container": "#eeeef0", "on-secondary-container": "#002760", "secondary": "#0159c7", "tertiary": "#734c00", "secondary-fixed": "#d9e2ff", "secondary-fixed-dim": "#afc6ff", "surface-dim": "#dadadc", "on-primary-container": "#b0ffdc", "primary-fixed": "#9ef4cf", "surface-tint": "#036c4f", "primary-fixed-dim": "#82d7b3", "surface-container-highest": "#e2e2e5", "inverse-primary": "#82d7b3", "on-secondary": "#ffffff", "on-error": "#ffffff", "on-primary-fixed-variant": "#00513a", "outline": "#6f7a73", "surface-bright": "#f9f9fc", "tertiary-fixed": "#ffddb1", "surface-container-lowest": "#ffffff", "secondary-container": "#548dfe", "on-primary-fixed": "#002115", "on-surface-variant": "#3f4943", "on-tertiary": "#ffffff", "on-error-container": "#93000a", "tertiary-container": "#936200", "error-container": "#ffdad6", "on-tertiary-fixed-variant": "#624000", "inverse-surface": "#2f3133", "inverse-on-surface": "#f0f0f3", "outline-variant": "#bec9c2", "tertiary-fixed-dim": "#ffba49", "on-primary": "#ffffff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xs": "0.25rem", "space-lg": "1rem", "space-sm": "0.5rem", "space-md": "0.75rem", "gutter": "0.75rem", "space-xl": "1.5rem", "margin": "1rem" }, fontFamily: { "data-metric-sm": ["Geist"], "display-hero": ["Geist"], "label-caption": ["Geist"], "body-lg": ["Geist"], "data-metric": ["Geist"], "headline-md": ["Geist"], "headline-lg": ["Geist"], "body-sm": ["Geist"] }, fontSize: { "data-metric-sm": ["16px", { lineHeight: "20px", letterSpacing: "-0.01em", fontWeight: "600" }], "display-hero": ["40px", { lineHeight: "44px", letterSpacing: "-0.03em", fontWeight: "600" }], "label-caption": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "500" }], "body-lg": ["16px", { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" }], "data-metric": ["24px", { lineHeight: "28px", letterSpacing: "-0.02em", fontWeight: "600" }], "headline-md": ["20px", { lineHeight: "26px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-lg": ["28px", { lineHeight: "34px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-sm": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-sm text-body-sm text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-14 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="MacroMeal Brand Icon" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCTlkzrFr3bqAbteg1aP9XGLcjHENim3uE79tKCh0QulYMDY8muxzYYOE6jVhPpfxhOW_UM9MlakWllceVPotiJmpHeCJ5nFegKAiSLcbNozxuGnDxWXxjvdSDV981sG-iwNm0fsBhzlG233ZPVK0cmZMXxe6Eze9NqCoRV67I3gU_OUCtgF13kCTP8IkIuqjFPNJCa-I7J6MK1DpCLw3IB-EK4s2IRJIag1WIMmp2E"/><span class="font-headline-md text-headline-md tracking-tight text-on-surface">MacroMeal</span></div><div class="flex items-center gap-space-md"><span class="font-label-caption text-label-caption text-on-surface-variant uppercase tracking-wider">History</span><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 pb-20 bg-surface"><div class="flex flex-col w-full px-margin pb-space-xl gap-space-lg">
+<!-- Section Title Area -->
+<div class="flex flex-col gap-space-xs mt-space-sm">
+<div class="flex items-center justify-between">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">History</h1>
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-caption text-label-caption">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+        Calibrated
+      </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Target adherence & nutritional trends</p>
+</div>
+<!-- Segmented Period Switcher -->
+<div class="w-full bg-surface-container p-1 rounded-xl flex items-center justify-between">
+<button class="flex-1 py-1.5 rounded-lg bg-surface-container-lowest shadow-sm text-on-surface font-label-caption text-label-caption uppercase tracking-wider text-center transition-all duration-150" id="tab-week" type="button">
+      Week
+    </button>
+<button class="flex-1 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-caption text-label-caption uppercase tracking-wider text-center transition-all duration-150" id="tab-month" type="button">
+      Month
+    </button>
+</div>
+<!-- Summary Metrics Banner -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-caption text-label-caption text-on-surface-variant uppercase tracking-wider">Weekly Average</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-display-hero text-display-hero text-on-surface tabular-nums">2,140</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">kcal / day</span>
+</div>
+</div>
+<div class="px-space-sm py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-caption text-label-caption flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">done_all</span>
+<span class="tabular-nums">97% Target</span>
+</div>
+</div>
+<!-- Macro Averages Row -->
+<div class="pt-space-sm bg-surface-container-low rounded-lg p-space-sm flex items-center justify-around">
+<div class="flex flex-col items-center">
+<span class="font-label-caption text-label-caption text-on-surface-variant">Protein Avg</span>
+<span class="font-data-metric-sm text-data-metric-sm text-on-surface tabular-nums mt-0.5">158 <span class="font-body-sm text-body-sm font-normal text-on-surface-variant">g</span></span>
+</div>
+<div class="h-6 w-px bg-surface-variant"></div>
+<div class="flex flex-col items-center">
+<span class="font-label-caption text-label-caption text-on-surface-variant">Carbs Avg</span>
+<span class="font-data-metric-sm text-data-metric-sm text-on-surface tabular-nums mt-0.5">215 <span class="font-body-sm text-body-sm font-normal text-on-surface-variant">g</span></span>
+</div>
+<div class="h-6 w-px bg-surface-variant"></div>
+<div class="flex flex-col items-center">
+<span class="font-label-caption text-label-caption text-on-surface-variant">Fat Avg</span>
+<span class="font-data-metric-sm text-data-metric-sm text-on-surface tabular-nums mt-0.5">68 <span class="font-body-sm text-body-sm font-normal text-on-surface-variant">g</span></span>
+</div>
+</div>
+</div>
+<!-- 7-Day Interactive Bar Chart Instrument -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">monitoring</span>
+<span class="font-headline-md text-headline-md text-on-surface">Daily Balance</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-0.5 border-t border-dashed border-outline inline-block"></span>
+<span class="font-label-caption text-label-caption text-on-surface-variant tabular-nums">2,200 kcal ref</span>
+</div>
+</div>
+<!-- Chart Canvas Container -->
+<div class="relative w-full h-48 pt-6 pb-2 flex flex-col justify-end">
+<!-- Target Reference Dotted Hairline (positioned at ~80% height) -->
+<div class="absolute inset-x-0 top-10 flex items-center pointer-events-none z-10">
+<div class="w-full border-b border-dashed border-outline-variant"></div>
+<span class="absolute right-0 -top-3.5 bg-surface-container-lowest pl-1 font-label-caption text-label-caption text-on-surface-variant tabular-nums">2.2k</span>
+</div>
+<!-- Bars Flex Grid -->
+<div class="grid grid-cols-7 gap-2 items-end h-36 w-full z-20">
+<!-- Mon -->
+<button class="day-bar group flex flex-col items-center h-full justify-end focus:outline-none" data-c="210" data-day="Mon, Nov 2" data-f="66" data-kcal="2,110" data-p="155" data-pct="96%" type="button">
+<span class="font-label-caption text-label-caption text-on-surface-variant group-hover:text-on-surface mb-1 opacity-0 group-hover:opacity-100 transition-opacity tabular-nums">2.1k</span>
+<div class="w-full max-w-[28px] rounded-t-lg bg-surface-variant hover:bg-secondary-fixed transition-colors duration-150" style="height: 72%;"></div>
+<span class="font-label-caption text-label-caption text-on-surface-variant mt-2">M</span>
+</button>
+<!-- Tue -->
+<button class="day-bar group flex flex-col items-center h-full justify-end focus:outline-none" data-c="220" data-day="Tue, Nov 3" data-f="70" data-kcal="2,190" data-p="160" data-pct="100%" type="button">
+<span class="font-label-caption text-label-caption text-on-surface-variant group-hover:text-on-surface mb-1 opacity-0 group-hover:opacity-100 transition-opacity tabular-nums">2.2k</span>
+<div class="w-full max-w-[28px] rounded-t-lg bg-surface-variant hover:bg-secondary-fixed transition-colors duration-150" style="height: 79%;"></div>
+<span class="font-label-caption text-label-caption text-on-surface-variant mt-2">T</span>
+</button>
+<!-- Wed -->
+<button class="day-bar group flex flex-col items-center h-full justify-end focus:outline-none" data-c="208" data-day="Wed, Nov 4" data-f="65" data-kcal="2,080" data-p="152" data-pct="95%" type="button">
+<span class="font-label-caption text-label-caption text-on-surface-variant group-hover:text-on-surface mb-1 opacity-0 group-hover:opacity-100 transition-opacity tabular-nums">2.1k</span>
+<div class="w-full max-w-[28px] rounded-t-lg bg-surface-variant hover:bg-secondary-fixed transition-colors duration-150" style="height: 70%;"></div>
+<span class="font-label-caption text-label-caption text-on-surface-variant mt-2">W</span>
+</button>
+<!-- Thu -->
+<button class="day-bar group flex flex-col items-center h-full justify-end focus:outline-none" data-c="228" data-day="Thu, Nov 5" data-f="72" data-kcal="2,240" data-p="165" data-pct="102%" type="button">
+<span class="font-label-caption text-label-caption text-on-surface-variant group-hover:text-on-surface mb-1 opacity-0 group-hover:opacity-100 transition-opacity tabular-nums">2.2k</span>
+<div class="w-full max-w-[28px] rounded-t-lg bg-surface-variant hover:bg-secondary-fixed transition-colors duration-150" style="height: 82%;"></div>
+<span class="font-label-caption text-label-caption text-on-surface-variant mt-2">T</span>
+</button>
+<!-- Fri -->
+<button class="day-bar group flex flex-col items-center h-full justify-end focus:outline-none" data-c="212" data-day="Fri, Nov 6" data-f="67" data-kcal="2,100" data-p="154" data-pct="95%" type="button">
+<span class="font-label-caption text-label-caption text-on-surface-variant group-hover:text-on-surface mb-1 opacity-0 group-hover:opacity-100 transition-opacity tabular-nums">2.1k</span>
+<div class="w-full max-w-[28px] rounded-t-lg bg-surface-variant hover:bg-secondary-fixed transition-colors duration-150" style="height: 71%;"></div>
+<span class="font-label-caption text-label-caption text-on-surface-variant mt-2">F</span>
+</button>
+<!-- Sat -->
+<button class="day-bar group flex flex-col items-center h-full justify-end focus:outline-none" data-c="205" data-day="Sat, Nov 7" data-f="69" data-kcal="2,070" data-p="150" data-pct="94%" type="button">
+<span class="font-label-caption text-label-caption text-on-surface-variant group-hover:text-on-surface mb-1 opacity-0 group-hover:opacity-100 transition-opacity tabular-nums">2.1k</span>
+<div class="w-full max-w-[28px] rounded-t-lg bg-surface-variant hover:bg-secondary-fixed transition-colors duration-150" style="height: 69%;"></div>
+<span class="font-label-caption text-label-caption text-on-surface-variant mt-2">S</span>
+</button>
+<!-- Sun (Active Highlighted) -->
+<button class="day-bar group flex flex-col items-center h-full justify-end focus:outline-none active-day" data-c="218" data-day="Sunday, Nov 8" data-f="71" data-kcal="2,185" data-p="162" data-pct="99%" type="button">
+<span class="font-label-caption text-label-caption text-primary font-semibold mb-1 opacity-100 tabular-nums">2.2k</span>
+<div class="w-full max-w-[28px] rounded-t-lg bg-primary shadow-sm" style="height: 78%;"></div>
+<span class="font-label-caption text-label-caption text-primary font-bold mt-2">S</span>
+</button>
+</div>
+</div>
+<!-- Status Strip / Hit Percentage -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-caption text-label-caption text-on-surface">Target Zone (±5%)</span>
+</div>
+<span class="font-label-caption text-label-caption text-on-surface font-semibold tabular-nums">7 / 7 Days On Cadence</span>
+</div>
+</div>
+<!-- Day Breakdown Detail Card (Focus on Nov 8) -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-md text-on-surface" id="detail-day-title">Sunday, Nov 8</span>
+<span class="font-label-caption text-label-caption px-space-sm py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-semibold tabular-nums" id="detail-day-pct">99% target</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-data-metric text-data-metric text-on-surface tabular-nums" id="detail-day-kcal">2,185</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">kcal logged</span>
+</div>
+</div>
+<!-- Macro Meters Trio -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<!-- Protein -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-label-caption text-label-caption">
+<span class="text-on-surface font-medium flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+            Protein
+          </span>
+<span class="text-on-surface tabular-nums"><strong id="detail-p-val">162</strong>g <span class="text-on-surface-variant">/ 165g (98%)</span></span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-low overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-300" id="detail-p-bar" style="width: 98%;"></div>
+</div>
+</div>
+<!-- Carbs -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-label-caption text-label-caption">
+<span class="text-on-surface font-medium flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+            Carbs
+          </span>
+<span class="text-on-surface tabular-nums"><strong id="detail-c-val">218</strong>g <span class="text-on-surface-variant">/ 220g (99%)</span></span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-low overflow-hidden">
+<div class="h-full bg-secondary rounded-full transition-all duration-300" id="detail-c-bar" style="width: 99%;"></div>
+</div>
+</div>
+<!-- Fat -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-label-caption text-label-caption">
+<span class="text-on-surface font-medium flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+            Fat
+          </span>
+<span class="text-on-surface tabular-nums"><strong id="detail-f-val">71</strong>g <span class="text-on-surface-variant">/ 73g (97%)</span></span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-low overflow-hidden">
+<div class="h-full bg-tertiary rounded-full transition-all duration-300" id="detail-f-bar" style="width: 97%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Logged Meals Accordion -->
+<div class="w-full flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-space-xs">
+<span class="font-headline-md text-headline-md text-on-surface">Logged Meals</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant uppercase tracking-wider tabular-nums">4 Entries</span>
+</div>
+<!-- Meal Accordion Container -->
+<div class="flex flex-col gap-space-sm" id="meals-accordion">
+<!-- Meal 1 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all">
+<button class="meal-toggle w-full p-space-md flex items-center justify-between text-left focus:outline-none" type="button">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">egg_alt</span>
+</div>
+<div class="flex flex-col truncate">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface truncate">Meal 1 · Breakfast</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">08:15 AM · 3 items</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<div class="flex flex-col items-end">
+<span class="font-data-metric-sm text-data-metric-sm text-on-surface tabular-nums">548</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">kcal</span>
+</div>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant transform transition-transform duration-200">expand_more</span>
+</div>
+</button>
+<div class="meal-content hidden px-space-md pb-space-md pt-0 text-body-sm text-on-surface-variant bg-surface-container-low/50">
+<div class="pt-space-sm flex flex-col gap-1.5 font-label-caption text-label-caption">
+<div class="flex justify-between items-center text-on-surface">
+<span>Rolled Oats & Whey Isolate</span>
+<span class="tabular-nums">340 kcal · P 38g</span>
+</div>
+<div class="flex justify-between items-center text-on-surface">
+<span>Whole Eggs (2x)</span>
+<span class="tabular-nums">148 kcal · P 12g</span>
+</div>
+<div class="flex justify-between items-center text-on-surface">
+<span>Blueberries (80g)</span>
+<span class="tabular-nums">60 kcal · C 14g</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Meal 2 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all">
+<button class="meal-toggle w-full p-space-md flex items-center justify-between text-left focus:outline-none" type="button">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">lunch_dining</span>
+</div>
+<div class="flex flex-col truncate">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface truncate">Meal 2 · Post-Workout</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">01:30 PM · 2 items</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<div class="flex flex-col items-end">
+<span class="font-data-metric-sm text-data-metric-sm text-on-surface tabular-nums">635</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">kcal</span>
+</div>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant transform transition-transform duration-200">expand_more</span>
+</div>
+</button>
+<div class="meal-content hidden px-space-md pb-space-md pt-0 text-body-sm text-on-surface-variant bg-surface-container-low/50">
+<div class="pt-space-sm flex flex-col gap-1.5 font-label-caption text-label-caption">
+<div class="flex justify-between items-center text-on-surface">
+<span>Grilled Chicken Breast & Jasmine Rice</span>
+<span class="tabular-nums">520 kcal · P 54g</span>
+</div>
+<div class="flex justify-between items-center text-on-surface">
+<span>Avocado (45g)</span>
+<span class="tabular-nums">115 kcal · F 10g</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Meal 3 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all">
+<button class="meal-toggle w-full p-space-md flex items-center justify-between text-left focus:outline-none" type="button">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">dinner_dining</span>
+</div>
+<div class="flex flex-col truncate">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface truncate">Meal 3 · Dinner</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">06:45 PM · 3 items</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<div class="flex flex-col items-end">
+<span class="font-data-metric-sm text-data-metric-sm text-on-surface tabular-nums">520</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">kcal</span>
+</div>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant transform transition-transform duration-200">expand_more</span>
+</div>
+</button>
+<div class="meal-content hidden px-space-md pb-space-md pt-0 text-body-sm text-on-surface-variant bg-surface-container-low/50">
+<div class="pt-space-sm flex flex-col gap-1.5 font-label-caption text-label-caption">
+<div class="flex justify-between items-center text-on-surface">
+<span>Wild Atlantic Salmon (180g)</span>
+<span class="tabular-nums">360 kcal · P 36g</span>
+</div>
+<div class="flex justify-between items-center text-on-surface">
+<span>Steamed Asparagus & Olive Oil</span>
+<span class="tabular-nums">90 kcal · F 7g</span>
+</div>
+<div class="flex justify-between items-center text-on-surface">
+<span>Baby Red Potatoes (120g)</span>
+<span class="tabular-nums">70 kcal · C 16g</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Meal 4 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all">
+<button class="meal-toggle w-full p-space-md flex items-center justify-between text-left focus:outline-none" type="button">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">bakery_dining</span>
+</div>
+<div class="flex flex-col truncate">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface truncate">Meal 4 · Evening Casein</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">09:30 PM · 2 items</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<div class="flex flex-col items-end">
+<span class="font-data-metric-sm text-data-metric-sm text-on-surface tabular-nums">482</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">kcal</span>
+</div>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant transform transition-transform duration-200">expand_more</span>
+</div>
+</button>
+<div class="meal-content hidden px-space-md pb-space-md pt-0 text-body-sm text-on-surface-variant bg-surface-container-low/50">
+<div class="pt-space-sm flex flex-col gap-1.5 font-label-caption text-label-caption">
+<div class="flex justify-between items-center text-on-surface">
+<span>Greek Yogurt 0% (250g)</span>
+<span class="tabular-nums">145 kcal · P 25g</span>
+</div>
+<div class="flex justify-between items-center text-on-surface">
+<span>Almond Butter (32g) & Honey</span>
+<span class="tabular-nums">337 kcal · F 24g</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Utilitarian Export / Audit Quick Action -->
+<div class="w-full flex items-center justify-between p-space-md bg-surface-container-low rounded-xl">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">file_download</span>
+<span class="font-body-sm text-body-sm text-on-surface">Export CSV raw ledger</span>
+</div>
+<button class="px-space-md py-1.5 bg-surface-container-lowest text-on-surface font-label-caption text-label-caption rounded-lg shadow-sm hover:bg-surface-variant transition-colors" type="button">
+      Share Data
+    </button>
+</div>
+</div>
+<script>
+  // Tab Switcher Micro-Interaction
+  const tabWeek = document.getElementById('tab-week');
+  const tabMonth = document.getElementById('tab-month');
+
+  if (tabWeek && tabMonth) {
+    tabWeek.addEventListener('click', () => {
+      tabWeek.className = 'flex-1 py-1.5 rounded-lg bg-surface-container-lowest shadow-sm text-on-surface font-label-caption text-label-caption uppercase tracking-wider text-center transition-all duration-150';
+      tabMonth.className = 'flex-1 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-caption text-label-caption uppercase tracking-wider text-center transition-all duration-150';
+    });
+
+    tabMonth.addEventListener('click', () => {
+      tabMonth.className = 'flex-1 py-1.5 rounded-lg bg-surface-container-lowest shadow-sm text-on-surface font-label-caption text-label-caption uppercase tracking-wider text-center transition-all duration-150';
+      tabWeek.className = 'flex-1 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-caption text-label-caption uppercase tracking-wider text-center transition-all duration-150';
+    });
+  }
+
+  // Interactive 7-Day Bar Selection
+  const bars = document.querySelectorAll('.day-bar');
+  const detailDayTitle = document.getElementById('detail-day-title');
+  const detailDayPct = document.getElementById('detail-day-pct');
+  const detailDayKcal = document.getElementById('detail-day-kcal');
+  const detailPVal = document.getElementById('detail-p-val');
+  const detailCVal = document.getElementById('detail-c-val');
+  const detailFVal = document.getElementById('detail-f-val');
+  const detailPBar = document.getElementById('detail-p-bar');
+  const detailCBar = document.getElementById('detail-c-bar');
+  const detailFBar = document.getElementById('detail-f-bar');
+
+  bars.forEach(bar => {
+    bar.addEventListener('click', () => {
+      bars.forEach(b => {
+        const barVisual = b.querySelector('div');
+        const barLabel = b.querySelector('span:last-child');
+        barVisual.classList.remove('bg-primary', 'shadow-sm');
+        barVisual.classList.add('bg-surface-variant');
+        barLabel.classList.remove('text-primary', 'font-bold');
+        barLabel.classList.add('text-on-surface-variant');
+      });
+
+      const selectedVisual = bar.querySelector('div');
+      const selectedLabel = bar.querySelector('span:last-child');
+      selectedVisual.classList.remove('bg-surface-variant');
+      selectedVisual.classList.add('bg-primary', 'shadow-sm');
+      selectedLabel.classList.remove('text-on-surface-variant');
+      selectedLabel.classList.add('text-primary', 'font-bold');
+
+      // Update Breakdown details seamlessly
+      const day = bar.getAttribute('data-day');
+      const kcal = bar.getAttribute('data-kcal');
+      const pct = bar.getAttribute('data-pct');
+      const p = bar.getAttribute('data-p');
+      const c = bar.getAttribute('data-c');
+      const f = bar.getAttribute('data-f');
+
+      if (detailDayTitle) detailDayTitle.textContent = day;
+      if (detailDayPct) detailDayPct.textContent = pct + ' target';
+      if (detailDayKcal) detailDayKcal.textContent = kcal;
+      if (detailPVal) detailPVal.textContent = p;
+      if (detailCVal) detailCVal.textContent = c;
+      if (detailFVal) detailFVal.textContent = f;
+
+      if (detailPBar) detailPBar.style.width = Math.min(100, Math.round((p / 165) * 100)) + '%';
+      if (detailCBar) detailCBar.style.width = Math.min(100, Math.round((c / 220) * 100)) + '%';
+      if (detailFBar) detailFBar.style.width = Math.min(100, Math.round((f / 73) * 100)) + '%';
+    });
+  });
+
+  // Accordion Toggle for Logged Meals
+  const toggles = document.querySelectorAll('.meal-toggle');
+  toggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const content = toggle.nextElementSibling;
+      const icon = toggle.querySelector('.material-symbols-outlined');
+      if (content) {
+        const isHidden = content.classList.contains('hidden');
+        content.classList.toggle('hidden');
+        if (icon) {
+          icon.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+        }
+      }
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[48px] min-h-[48px] px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="today" href="#"><span class="material-symbols-outlined text-[24px]">calendar_today</span><span class="font-label-caption text-label-caption mt-0.5">Today</span></a><a class="flex flex-col items-center justify-center min-w-[48px] min-h-[48px] px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="foods" href="#"><span class="material-symbols-outlined text-[24px]">restaurant</span><span class="font-label-caption text-label-caption mt-0.5">Foods</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[48px] min-h-[48px] px-space-sm py-space-xs transition-colors text-primary font-semibold" data-path="history" href="#"><span class="material-symbols-outlined text-[24px]">bar_chart</span><span class="font-label-caption text-label-caption mt-0.5">History</span></a><a class="flex flex-col items-center justify-center min-w-[48px] min-h-[48px] px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[24px]">tune</span><span class="font-label-caption text-label-caption mt-0.5">Settings</span></a></div></nav></body></html>
