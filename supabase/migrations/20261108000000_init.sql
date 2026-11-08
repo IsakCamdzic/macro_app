@@ -1,6 +1,6 @@
 -- Enable extensions
 create extension if not exists "pgcrypto";
-create extension if not exists "pg_trgm";
+   create extension if not exists pg_trgm with schema extensions;
 
 -- 1. profiles
 create table if not exists profiles (
@@ -42,7 +42,8 @@ create table if not exists foods (
   check ((source = 'custom') = (owner_id is not null))
 );
 create unique index if not exists foods_global_ext on foods (source, external_id) where owner_id is null;
-create index if not exists foods_name_trgm on foods using gin (name gin_trgm_ops);
+create index if not exists foods_name_trgm
+on foods using gin (name extensions.gin_trgm_ops);
 
 -- 4. a meal slot on a date
 create table if not exists meals (
