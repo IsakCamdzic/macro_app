@@ -31,6 +31,12 @@ yarn-error.log*
 .venv/
 __pycache__/
 
+# data downloads
+data/
+*.zip
+*.csv
+
+
 
 # vercel
 .vercel

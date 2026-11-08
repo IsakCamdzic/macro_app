@@ -2,16 +2,18 @@ import "server-only";
 import { createClient } from "@supabase/supabase-js";
 
 /**
- * Service-role client strictly isolated to inserting / caching global food items
+ * Secret-key client strictly isolated to inserting / caching global food items
  * fetched from USDA / Open Food Facts.
  */
 function getServiceClient() {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  const rawUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const key = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
 
-  if (!url || !key) {
+  if (!rawUrl || !key) {
     return null;
   }
+
+  const url = rawUrl.startsWith("http") ? rawUrl : `https://${rawUrl}.supabase.co`;
 
   return createClient(url, key, {
     auth: {

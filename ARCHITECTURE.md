@@ -52,6 +52,14 @@ Important reality check the app must handle gracefully: chicken, rice and brocco
 
 **No LLM in the calculation path.** Numbers come from deterministic code only. (An optional future "describe your meal in words" parser may use an LLM to extract food names, but it must never produce macro numbers or grams.)
 
+
+### 2.1 Supabase / Next.js current-practice notes (verified against Supabase docs, Nov 2026)
+- Supabase's new API keys replace the old ones: use the **publishable key** (`sb_publishable_…`) on the client and the **secret key** (`sb_secret_…`) only on the server. The legacy `anon` / `service_role` keys are being retired by the end of 2026 — do not build on them. In this document "service-role key" means the secret key.
+- Env var names: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`, `SUPABASE_SECRET_KEY`.
+- Use `@supabase/ssr` with the cookie-based client. Protect pages and data with **`supabase.auth.getClaims()`**; never trust `getSession()` in server code.
+- Server Components cannot write cookies, so session refresh happens in the request interceptor (`middleware.ts`, called `proxy.ts` in the newest Next.js versions — use whichever the installed Next.js version expects).
+- Never cache a response that depends on the user's session; a cached authenticated response served to another user would sign them in as the wrong person.
+
 ---
 
 ## 3. System architecture
@@ -69,7 +77,7 @@ Important reality check the app must handle gracefully: chicken, rice and brocco
 │  /api/foods/search → proxy to USDA/OFF (API keys stay server-side) + cache       │
 │  lib/solver (same package, re-runs authoritatively before persisting a meal)     │
 └──────┬───────────────────────────────────────────────────────────────┬───────────┘
-       │ user-scoped Supabase client (anon key + user JWT → RLS applies)│
+       │ user-scoped Supabase client (publishable key + user JWT → RLS applies)│
 ┌──────▼───────────────┐                                  ┌────────────▼──────────┐
 │ Supabase Postgres    │                                  │ Upstash Redis         │
 │ RLS on every table   │                                  │ rate limit counters   │
@@ -83,7 +91,7 @@ Important reality check the app must handle gracefully: chicken, rice and brocco
 2. **The solver is a pure, framework-free module** (`/lib/solver`) with zero imports from React, Next, or Supabase. It runs in the browser for instant feedback and on the server for authoritative verification at save time.
 3. **The server never trusts client-computed macros.** On save it recomputes macros from `grams × per-100g values` fetched from the DB, not from client payload.
 4. **Food snapshots.** A logged meal stores a snapshot of each food's per-100g values at log time, so editing/deleting a food or a database refresh never rewrites history.
-5. **Least privilege.** The Supabase **service-role key is used only** in one server-only module (`/lib/server/food-cache.ts`, marked with `import "server-only"`) for inserting global cached foods. It is never imported anywhere else, never exposed to the client, never prefixed `NEXT_PUBLIC_`.
+5. **Least privilege.** The Supabase **secret key (formerly service-role key) is used only** in one server-only module (`/lib/server/food-cache.ts`, marked with `import "server-only"`) for inserting global cached foods. It is never imported anywhere else, never exposed to the client, never prefixed `NEXT_PUBLIC_`.
 6. **Offline-tolerant shell.** PWA with cached app shell; logging requires network in v1 (no offline sync).
 
 ---
@@ -370,7 +378,7 @@ Nutrition and body data is health-adjacent personal data. Treat it accordingly.
 
 **Authorization**
 - RLS on every table (see §6). A CI test must prove **user B cannot select / insert / update / delete user A's rows** on every table, including via `meal_items` with a foreign `meal_id`.
-- Never use the service-role key outside `/lib/server/food-cache.ts`. A lint rule / grep check in CI fails the build if `SUPABASE_SERVICE_ROLE_KEY` appears elsewhere.
+- Never use the service-role key outside `/lib/server/food-cache.ts`. A lint rule / grep check in CI fails the build if `SUPABASE_SECRET_KEY` appears elsewhere.
 
 **Input & output**
 - Zod schemas on every action and route handler; reject unknown keys (`.strict()`).
@@ -384,7 +392,7 @@ Nutrition and body data is health-adjacent personal data. Treat it accordingly.
 - CSRF: Server Actions + SameSite cookies; verify `Origin` on custom route handlers.
 
 **Secrets & supply chain**
-- All secrets in Vercel env vars; `.env.example` committed, `.env*` git-ignored. Only `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` are public.
+- All secrets in Vercel env vars; `.env.example` committed, `.env*` git-ignored. Only `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` are public.
 - Lockfile committed; Dependabot on; `npm audit --omit=dev` in CI; pin major versions; minimal dependencies.
 - Rotate keys if ever leaked; document in `SECURITY.md`.
 
@@ -471,7 +479,7 @@ Illustrative per-100 g values:
 
 - GitHub repo → Vercel project; preview deploys per PR; production on `main`.
 - Supabase: separate **dev** and **prod** projects. Migrations applied via Supabase CLI in CI.
-- Env vars: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY` (server only), `USDA_API_KEY`, `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN`.
+- Env vars: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`, `SUPABASE_SECRET_KEY` (server only), `USDA_API_KEY`, `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN`.
 ### 12.1 USDA API key handling
 
 The owner has a personal USDA FoodData Central API key. **The key itself is deliberately NOT written in this file or in any file that gets committed**; USDA deactivates keys found in code repositories, and this spec will live in the repo. The owner gives it to you directly (chat/message) and you handle it like this:

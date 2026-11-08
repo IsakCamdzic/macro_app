@@ -33,11 +33,11 @@ jobs:
       - name: Solver Calibration Test
         run: npm run test:calibration
 
-      - name: Security Check - Service Role Key Isolation
+      - name: Security Check - Service Role / Secret Key Isolation
         run: |
-          LEAKS=$(grep -rn "SUPABASE_SERVICE_ROLE_KEY" --exclude-dir=node_modules --exclude-dir=.next --exclude-dir=.git --exclude-dir=.venv --exclude-dir=.github --exclude="food-cache.ts" --exclude="*.md" --exclude=".env.example" . || true)
+          LEAKS=$(grep -rnE "(SUPABASE_SERVICE_ROLE_KEY|SUPABASE_SECRET_KEY)" --exclude-dir=node_modules --exclude-dir=.next --exclude-dir=.git --exclude-dir=.venv --exclude-dir=.github --exclude="food-cache.ts" --exclude="import-usda.ts" --exclude="*.md" --exclude=".env*" . || true)
           if [ -n "$LEAKS" ]; then
-            echo "SECURITY LEAK: SUPABASE_SERVICE_ROLE_KEY found outside food-cache.ts:"
+            echo "SECURITY LEAK: SUPABASE secret/service key found outside food-cache.ts / import-usda.ts:"
             echo "$LEAKS"
             exit 1
           fi

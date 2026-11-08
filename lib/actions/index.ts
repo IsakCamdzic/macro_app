@@ -222,7 +222,7 @@ export async function searchFoods(query: unknown): Promise<ActionResult<any[]>> 
     return { ok: false, error: { code: "VALIDATION_ERROR", message: "Invalid search query" } };
   }
 
-  const q = parsed.data.q.trim().toLowerCase();
+  const q = parsed.data.q.trim();
   const user = await getSessionUser();
   const userId = user?.id || "demo-user";
 
@@ -232,28 +232,53 @@ export async function searchFoods(query: unknown): Promise<ActionResult<any[]>> 
   }
 
   const results: any[] = [];
+  const seenIds = new Set<string>();
+  const seenNames = new Set<string>();
 
-  // Filter curated staples
-  for (const staple of CURATED_STAPLES) {
-    if (!q || staple.name.toLowerCase().includes(q)) {
-      results.push({
-        id: staple.id,
-        name: staple.name,
-        brand: null,
-        state: "raw",
-        protein_100: staple.per100.protein,
-        carbs_100: staple.per100.carbs,
-        fat_100: staple.per100.fat,
-        default_portion_g: staple.defaultGrams || 100,
-        source: "seed",
-        is_favourite: demoFavourites.has(staple.id),
-      });
+  // 1. Query Supabase foods table (global USDA/seed + user custom foods)
+  try {
+    const supabase = await createClient();
+
+    let queryBuilder = supabase
+      .from("foods")
+      .select("id, name, brand, state, protein_100, carbs_100, fat_100, default_portion_g, source, owner_id")
+      .limit(25);
+
+    if (q) {
+      queryBuilder = queryBuilder.ilike("name", `%${q}%`);
+    } else {
+      queryBuilder = queryBuilder.order("name", { ascending: true });
     }
+
+    const { data: dbFoods, error: dbError } = await queryBuilder;
+
+    if (!dbError && dbFoods) {
+      for (const item of dbFoods) {
+        seenIds.add(item.id);
+        seenNames.add(item.name.toLowerCase());
+        results.push({
+          id: item.id,
+          name: item.name,
+          brand: item.brand,
+          state: item.state,
+          protein_100: Number(item.protein_100),
+          carbs_100: Number(item.carbs_100),
+          fat_100: Number(item.fat_100),
+          default_portion_g: Number(item.default_portion_g || 100),
+          source: item.source,
+          is_favourite: demoFavourites.has(item.id),
+        });
+      }
+    }
+  } catch {
+    // If Supabase query fails, fall back to in-memory items
   }
 
-  // Filter custom foods
+  // 2. Also check local custom foods if any
   for (const custom of demoCustomFoods) {
-    if (!q || custom.name.toLowerCase().includes(q)) {
+    if (!seenIds.has(custom.id) && (!q || custom.name.toLowerCase().includes(q.toLowerCase()))) {
+      seenIds.add(custom.id);
+      seenNames.add(custom.name.toLowerCase());
       results.push({
         ...custom,
         is_favourite: demoFavourites.has(custom.id),
@@ -261,17 +286,29 @@ export async function searchFoods(query: unknown): Promise<ActionResult<any[]>> 
     }
   }
 
-  // If query is provided and we have fewer than 8 results, query USDA proxy
-  if (q.length >= 2 && results.length < 8) {
-    const usdaResults = await searchUSDA(q);
-    for (const u of usdaResults) {
-      if (!results.some((r) => r.name.toLowerCase() === u.name.toLowerCase())) {
-        results.push({
-          id: `usda_${u.external_id}`,
-          ...u,
-          is_favourite: false,
-        });
+  // 3. Fallback to USDA FoodData Central live API if < 5 hits and query >= 2 chars
+  if (q.length >= 2 && results.length < 5) {
+    try {
+      const usdaResults = await searchUSDA(q);
+      for (const u of usdaResults) {
+        if (!seenNames.has(u.name.toLowerCase())) {
+          seenNames.add(u.name.toLowerCase());
+          results.push({
+            id: `usda_${u.external_id}`,
+            name: u.name,
+            brand: u.brand,
+            state: u.state,
+            protein_100: u.protein_100,
+            carbs_100: u.carbs_100,
+            fat_100: u.fat_100,
+            default_portion_g: u.default_portion_g || 100,
+            source: "usda",
+            is_favourite: false,
+          });
+        }
       }
+    } catch {
+      // Ignore upstream USDA API errors
     }
   }
 
